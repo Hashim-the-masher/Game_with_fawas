@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Red colour.tres" id="3_nif78"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_se0j5"]
-radius = 7.0
+radius = 10.049875
 
 [sub_resource type="SphereMesh" id="SphereMesh_xwma6"]
 lightmap_size_hint = Vector2i(17, 9)
@@ -16,26 +16,33 @@ colors = PackedColorArray(0, 0, 1, 1, 1, 1, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_q4kn3"]
 gradient = SubResource("Gradient_nif78")
 fill = 1
-fill_from = Vector2(0.7383177, 0.6401869)
+fill_from = Vector2(0.751, 0.64)
 
 [sub_resource type="QuadMesh" id="QuadMesh_vdagh"]
 
 [sub_resource type="PrismMesh" id="PrismMesh_3rftl"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_mask = 6
 motion_mode = 1
 script = ExtResource("1_h07og")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_se0j5")
 
-[node name="Mesh(es)" type="Node" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3.1, 3.1)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
 
-[node name="Normal state" type="Node" parent="Mesh(es)"]
+[node name="Mesh(es)" type="Node2D" parent="."]
+
+[node name="Normal state" type="Node2D" parent="Mesh(es)"]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="Mesh(es)/Normal state"]
 position = Vector2(0, 1.9073486e-06)
-scale = Vector2(20.022676, 20.000004)
+scale = Vector2(20, 19.977)
 mesh = SubResource("SphereMesh_xwma6")
 texture = SubResource("GradientTexture2D_q4kn3")
 
@@ -52,27 +59,26 @@ scale = Vector2(4.000001, 3.2644424)
 mesh = SubResource("PrismMesh_3rftl")
 texture = ExtResource("2_xwma6")
 
-[node name="Smash state" type="Node" parent="Mesh(es)"]
+[node name="Smash state" type="Node2D" parent="Mesh(es)"]
+visible = false
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="Mesh(es)/Smash state"]
-visible = false
 position = Vector2(-1.5, 0)
 scale = Vector2(17, 20)
 mesh = SubResource("QuadMesh_vdagh")
 texture = ExtResource("3_nif78")
 
 [node name="MeshInstance2D3" type="MeshInstance2D" parent="Mesh(es)/Smash state"]
-visible = false
 position = Vector2(8.485012, -0.064583786)
 rotation = -1.5707964
 scale = Vector2(20.060163, 3.0061002)
 mesh = SubResource("PrismMesh_3rftl")
 texture = ExtResource("3_nif78")
 
-[node name="Dash state" type="Node" parent="Mesh(es)"]
+[node name="Dash state" type="Node2D" parent="Mesh(es)"]
+visible = false
 
 [node name="MeshInstance2D3" type="MeshInstance2D" parent="Mesh(es)/Dash state"]
-visible = false
 position = Vector2(2.6508234, -5.364418e-07)
 rotation = -1.5707964
 scale = Vector2(18.122608, 14.674477)
