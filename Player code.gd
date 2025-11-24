@@ -50,3 +50,12 @@ func _physics_process(delta: float) -> void:
 	character.rotation = atan2(get_global_mouse_position().y-character.global_position.y,get_global_mouse_position().x-character.global_position.x)
 
 	move_and_slide()
+
+
+func _on_smash_kill() -> void:
+	current_state = states[1]
+	switch_mesh(current_state)
+
+func _on_dash_kill() -> void:
+	current_state = states[2]
+	switch_mesh(current_state)
