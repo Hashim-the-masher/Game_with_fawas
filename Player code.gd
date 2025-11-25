@@ -10,6 +10,11 @@ var current_state:StringName
 @onready var camera: Camera2D = $Camera2D
 var friction = 1.1
 
+@export var cooldown = 0.25
+@export var bullet_scene : PackedScene
+var can_shoot = true
+var can_smash = false
+var can_dash = false
 
 @onready var meshes = $"Mesh(es)"
 var states = {0:"Normal state",1:"Smash state",2:"Dash state"}
@@ -29,6 +34,11 @@ func _input(event: InputEvent) -> void:
 			zoom -= .1
 			camera.zoom.x = zoom
 			camera.zoom.y = zoom
+	if event.is_action("Shoot"):
+		shoot()
+		dash()
+		smash()
+
 
 
 func switch_mesh(state:StringName):
@@ -39,6 +49,21 @@ func switch_mesh(state:StringName):
 		elif state != meshes.get_child(num).name:
 			meshes.get_child(num).hide()
 			print(states[num],"hidden")
+
+func switch_ablity(state:StringName):
+	if state == states[0]:
+		can_shoot = true
+		can_smash = false
+		can_dash = false
+	elif state == states[1]:
+		can_shoot = false
+		can_smash = true
+		can_dash = false
+	elif state == states[2]:
+		can_shoot = false
+		can_smash = false
+		can_dash = true
+	else: get_tree().change_scene_to_file("res://Death screen.tscn")
 
 func _physics_process(delta: float) -> void:
 	if Input.get_vector("down","up","left","right"):
@@ -55,7 +80,32 @@ func _physics_process(delta: float) -> void:
 func _on_smash_kill() -> void:
 	current_state = states[1]
 	switch_mesh(current_state)
+	switch_ablity(current_state)
 
 func _on_dash_kill() -> void:
 	current_state = states[2]
 	switch_mesh(current_state)
+	switch_ablity(current_state)
+
+func shoot():
+	if can_shoot == false:
+		return
+	var bullet = bullet_scene.instantiate()
+	get_tree().root.add_child(bullet)
+	bullet.start(position)
+
+func smash():
+	if can_smash == false:
+		return
+	
+
+func dash():
+	if can_dash == false:
+		return
+	
+
+func _on_Enemy_contact(area: Area2D) -> void:
+	Death()
+
+func Death():
+	get_tree().change_scene_to_file("res://Death screen.tscn")

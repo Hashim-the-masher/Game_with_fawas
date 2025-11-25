@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://dyv0earpf0pyp"]
+[gd_scene load_steps=7 format=4 uid="uid://dyv0earpf0pyp"]
 
 [ext_resource type="PackedScene" uid="uid://c4uv6fisup5fn" path="res://Player character.tscn" id="1_80c3a"]
 [ext_resource type="Texture2D" uid="uid://4wkwkxtu4e0c" path="res://Map.jpg" id="2_d17em"]
 [ext_resource type="PackedScene" uid="uid://dc8br0tfcp4pa" path="res://Dash enemy.tscn" id="3_46faf"]
 [ext_resource type="PackedScene" uid="uid://c40canctt3jv8" path="res://Smash enemy.tscn" id="4_threo"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d17em"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_46faf"]
 texture = ExtResource("2_d17em")
@@ -41,7 +39,6 @@ texture = ExtResource("2_d17em")
 [sub_resource type="TileSet" id="TileSet_threo"]
 physics_layer_0/collision_layer = 2
 physics_layer_0/collision_mask = 29
-physics_layer_0/physics_material = SubResource("PhysicsMaterial_d17em")
 sources/0 = SubResource("TileSetAtlasSource_46faf")
 
 [node name="Node2D" type="Node2D"]
