@@ -1,23 +1,29 @@
 extends CharacterBody2D
-@export var max_zoom = 50
-@export var min_zoom = .5
+@export var max_zoom:float = 50
+@export var min_zoom:float = .5
 var zoom = 3.1
-@export var speed = 150
-@export var max_velocity= 250
-@export var min_velocity= 0.1
+@export var speed:float = 150
+@export var max_velocity:float = 250
+@export var min_velocity:float = 0.1
 var current_state:StringName
 @onready var character: CharacterBody2D = $"."
 @onready var camera: Camera2D = $Camera2D
-var friction = 1.1
-
+var friction:float = 1.1
+var d
 @export var cooldown = 0.25
-@export var bullet_scene : PackedScene
+var bullet_scene : PackedScene =preload("uid://bc1dyw233yaa2")
+var smash_scene : PackedScene=preload("uid://dj6l43tiggqsb")
+var dash_scene : PackedScene=preload("uid://dum66niw41wlj")
 var can_shoot = true
 var can_smash = false
 var can_dash = false
-
+var dash_position
+var dash_rotation
 @onready var meshes = $"Mesh(es)"
 var states = {0:"Normal state",1:"Smash state",2:"Dash state"}
+@onready var dash_timer: Timer = $Timer
+@onready var smash_timer: Timer = $Timer2
+
 
 func _ready() -> void:
 	current_state = states[0]
@@ -66,13 +72,19 @@ func switch_ablity(state:StringName):
 	else: get_tree().change_scene_to_file("res://Death screen.tscn")
 
 func _physics_process(delta: float) -> void:
-	if Input.get_vector("down","up","left","right"):
-		if sqrt(velocity.x**2+velocity.y**2) < max_velocity:
-			character.velocity += Input.get_vector("down","up","left","right").rotated(character.rotation)*speed*delta
-	elif sqrt(velocity.x**2+velocity.y**2)>min_velocity: 
-		character.velocity /= friction
-	else: character.velocity = Vector2.ZERO
-	character.rotation = atan2(get_global_mouse_position().y-character.global_position.y,get_global_mouse_position().x-character.global_position.x)
+	if current_state == states[2] and can_dash == false:
+		dash_position = d.position
+		dash_rotation = d.rotation
+		position = dash_position
+		rotation = dash_rotation
+	else:
+		if Input.get_vector("down","up","left","right"):
+			if sqrt(velocity.x**2+velocity.y**2) < max_velocity:
+				character.velocity += Input.get_vector("down","up","left","right").rotated(character.rotation)*speed*delta
+		elif sqrt(velocity.x**2+velocity.y**2)>min_velocity: 
+			character.velocity /= friction
+		else: character.velocity = Vector2.ZERO
+		character.rotation = atan2(get_global_mouse_position().y-character.global_position.y,get_global_mouse_position().x-character.global_position.x)
 
 	move_and_slide()
 
@@ -87,6 +99,7 @@ func _on_dash_kill() -> void:
 	switch_mesh(current_state)
 	switch_ablity(current_state)
 
+
 func shoot():
 	if can_shoot == false:
 		return
@@ -97,12 +110,33 @@ func shoot():
 func smash():
 	if can_smash == false:
 		return
-	
+	can_smash = false
+	smash_timer.start()
+	var bullet = smash_scene.instantiate()
+	get_tree().root.add_child(bullet)
+	bullet.start(position)
+
 
 func dash():
 	if can_dash == false:
 		return
-	
+	dash_timer.start()
+	d = dash_scene.instantiate()
+	get_tree().root.add_child(d)
+	d.start(position)
+	can_dash = false
+
+func _on_dash_timeout() -> void:
+
+	velocity = Vector2.ZERO
+	if d != null:
+		d.queue_free()
+	if current_state == states[2]:
+		can_dash = true
+
+func smash_cooldown() -> void: 
+	if current_state == states[1]:
+		can_smash = true
 
 func _on_Enemy_contact(area: Area2D) -> void:
 	Death()

@@ -1,6 +1,25 @@
 [gd_scene load_steps=7 format=3 uid="uid://bc1dyw233yaa2"]
 
-[ext_resource type="Script" uid="uid://cb46r5a2cgi66" path="res://player,bullet.gd" id="1_3umxu"]
+[sub_resource type="GDScript" id="GDScript_6g606"]
+script/source = "extends Area2D
+
+@export var speed = 333
+var line_of_fire
+func start(pos):
+	position = pos
+	line_of_fire = atan2(get_global_mouse_position().y-global_position.y,get_global_mouse_position().x-global_position.x)
+	rotation = atan2(get_global_mouse_position().y-global_position.y,get_global_mouse_position().x-global_position.x)-90
+
+func _process(delta):
+	position += Vector2(1,0).rotated(line_of_fire)*speed*delta
+
+
+func _on_enemy(area: Area2D) -> void:
+	queue_free()
+
+func _on_visible_on_screen_notifier_2d_screen_exited():
+	queue_free()
+"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6g606"]
 radius = 1.0
@@ -23,7 +42,7 @@ seamless_blend_skirt = 0.394
 [node name="Bullet" type="Area2D"]
 collision_layer = 8
 collision_mask = 6
-script = ExtResource("1_3umxu")
+script = SubResource("GDScript_6g606")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6g606")
