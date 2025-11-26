@@ -138,7 +138,14 @@ func smash_cooldown() -> void:
 	if current_state == states[1]:
 		can_smash = true
 
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if current_state == states[2] and can_dash == false:
+		return
+	Death()
+
 func _on_Enemy_contact(area: Area2D) -> void:
+	if current_state == states[2] and can_dash == false:
+		return
 	Death()
 
 func Death():
