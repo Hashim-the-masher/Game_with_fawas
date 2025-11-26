@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://dyv0earpf0pyp"]
+[gd_scene load_steps=8 format=4 uid="uid://dyv0earpf0pyp"]
 
 [ext_resource type="PackedScene" uid="uid://c4uv6fisup5fn" path="res://Player character.tscn" id="1_80c3a"]
 [ext_resource type="Texture2D" uid="uid://4wkwkxtu4e0c" path="res://Map.jpg" id="2_d17em"]
 [ext_resource type="PackedScene" uid="uid://dc8br0tfcp4pa" path="res://Dash enemy.tscn" id="3_46faf"]
 [ext_resource type="PackedScene" uid="uid://c40canctt3jv8" path="res://Smash enemy.tscn" id="4_threo"]
+[ext_resource type="PackedScene" uid="uid://dfi00lor8lwr0" path="res://Smash(able) tiles.tscn" id="5_threo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_46faf"]
 texture = ExtResource("2_d17em")
@@ -62,6 +63,9 @@ position = Vector2(-161, -67)
 
 [node name="smash" parent="." instance=ExtResource("4_threo")]
 position = Vector2(-38, -92)
+
+[node name="Breakables" parent="." instance=ExtResource("5_threo")]
+position = Vector2(9, -52)
 
 [connection signal="kill" from="dash" to="player" method="_on_dash_kill"]
 [connection signal="kill" from="smash" to="player" method="_on_smash_kill"]
