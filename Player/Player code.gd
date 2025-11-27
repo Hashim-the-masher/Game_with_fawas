@@ -6,6 +6,7 @@ var zoom = 3.1
 @export var max_velocity:float = 250
 @export var min_velocity:float = 0.1
 var current_state:StringName
+@onready var area: Area2D = $Area2D
 @onready var character: CharacterBody2D = $"."
 @onready var camera: Camera2D = $Camera2D
 var friction:float = 1.01
@@ -74,6 +75,8 @@ func switch_ablity(state:StringName):
 
 func _physics_process(delta: float) -> void:
 	if current_state == states[2] and can_dash == false:
+		area.set_collision_mask_value(3,false)
+		area.set_collision_mask_value(8,false)
 		dash_position = d.position
 		dash_rotation = d.rotation
 		position = dash_position
@@ -129,8 +132,6 @@ func dash():
 
 
 func _on_Enemy_contact(area: Area2D) -> void:
-	if current_state == states[2] and can_dash == false:
-		return
 	Death()
 
 func Death():
@@ -144,6 +145,8 @@ func _on_dash_timeout() -> void:
 		d.queue_free()
 	if current_state == states[2]:
 		can_dash = true
+		area.set_collision_mask_value(3,true)
+		area.set_collision_mask_value(8,true)
 
 
 func smash_cooldown() -> void: 
