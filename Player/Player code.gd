@@ -145,8 +145,8 @@ func _on_dash_timeout() -> void:
 		d.queue_free()
 	if current_state == states[2]:
 		can_dash = true
-		area.set_collision_mask_value(3,true)
-		area.set_collision_mask_value(8,true)
+	area.set_collision_mask_value(3,true)
+	area.set_collision_mask_value(8,true)
 
 
 func smash_cooldown() -> void: 
