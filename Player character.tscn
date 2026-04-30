@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://c4uv6fisup5fn"]
 
-[ext_resource type="Script" uid="uid://c1yq5e3ldovvc" path="res://Player/Player code.gd" id="1_h07og"]
+[ext_resource type="Script" uid="uid://c1yq5e3ldovvc" path="res://Player code.gd" id="1_h07og"]
 [ext_resource type="Texture2D" uid="uid://doisbhxhnuw30" path="res://Black colour.tres" id="2_xwma6"]
 [ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Red colour.tres" id="3_nif78"]
 

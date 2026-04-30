@@ -10,7 +10,8 @@ var current_state:StringName
 @onready var HitBox: Area2D = $Area2D
 @onready var camera: Camera2D = $Camera2D
 
-var friction:float = 1.1
+@export var friction:float = 1.01
+@export var stopping_friction:float = 1.1
 var d
 @export var cooldown = 0.25
 var bullet_scene : PackedScene =preload("uid://bc1dyw233yaa2")
@@ -85,8 +86,9 @@ func _physics_process(delta: float) -> void:
 		if Input.get_vector("down","up","left","right"):
 			if sqrt(velocity.x**2+velocity.y**2) < max_velocity:
 				character.velocity += Input.get_vector("down","up","left","right").rotated(character.rotation)*speed*delta
+				character.velocity /= friction
 		elif sqrt(velocity.x**2+velocity.y**2)>min_velocity: 
-			character.velocity /= friction
+			character.velocity /= stopping_friction
 		else: character.velocity = Vector2.ZERO
 		character.rotation = atan2(get_global_mouse_position().y-character.global_position.y,get_global_mouse_position().x-character.global_position.x)
 
