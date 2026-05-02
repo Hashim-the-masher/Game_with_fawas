@@ -1,6 +1,7 @@
 extends Area2D
 
 @export var speed = 333
+
 var line_of_fire
 func start(pos):
 	position = pos

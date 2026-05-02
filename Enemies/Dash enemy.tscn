@@ -1,7 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://dc8br0tfcp4pa"]
+[gd_scene format=3 uid="uid://dc8br0tfcp4pa"]
 
 [ext_resource type="Texture2D" uid="uid://doisbhxhnuw30" path="res://Black colour.tres" id="1_00obo"]
-[ext_resource type="Script" uid="uid://dvcveb2dufu30" path="res://Enemies/dash_enemy.gd" id="1_xk3ga"]
+
+[sub_resource type="GDScript" id="GDScript_tfsms"]
+script/source = "extends CharacterBody2D
+
+signal kill
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	kill.emit()
+	queue_free()
+"
 
 [sub_resource type="PrismMesh" id="PrismMesh_xk3ga"]
 
@@ -11,28 +19,28 @@ radius = 10.049875
 [sub_resource type="CircleShape2D" id="CircleShape2D_00obo"]
 radius = 5.0
 
-[node name="dash" type="CharacterBody2D"]
+[node name="dash" type="CharacterBody2D" unique_id=1750941581]
 collision_layer = 4
 collision_mask = 7
-script = ExtResource("1_xk3ga")
+script = SubResource("GDScript_tfsms")
 
-[node name="Dash state" type="Node2D" parent="."]
+[node name="Dash state" type="Node2D" parent="." unique_id=1238788509]
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="Dash state"]
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Dash state" unique_id=1008312891]
 position = Vector2(2.6508234, -5.364418e-07)
 rotation = -1.5707964
 scale = Vector2(18.122608, 14.674477)
 mesh = SubResource("PrismMesh_xk3ga")
 texture = ExtResource("1_00obo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=119338462]
 shape = SubResource("CircleShape2D_rxndd")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=165873883]
 collision_layer = 4
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1348034248]
 shape = SubResource("CircleShape2D_00obo")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

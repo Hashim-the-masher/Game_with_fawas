@@ -1,11 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://c4uv6fisup5fn"]
+[gd_scene format=3 uid="uid://c4uv6fisup5fn"]
 
 [ext_resource type="Script" uid="uid://c1yq5e3ldovvc" path="res://Player/Player code.gd" id="1_h07og"]
-[ext_resource type="PackedScene" uid="uid://bc1dyw233yaa2" path="res://Player/Player bullets/player,bullet.tscn" id="2_nif78"]
+[ext_resource type="PackedScene" uid="uid://bc1dyw233yaa2" path="res://Player bullets/player,bullet.tscn" id="2_nif78"]
 [ext_resource type="Texture2D" uid="uid://doisbhxhnuw30" path="res://Black colour.tres" id="2_xwma6"]
 [ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Red colour.tres" id="3_nif78"]
-[ext_resource type="PackedScene" uid="uid://dj6l43tiggqsb" path="res://Player/Player bullets/player,smash.tscn" id="3_q4kn3"]
-[ext_resource type="PackedScene" uid="uid://dum66niw41wlj" path="res://Player/Player bullets/player,dash.tscn" id="4_vdagh"]
+[ext_resource type="PackedScene" uid="uid://dj6l43tiggqsb" path="res://Player bullets/player,smash.tscn" id="3_q4kn3"]
+[ext_resource type="PackedScene" uid="uid://dum66niw41wlj" path="res://Player bullets/player,dash.tscn" id="4_vdagh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_se0j5"]
 radius = 10.049875

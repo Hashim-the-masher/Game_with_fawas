@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dfi00lor8lwr0"]
+
+[ext_resource type="Script" uid="uid://dh4uqixxef3x7" path="res://Special tiles/smash(able)_tiles.gd" id="1_dy50x"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_04h8d"]
+
+[sub_resource type="Gradient" id="Gradient_dy50x"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mw3pq"]
+gradient = SubResource("Gradient_dy50x")
+fill_from = Vector2(0.9626168, 0.023364486)
+repeat = 1
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oxmi"]
+
+[node name="Breakables" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 29
+script = ExtResource("1_dy50x")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+scale = Vector2(20, 20)
+mesh = SubResource("QuadMesh_04h8d")
+texture = SubResource("GradientTexture2D_mw3pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_2oxmi")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_2oxmi")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

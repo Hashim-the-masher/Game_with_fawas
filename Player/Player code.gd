@@ -4,7 +4,7 @@ extends CharacterBody2D
 var zoom = 3.1
 @export var speed:float = 150
 @export var max_velocity:float = 250
-@export var min_velocity:float = 0.1
+@export var min_velocity:float = 0.1  
 var current_state:StringName
 @onready var area: Area2D = $Area2D
 @onready var character: CharacterBody2D = $"."
@@ -13,19 +13,14 @@ var friction:float = 1.01
 var breaking_friction:float = 1.1
 var d
 @export var cooldown = 0.25
-var bullet_scene : PackedScene =preload("uid://bc1dyw233yaa2")
-var smash_scene : PackedScene=preload("uid://dj6l43tiggqsb")
-var dash_scene : PackedScene=preload("uid://dum66niw41wlj")
-var can_shoot = true
-var can_smash = false
-var can_dash = false
+
+@onready var bullet_scenes = {"bullet":preload("res://Player bullets/player,bullet.tscn"),"smash":preload("res://Player bullets/player,smash.tscn"),"dash":preload("res://Player bullets/player,dash.tscn")}
+var flags = {"dash":false,"smash":false,"shoot":true}
 var dash_position
 var dash_rotation
 @onready var meshes = $"Mesh(es)"
 var states = {0:"Normal state",1:"Smash state",2:"Dash state"}
-@onready var dash_timer: Timer = $Timer
-@onready var smash_timer: Timer = $Timer2
-
+@onready var timers = {"smash":$Timer2,"dash":$Timer}
 
 func _ready() -> void:
 	current_state = states[0]
@@ -59,28 +54,35 @@ func switch_mesh(state:StringName):
 			print(states[num],"hidden")
 
 func switch_ablity(state:StringName):
-	if state == states[0]:
-		can_shoot = true
-		can_smash = false
-		can_dash = false
-	elif state == states[1]:
-		can_shoot = false
-		can_smash = true
-		can_dash = false
-	elif state == states[2]:
-		can_shoot = false
-		can_smash = false
-		can_dash = true
-	else: get_tree().change_scene_to_file("res://Death screen.tscn")
+	match state:
+		"Normal state":
+			flags["shoot"] = true
+			flags["smash"] = false
+			flags["dash"] = false
+			return
+		"Smash state":
+			flags["shoot"] = false
+			flags["smash"] = true
+			flags["dash"] = false
+			return
+		"Dash state":
+			flags["shoot"] = false
+			flags["smash"] = false
+			flags["dash"] = true
+			return
+	get_tree().change_scene_to_file("res://Death screen.tscn")
 
 func _physics_process(delta: float) -> void:
-	if current_state == states[2] and can_dash == false:
-		area.set_collision_mask_value(3,false)
-		area.set_collision_mask_value(8,false)
-		dash_position = d.position
-		dash_rotation = d.rotation
-		position = dash_position
-		rotation = dash_rotation
+	if current_state == states[2] and flags["dash"] == false:
+		if d != null:
+			area.set_collision_mask_value(3,false)
+			area.set_collision_mask_value(8,false)
+			dash_position = d.position
+			dash_rotation = d.rotation
+			position = dash_position
+			rotation = dash_rotation
+		else:
+			_on_dash_timeout()
 	else:
 		if Input.get_vector("down","up","left","right"):
 			if sqrt(velocity.x**2+velocity.y**2) < max_velocity:
@@ -105,30 +107,30 @@ func _on_dash_kill() -> void:
 	switch_ablity(current_state)
 
 func shoot():
-	if can_shoot == false:
+	if flags["shoot"] == false:
 		return
-	var bullet = bullet_scene.instantiate()
+	var bullet = bullet_scenes["bullet"].instantiate()
 	get_tree().root.add_child(bullet)
 	bullet.start(position)
 
 func smash():
-	if can_smash == false:
+	if flags["smash"] == false:
 		return
-	can_smash = false
-	smash_timer.start()
-	var bullet = smash_scene.instantiate()
+	flags["smash"] = false
+	timers["smash"].start()
+	var bullet = bullet_scenes["smash"].instantiate()
 	get_tree().root.add_child(bullet)
 	bullet.start(position)
 
 
 func dash():
-	if can_dash == false:
+	if flags["dash"] == false:
 		return
-	dash_timer.start()
-	d = dash_scene.instantiate()
+	timers["dash"].start()
+	d = bullet_scenes["dash"].instantiate()
 	get_tree().root.add_child(d)
 	d.start(position)
-	can_dash = false
+	flags["dash"] = false
 
 
 func _on_Enemy_contact(area: Area2D) -> void:
@@ -137,20 +139,19 @@ func _on_Enemy_contact(area: Area2D) -> void:
 func Death():
 	get_tree().change_scene_to_file("res://Death screen.tscn")
 
-
 func _on_dash_timeout() -> void:
 
 	velocity = Vector2.ZERO
 	if d != null:
 		d.queue_free()
 	if current_state == states[2]:
-		can_dash = true
+		flags["dash"] = true
 	area.set_collision_mask_value(3,true)
 	area.set_collision_mask_value(8,true)
 
 
 func smash_cooldown() -> void: 
 	if current_state == states[1]:
-		can_smash = true
+		flags["smash"] = true
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	Death()
