@@ -1,13 +1,14 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1777725168
-Black colour.tres::CurveXYZTexture::8159515979238121401::1777722135::0::1::::<><><>0<>0<><>::
+::res://::1777790480
+Black colour.tres::CurveXYZTexture::8159515979238121401::1777725517::0::1::::<><><>0<>0<><>::
 Death screen.tscn::PackedScene::2314324198914443454::1777576610::0::1::::<><><>0<>0<><>::uid://pgv1oq60gvww::::res://death_screen.gd
 death_screen.gd::GDScript::1066541170070407542::1777576610::0::1::::<>Control<><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1777576610::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5278408587739377647::1777576610::1777719881::1::::<><><>0<>0<>33304827e6ef570635026b2057dce823<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 Map.jpg::CompressedTexture2D::2081539795140974636::1777576610::1777719881::1::::<><><>0<>0<>d6cd6a79a44b41f7efe8a2e14982a8fd<>res://.godot/imported/Map.jpg-10e1fe4a98b89006b21f994f3593be27.ctex::
-Playground.tscn::PackedScene::8888671326173005747::1777725114::0::1::::<><><>0<>0<><>::uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://damm3o3i00uqa::::res://You_win.gd<>uid://4wkwkxtu4e0c::::res://Map.jpg<>uid://dc8br0tfcp4pa::::res://Enemies/Dash enemy.tscn<>uid://c40canctt3jv8::::res://Enemies/Smash enemy.tscn<>uid://dfi00lor8lwr0::::res://Special tiles/Smash(able) tiles.tscn
-Red colour.tres::CurveXYZTexture::4194766768480230310::1777725114::0::1::::<><><>0<>0<><>::
+Map.png::CompressedTexture2D::1542929626586489947::1777790480::1777790489::1::::<><><>0<>0<>d520cbbefd22bf18906841fec4be6a6b<>res://.godot/imported/Map.png-102a787702bb79280fe9137f394f2318.ctex::
+Playground.tscn::PackedScene::8888671326173005747::1777738027::0::1::::<><><>0<>0<><>::uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://damm3o3i00uqa::::res://You_win.gd<>uid://4wkwkxtu4e0c::::res://Map.jpg<>uid://dc8br0tfcp4pa::::res://Enemies/Dash enemy.tscn<>uid://c40canctt3jv8::::res://Enemies/Smash enemy.tscn<>uid://dfi00lor8lwr0::::res://Special tiles/Smash(able) tiles.tscn
+Red colour.tres::CurveXYZTexture::4194766768480230310::1777725517::0::1::::<><><>0<>0<><>::
 Win_effects.gd::GDScript::6490184480069237477::1777576610::0::1::::<>Control<><>0<>0<><>::
 You_win.gd::GDScript::7184813969249878856::1777576610::0::1::::<>Node2D<><>0<>0<><>::
 You_win.tscn::PackedScene::4742611249319589752::1777576610::0::1::::<><><>0<>0<><>::uid://cyp5nja2n8xgf::::res://Win_effects.gd
@@ -16,9 +17,9 @@ Dash enemy.tscn::PackedScene::7367856622394001130::1777723522::0::1::::<><><>0<>
 dash_enemy.gd::GDScript::8638638817406141097::1777576610::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Smash enemy.tscn::PackedScene::6860049397509104383::1777576610::0::1::::<><><>0<>0<><>::uid://lfo2fdips0cg::::res://Enemies/smash_enemy.gd<>uid://b008gwmi84u4e::::res://Red colour.tres
 smash_enemy.gd::GDScript::783297690758246638::1777576610::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://Player/::1777724697
+::res://Player/::1777725694
 Player character.tscn::PackedScene::6850936080249859111::1777724521::0::1::::<><><>0<>0<><>::uid://c1yq5e3ldovvc::::res://Player/Player code.gd<>uid://bc1dyw233yaa2::::res://Player bullets/player,bullet.tscn<>uid://doisbhxhnuw30::::res://Black colour.tres<>uid://b008gwmi84u4e::::res://Red colour.tres<>uid://dj6l43tiggqsb::::res://Player bullets/player,smash.tscn<>uid://dum66niw41wlj::::res://Player bullets/player,dash.tscn
-Player code.gd::GDScript::6648321667626187168::1777724697::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Player code.gd::GDScript::6648321667626187168::1777725694::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://Player bullets/::1777723060
 player,bullet.gd::GDScript::4904811328094291213::1777576610::0::1::::<>Area2D<><>0<>0<><>::
 player,bullet.tscn::PackedScene::2580698401140711899::1777576610::0::1::::<><><>0<>0<><>::uid://cb46r5a2cgi66::::res://Player/Player bullets/player,bullet.gd

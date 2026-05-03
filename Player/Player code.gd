@@ -9,7 +9,7 @@ var current_state:StringName
 @onready var area: Area2D = $Area2D
 @onready var character: CharacterBody2D = $"."
 @onready var camera: Camera2D = $Camera2D
-var friction:float = 1.01
+var friction:float = 1.03
 var breaking_friction:float = 1.1
 var d
 @export var cooldown = 0.25
@@ -39,8 +39,6 @@ func _input(event: InputEvent) -> void:
 			camera.zoom.y = zoom
 	if event.is_action("Shoot"):
 		shoot()
-		dash()
-		smash()
 
 
 
@@ -81,6 +79,7 @@ func _physics_process(delta: float) -> void:
 			dash_rotation = d.rotation
 			position = dash_position
 			rotation = dash_rotation
+			
 		else:
 			_on_dash_timeout()
 	else:
@@ -107,30 +106,23 @@ func _on_dash_kill() -> void:
 	switch_ablity(current_state)
 
 func shoot():
-	if flags["shoot"] == false:
-		return
-	var bullet = bullet_scenes["bullet"].instantiate()
-	get_tree().root.add_child(bullet)
-	bullet.start(position)
-
-func smash():
-	if flags["smash"] == false:
-		return
-	flags["smash"] = false
-	timers["smash"].start()
-	var bullet = bullet_scenes["smash"].instantiate()
-	get_tree().root.add_child(bullet)
-	bullet.start(position)
-
-
-func dash():
-	if flags["dash"] == false:
-		return
-	timers["dash"].start()
-	d = bullet_scenes["dash"].instantiate()
-	get_tree().root.add_child(d)
-	d.start(position)
-	flags["dash"] = false
+	if flags["shoot"] == true:
+		var bullet = bullet_scenes["bullet"].instantiate()
+		get_tree().root.add_child(bullet)
+		bullet.start(position)
+	elif flags["smash"] == true:
+		flags["smash"] = false
+		timers["smash"].start()
+		var bullet = bullet_scenes["smash"].instantiate()
+		get_tree().root.add_child(bullet)
+		bullet.start(position)
+	elif flags["dash"] == true:
+		timers["dash"].start()
+		d = bullet_scenes["dash"].instantiate()
+		get_tree().root.add_child(d)
+		d.start(position)
+		flags["dash"] = false
+	else: return
 
 
 func _on_Enemy_contact(area: Area2D) -> void:
