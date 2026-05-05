@@ -1,6 +1,32 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763750946
-icon.svg::CompressedTexture2D::7258918020731614716::1763749469::1763750711::1::::<><><>0<>0<>ff4ba415466570515fa0287dd5550851<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-Playground.tscn::PackedScene::8888671326173005747::1763750946::0::1::::<><><>0<>0<><>::
-character_body_2d.gd::GDScript::6648321667626187168::1763751655::0::1::::<>CharacterBody2D<><>0<>0<><>::
-Player character.tscn::PackedScene::6850936080249859111::1763751687::0::1::::<><><>0<>0<><>::uid://c1yq5e3ldovvc::::res://character_body_2d.gd
+::res://::1777790480
+Black colour.tres::CurveXYZTexture::8159515979238121401::1777725517::0::1::::<><><>0<>0<><>::
+Death screen.tscn::PackedScene::2314324198914443454::1777576610::0::1::::<><><>0<>0<><>::uid://pgv1oq60gvww::::res://death_screen.gd
+death_screen.gd::GDScript::1066541170070407542::1777576610::0::1::::<>Control<><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1777576610::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::5278408587739377647::1777576610::1777719881::1::::<><><>0<>0<>33304827e6ef570635026b2057dce823<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+Map.jpg::CompressedTexture2D::2081539795140974636::1777576610::1777719881::1::::<><><>0<>0<>d6cd6a79a44b41f7efe8a2e14982a8fd<>res://.godot/imported/Map.jpg-10e1fe4a98b89006b21f994f3593be27.ctex::
+Map.png::CompressedTexture2D::1542929626586489947::1777790480::1777790489::1::::<><><>0<>0<>d520cbbefd22bf18906841fec4be6a6b<>res://.godot/imported/Map.png-102a787702bb79280fe9137f394f2318.ctex::
+Playground.tscn::PackedScene::8888671326173005747::1777738027::0::1::::<><><>0<>0<><>::uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://damm3o3i00uqa::::res://You_win.gd<>uid://4wkwkxtu4e0c::::res://Map.jpg<>uid://dc8br0tfcp4pa::::res://Enemies/Dash enemy.tscn<>uid://c40canctt3jv8::::res://Enemies/Smash enemy.tscn<>uid://dfi00lor8lwr0::::res://Special tiles/Smash(able) tiles.tscn
+Red colour.tres::CurveXYZTexture::4194766768480230310::1777725517::0::1::::<><><>0<>0<><>::
+Win_effects.gd::GDScript::6490184480069237477::1777576610::0::1::::<>Control<><>0<>0<><>::
+You_win.gd::GDScript::7184813969249878856::1777576610::0::1::::<>Node2D<><>0<>0<><>::
+You_win.tscn::PackedScene::4742611249319589752::1777576610::0::1::::<><><>0<>0<><>::uid://cyp5nja2n8xgf::::res://Win_effects.gd
+::res://Enemies/::1777723522
+Dash enemy.tscn::PackedScene::7367856622394001130::1777723522::0::1::::<><><>0<>0<><>::uid://doisbhxhnuw30::::res://Black colour.tres
+dash_enemy.gd::GDScript::8638638817406141097::1777576610::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Smash enemy.tscn::PackedScene::6860049397509104383::1777576610::0::1::::<><><>0<>0<><>::uid://lfo2fdips0cg::::res://Enemies/smash_enemy.gd<>uid://b008gwmi84u4e::::res://Red colour.tres
+smash_enemy.gd::GDScript::783297690758246638::1777576610::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Player/::1777725694
+Player character.tscn::PackedScene::6850936080249859111::1777724521::0::1::::<><><>0<>0<><>::uid://c1yq5e3ldovvc::::res://Player/Player code.gd<>uid://bc1dyw233yaa2::::res://Player bullets/player,bullet.tscn<>uid://doisbhxhnuw30::::res://Black colour.tres<>uid://b008gwmi84u4e::::res://Red colour.tres<>uid://dj6l43tiggqsb::::res://Player bullets/player,smash.tscn<>uid://dum66niw41wlj::::res://Player bullets/player,dash.tscn
+Player code.gd::GDScript::6648321667626187168::1777725694::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://Player bullets/::1777723060
+player,bullet.gd::GDScript::4904811328094291213::1777576610::0::1::::<>Area2D<><>0<>0<><>::
+player,bullet.tscn::PackedScene::2580698401140711899::1777576610::0::1::::<><><>0<>0<><>::uid://cb46r5a2cgi66::::res://Player/Player bullets/player,bullet.gd
+player,dash.gd::GDScript::6448787388034410685::1777722895::0::1::::<>Area2D<><>0<>0<><>::
+player,dash.tscn::PackedScene::8589749739476848311::1777723060::0::1::::<><><>0<>0<><>::uid://cx43t6sei8leb::::res://Player bullets/player,dash.gd<>uid://doisbhxhnuw30::::res://Black colour.tres
+player,smash.gd::GDScript::7001203502172949016::1777576610::0::1::::<>Area2D<><>0<>0<><>::
+player,smash.tscn::PackedScene::7855678529517965045::1777576610::0::1::::<><><>0<>0<><>::uid://c60o2fnyyjbtg::::res://Player/Player bullets/player,smash.gd
+::res://Special tiles/::1777724610
+Smash(able) tiles.tscn::PackedScene::7528284461169800379::1777724610::0::1::::<><><>0<>0<><>::uid://dh4uqixxef3x7::::res://Special tiles/smash(able)_tiles.gd
+smash(able)_tiles.gd::GDScript::7711694280738963494::1777576610::0::1::::<>StaticBody2D<><>0<>0<><>::
