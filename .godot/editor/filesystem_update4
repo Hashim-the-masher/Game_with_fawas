@@ -10,3 +10,4 @@ res://Menus/settings.gd
 res://savedata.json
 res://Assets/Textures/UI_settings_hidden.tres
 res://Assets/Textures/UI_settings_selected.tres
+res://Player/Player character.tscn
