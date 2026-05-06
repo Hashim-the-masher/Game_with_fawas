@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://c4uv6fisup5fn"]
 
 [ext_resource type="Script" uid="uid://c1yq5e3ldovvc" path="res://Player/Player code.gd" id="1_h07og"]
-[ext_resource type="PackedScene" uid="uid://bc1dyw233yaa2" path="res://Player bullets/player,bullet.tscn" id="2_nif78"]
-[ext_resource type="Texture2D" uid="uid://doisbhxhnuw30" path="res://Black colour.tres" id="2_xwma6"]
-[ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Red colour.tres" id="3_nif78"]
-[ext_resource type="PackedScene" uid="uid://dj6l43tiggqsb" path="res://Player bullets/player,smash.tscn" id="3_q4kn3"]
-[ext_resource type="PackedScene" uid="uid://dum66niw41wlj" path="res://Player bullets/player,dash.tscn" id="4_vdagh"]
+[ext_resource type="Texture2D" uid="uid://doisbhxhnuw30" path="res://Assets/Textures/Black colour.tres" id="2_xwma6"]
+[ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Assets/Textures/Red colour.tres" id="3_nif78"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_se0j5"]
 radius = 10.049875
@@ -28,83 +25,84 @@ fill_from = Vector2(0.751, 0.64)
 [sub_resource type="CircleShape2D" id="CircleShape2D_xwma6"]
 radius = 8.0
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" unique_id=768464723]
+scale = Vector2(3, 3)
 collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_h07og")
-bullet_scene = ExtResource("2_nif78")
-smash_scene = ExtResource("3_q4kn3")
-dash_scene = ExtResource("4_vdagh")
+max_zoom = 1.0
+min_zoom = 1.0
+speed = 300.0
+max_velocity = 750.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1000197918]
 shape = SubResource("CircleShape2D_se0j5")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3.1, 3.1)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=359090127]
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 rotation_smoothing_enabled = true
 
-[node name="Mesh(es)" type="Node2D" parent="."]
+[node name="Mesh(es)" type="Node2D" parent="." unique_id=1932649665]
 
-[node name="Normal state" type="Node2D" parent="Mesh(es)"]
+[node name="Normal state" type="Node2D" parent="Mesh(es)" unique_id=318106322]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Mesh(es)/Normal state"]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Mesh(es)/Normal state" unique_id=1181792956]
 position = Vector2(0, 1.9073486e-06)
 scale = Vector2(20, 19.977)
 mesh = SubResource("SphereMesh_xwma6")
 texture = SubResource("GradientTexture2D_q4kn3")
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="Mesh(es)/Normal state"]
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Mesh(es)/Normal state" unique_id=750730891]
 position = Vector2(-1, 0)
 scale = Vector2(16, 1)
 mesh = SubResource("QuadMesh_vdagh")
 texture = ExtResource("2_xwma6")
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="Mesh(es)/Normal state"]
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Mesh(es)/Normal state" unique_id=142858858]
 position = Vector2(8.355841, -1.5554292e-08)
 rotation = -1.5707964
 scale = Vector2(4.000001, 3.2644424)
 mesh = SubResource("PrismMesh_3rftl")
 texture = ExtResource("2_xwma6")
 
-[node name="Smash state" type="Node2D" parent="Mesh(es)"]
+[node name="Smash state" type="Node2D" parent="Mesh(es)" unique_id=134766881]
 visible = false
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="Mesh(es)/Smash state"]
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Mesh(es)/Smash state" unique_id=661336505]
 position = Vector2(-1.5, 0)
 scale = Vector2(17, 20)
 mesh = SubResource("QuadMesh_vdagh")
 texture = ExtResource("3_nif78")
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="Mesh(es)/Smash state"]
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Mesh(es)/Smash state" unique_id=633473532]
 position = Vector2(8.485012, -0.064583786)
 rotation = -1.5707964
 scale = Vector2(20.060163, 3.0061002)
 mesh = SubResource("PrismMesh_3rftl")
 texture = ExtResource("3_nif78")
 
-[node name="Dash state" type="Node2D" parent="Mesh(es)"]
+[node name="Dash state" type="Node2D" parent="Mesh(es)" unique_id=424314427]
 visible = false
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="Mesh(es)/Dash state"]
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Mesh(es)/Dash state" unique_id=580471045]
 position = Vector2(2.6508234, -5.364418e-07)
 rotation = -1.5707964
 scale = Vector2(18.122608, 14.674477)
 mesh = SubResource("PrismMesh_3rftl")
 texture = ExtResource("2_xwma6")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1797415178]
 collision_mask = 212
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1833777459]
 shape = SubResource("CircleShape2D_xwma6")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1705794473]
 wait_time = 0.2
 one_shot = true
 
-[node name="Timer2" type="Timer" parent="."]
+[node name="Timer2" type="Timer" parent="." unique_id=735788169]
 wait_time = 0.5
 one_shot = true
 

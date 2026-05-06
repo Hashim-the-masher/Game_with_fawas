@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://78ct1eqw08ic"]
+[gd_scene format=3 uid="uid://78ct1eqw08ic"]
 
-[ext_resource type="Script" uid="uid://pgv1oq60gvww" path="res://death_screen.gd" id="1_hjv52"]
+[ext_resource type="Script" uid="uid://pgv1oq60gvww" path="res://Effects/Screen effects/death_screen.gd" id="1_hjv52"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hjv52"]
 font_color = Color(1, 0, 0, 1)

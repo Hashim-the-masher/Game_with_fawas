@@ -13,24 +13,25 @@ repeat = 1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2oxmi"]
 
-[node name="Breakables" type="StaticBody2D"]
+[node name="Breakables" type="StaticBody2D" unique_id=362770151]
+scale = Vector2(3, 3)
 collision_layer = 2
 collision_mask = 29
 script = ExtResource("1_dy50x")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1802397566]
 scale = Vector2(20, 20)
 mesh = SubResource("QuadMesh_04h8d")
 texture = SubResource("GradientTexture2D_mw3pq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1079662875]
 shape = SubResource("RectangleShape2D_2oxmi")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=256332325]
 collision_layer = 2
 collision_mask = 32
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=253323634]
 shape = SubResource("RectangleShape2D_2oxmi")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

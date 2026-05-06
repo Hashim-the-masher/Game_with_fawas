@@ -28,12 +28,12 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action("scroll up"):
-		if zoom < max_zoom:
+		if zoom <= max_zoom:
 			zoom += .1
 			camera.zoom.x = zoom
 			camera.zoom.y = zoom
 	if event.is_action("scroll down"):
-		if zoom > min_zoom:
+		if zoom >= min_zoom:
 			zoom -= .1
 			camera.zoom.x = zoom
 			camera.zoom.y = zoom
@@ -68,7 +68,7 @@ func switch_ablity(state:StringName):
 			flags["smash"] = false
 			flags["dash"] = true
 			return
-	get_tree().change_scene_to_file("res://Death screen.tscn")
+	Death()
 
 func _physics_process(delta: float) -> void:
 	if current_state == states[2] and flags["dash"] == false:
@@ -129,7 +129,7 @@ func _on_Enemy_contact(area: Area2D) -> void:
 	Death()
 
 func Death():
-	get_tree().change_scene_to_file("res://Death screen.tscn")
+	get_tree().change_scene_to_file("res://Effects/Screen effects/Death screen.tscn")
 
 func _on_dash_timeout() -> void:
 

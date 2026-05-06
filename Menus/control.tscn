@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://cg418vk1chf5k"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lh8nx"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=1629708582]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1529390860]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=732909083]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "The Game With fawas, Kill to get power"
+label_settings = SubResource("LabelSettings_lh8nx")

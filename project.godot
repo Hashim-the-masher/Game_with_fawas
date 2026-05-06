@@ -19,6 +19,12 @@ run/main_scene="uid://dyv0earpf0pyp"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=512
+window/stretch/mode="viewport"
+
 [input]
 
 up={

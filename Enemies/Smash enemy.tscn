@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c40canctt3jv8"]
+[gd_scene format=3 uid="uid://c40canctt3jv8"]
 
 [ext_resource type="Script" uid="uid://lfo2fdips0cg" path="res://Enemies/smash_enemy.gd" id="1_2kmf5"]
-[ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Red colour.tres" id="1_d2lgf"]
+[ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Assets/Textures/Red colour.tres" id="1_d2lgf"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_2kmf5"]
 
@@ -13,34 +13,35 @@ radius = 10.049875
 [sub_resource type="CircleShape2D" id="CircleShape2D_d2lgf"]
 radius = 9.0
 
-[node name="smash" type="CharacterBody2D"]
+[node name="smash" type="CharacterBody2D" unique_id=2132735446]
+scale = Vector2(3, 3)
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_2kmf5")
 
-[node name="Smash state" type="Node2D" parent="."]
+[node name="Smash state" type="Node2D" parent="." unique_id=540779467]
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="Smash state"]
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Smash state" unique_id=515362287]
 position = Vector2(-1.5, 0)
 scale = Vector2(17, 20)
 mesh = SubResource("QuadMesh_2kmf5")
 texture = ExtResource("1_d2lgf")
 
-[node name="MeshInstance2D3" type="MeshInstance2D" parent="Smash state"]
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Smash state" unique_id=47880711]
 position = Vector2(8.485012, -0.064583786)
 rotation = -1.5707964
 scale = Vector2(20.060163, 3.0061002)
 mesh = SubResource("PrismMesh_i47nt")
 texture = ExtResource("1_d2lgf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1750509215]
 shape = SubResource("CircleShape2D_u11kl")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=841924189]
 collision_layer = 4
 collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1267277425]
 shape = SubResource("CircleShape2D_d2lgf")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
