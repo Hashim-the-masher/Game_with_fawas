@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://b5pijvb5s1ujn"]
+
+[ext_resource type="FontFile" uid="uid://bffuiwh7227js" path="res://Assets/fonts/UbuntuSans[wdth,wght].ttf" id="1_rhab0"]
+
+[resource]
+font = ExtResource("1_rhab0")
+font_size = 64
+font_color = Color(0, 0, 0, 1)

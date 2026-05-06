@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Game with fawas"
-run/main_scene="uid://dyv0earpf0pyp"
+run/main_scene="uid://cg418vk1chf5k"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/use_filter=false
 config/icon="res://icon.svg"

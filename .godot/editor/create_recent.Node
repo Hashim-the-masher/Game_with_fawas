@@ -1,3 +1,11 @@
+TextureRect
+TextEdit
+Node2D
+Node
+Control
+VBoxContainer
+HBoxContainer
 Label
+Button
 ColorRect
 TileMapLayer

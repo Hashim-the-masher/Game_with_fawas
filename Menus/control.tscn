@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cg418vk1chf5k"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_lh8nx"]
-font_color = Color(0, 0, 0, 1)
+[ext_resource type="LabelSettings" uid="uid://b5pijvb5s1ujn" path="res://Assets/Textures/UI.tres" id="1_1dxsu"]
+[ext_resource type="Texture2D" uid="uid://dyf64kjp5hdow" path="res://Assets/Textures/arrow.png" id="2_1dxsu"]
 
 [node name="Control" type="Control" unique_id=1629708582]
 layout_mode = 3
@@ -19,9 +19,59 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="." unique_id=732909083]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2083741596]
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 23.0
-text = "The Game With fawas, Kill to get power"
-label_settings = SubResource("LabelSettings_lh8nx")
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=2128584590]
+layout_mode = 2
+
+[node name="Start" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1845538501]
+layout_mode = 2
+text = "Start?"
+label_settings = ExtResource("1_1dxsu")
+
+[node name="Options" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1753880263]
+layout_mode = 2
+text = "Options"
+label_settings = ExtResource("1_1dxsu")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=888538755]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="empty" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=1362687933]
+custom_minimum_size = Vector2(0, 5.18)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="arrow" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=191218695]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer2/arrow" unique_id=247671857]
+layout_mode = 0
+offset_right = 523.0
+offset_bottom = 108.0
+texture = ExtResource("2_1dxsu")
+
+[node name="empty2" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=2014981095]
+custom_minimum_size = Vector2(0, 84.935)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="arrow2" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=1743522057]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer2/arrow2" unique_id=1255549365]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_1dxsu")
+
+[node name="empty3" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=888312752]
+layout_mode = 2
+size_flags_vertical = 3
