@@ -1,11 +1,12 @@
-TextureRect
-TextEdit
-Node2D
-Node
 Control
+TextureRect
 VBoxContainer
 HBoxContainer
 Label
-Button
+OpenXRCompositionLayerEquirect
 ColorRect
+TextEdit
+Node2D
+Node
+Button
 TileMapLayer

@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://cg418vk1chf5k"]
 
-[ext_resource type="LabelSettings" uid="uid://b5pijvb5s1ujn" path="res://Assets/Textures/UI.tres" id="1_1dxsu"]
-[ext_resource type="Texture2D" uid="uid://dyf64kjp5hdow" path="res://Assets/Textures/arrow.png" id="2_1dxsu"]
+[ext_resource type="Script" uid="uid://cx0x758ud34u7" path="res://Menus/Title_screen.gd" id="1_swqdk"]
+[ext_resource type="LabelSettings" uid="uid://dvpvf7wdsrfxi" path="res://Assets/Textures/UI_selected.tres" id="2_hfqrc"]
+[ext_resource type="LabelSettings" uid="uid://b5pijvb5s1ujn" path="res://Assets/Textures/UI.tres" id="3_og6q2"]
+[ext_resource type="Texture2D" uid="uid://dyf64kjp5hdow" path="res://Assets/Textures/arrow.png" id="4_tbroc"]
 
 [node name="Control" type="Control" unique_id=1629708582]
 layout_mode = 3
@@ -10,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_swqdk")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1529390860]
 layout_mode = 1
@@ -29,13 +32,13 @@ layout_mode = 2
 
 [node name="Start" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1845538501]
 layout_mode = 2
-text = "Start?"
-label_settings = ExtResource("1_1dxsu")
+text = "Start"
+label_settings = ExtResource("2_hfqrc")
 
 [node name="Options" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1753880263]
 layout_mode = 2
 text = "Options"
-label_settings = ExtResource("1_1dxsu")
+label_settings = ExtResource("3_og6q2")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=888538755]
 layout_mode = 2
@@ -53,12 +56,13 @@ size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer2/arrow" unique_id=247671857]
 layout_mode = 0
-offset_right = 523.0
-offset_bottom = 108.0
-texture = ExtResource("2_1dxsu")
+offset_right = 320.0
+offset_bottom = 64.0
+texture = ExtResource("4_tbroc")
+expand_mode = 1
 
 [node name="empty2" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=2014981095]
-custom_minimum_size = Vector2(0, 84.935)
+custom_minimum_size = Vector2(0, 81.63)
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -67,10 +71,12 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer2/arrow2" unique_id=1255549365]
+custom_minimum_size = Vector2(320, 64)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("2_1dxsu")
+texture = ExtResource("4_tbroc")
+expand_mode = 1
 
 [node name="empty3" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=888312752]
 layout_mode = 2

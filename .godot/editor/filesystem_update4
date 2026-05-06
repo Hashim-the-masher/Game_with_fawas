@@ -1,8 +1,12 @@
-res://Levels/Playground.tscn
+res://Menus/control.tscn
 res://Assets/Textures/Black colour.tres
 res://Assets/Textures/Red colour.tres
-res://Levels/base.tscn
-res://Levels/level_2.tscn
-res://Levels/level_1.tscn
-res://Menus/control.tscn
-res://Assets/Textures/UI.tres
+res://Assets/Textures/UI_selected.tres
+res://Menus/Title_screen.tscn
+res://Menus/Title_screen.gd
+res://Menus/Settings.tscn
+res://Assets/Textures/UI_settings.tres
+res://Menus/settings.gd
+res://savedata.json
+res://Assets/Textures/UI_settings_hidden.tres
+res://Assets/Textures/UI_settings_selected.tres
