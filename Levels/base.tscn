@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dyv0earpf0pyp"]
 
+[ext_resource type="Script" uid="uid://bo4y332gakbbj" path="res://Levels/level.gd" id="1_k205t"]
 [ext_resource type="Texture2D" uid="uid://v8n3cko3hc2f" path="res://Assets/Textures/Map.png" id="1_nuwgy"]
 [ext_resource type="PackedScene" uid="uid://c4uv6fisup5fn" path="res://Player/Player character.tscn" id="2_k205t"]
 
@@ -44,6 +45,7 @@ physics_layer_2/collision_mask = 5
 sources/0 = SubResource("TileSetAtlasSource_s2wwn")
 
 [node name="Node2D" type="Node2D" unique_id=2137181921]
+script = ExtResource("1_k205t")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1337725415]
 texture_filter = 1
@@ -51,3 +53,13 @@ tile_map_data = PackedByteArray("AAD//wAAAAAEAAAAAAD6/wAAAAAEAAAAAAD8/wEAAAAEAAA
 tile_set = SubResource("TileSet_bia53")
 
 [node name="player" parent="." unique_id=768464723 instance=ExtResource("2_k205t")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=774721971]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1947824267]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

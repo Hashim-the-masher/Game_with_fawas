@@ -4,6 +4,7 @@ extends Control
 @onready var arrow_2: Control = $HBoxContainer/VBoxContainer2/arrow2
 @onready var start: Label = $HBoxContainer/VBoxContainer/Start
 @onready var options: Label = $HBoxContainer/VBoxContainer/Options
+@onready var sure_flag = false
 
 var option_selected:int = 0
 
@@ -21,6 +22,8 @@ func _input(event: InputEvent) -> void:
 		option_selected =1
 		start.label_settings = UI
 		options.label_settings = UI_SELECTED
+		sure_flag = false
+		start.text = "Start"
 		arrow.hide()
 		arrow_2.show()
 	if event.is_action_pressed("up"):
@@ -34,4 +37,9 @@ func _input(event: InputEvent) -> void:
 			1:
 				get_tree().change_scene_to_file("res://Menus/Settings.tscn")
 			0:
-				get_tree().change_scene_to_file("res://Levels/level_1.tscn")
+				match sure_flag:
+					true:
+						get_tree().change_scene_to_file("res://Levels/level_1.tscn")
+					false:
+						sure_flag = true
+						start.text = "You sure?"

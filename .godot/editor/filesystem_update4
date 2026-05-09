@@ -1,13 +1,19 @@
-res://Menus/control.tscn
+res://Enemies/Dash enemy.tscn
 res://Assets/Textures/Black colour.tres
 res://Assets/Textures/Red colour.tres
-res://Assets/Textures/UI_selected.tres
-res://Menus/Title_screen.tscn
-res://Menus/Title_screen.gd
-res://Menus/Settings.tscn
-res://Assets/Textures/UI_settings.tres
-res://Menus/settings.gd
-res://savedata.json
-res://Assets/Textures/UI_settings_hidden.tres
-res://Assets/Textures/UI_settings_selected.tres
+res://Levels/level_3.tscn
+res://Player/Player code.gd
+res://Player bullets/player,bullet.gd
 res://Player/Player character.tscn
+res://Player bullets/player,bullet.tscn
+res://Levels/base.tscn
+res://Levels/level.gd
+res://Levels/level_1.tscn
+res://Levels/level_2.tscn
+res://Player bullets/player,dash.gd
+res://savedata.json
+res://Menus/Title_screen.gd
+res://Special tiles/win_area.gd
+res://Player bullets/Bullet.tscn
+res://Player bullets/player,dash.tscn
+res://Player bullets/smash.gd

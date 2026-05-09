@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://p8v6rpanovbs"]
+
+[ext_resource type="Script" uid="uid://c8rtcq5pgixl3" path="res://Special tiles/win_area.gd" id="1_ff5s2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajewd"]
+
+[node name="Win_area" type="Area2D" unique_id=1385832897]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_ff5s2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2128223449]
+position = Vector2(31.999998, 31.999998)
+scale = Vector2(3.2, 3.2)
+shape = SubResource("RectangleShape2D_ajewd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -30,9 +30,7 @@ scale = Vector2(3, 3)
 collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_h07og")
-max_zoom = 1.0
-min_zoom = 1.0
-speed = 300.0
+speed = 400.0
 max_velocity = 750.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1000197918]
@@ -98,15 +96,21 @@ collision_mask = 212
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1833777459]
 shape = SubResource("CircleShape2D_xwma6")
 
-[node name="Timer" type="Timer" parent="." unique_id=1705794473]
+[node name="dash" type="Timer" parent="." unique_id=1705794473]
 wait_time = 0.2
 one_shot = true
 
-[node name="Timer2" type="Timer" parent="." unique_id=735788169]
+[node name="smash" type="Timer" parent="." unique_id=735788169]
 wait_time = 0.5
 one_shot = true
 
+[node name="shoot" type="Timer" parent="." unique_id=1456680334]
+process_callback = 0
+wait_time = 0.1
+autostart = true
+
 [connection signal="area_entered" from="Area2D" to="." method="_on_Enemy_contact"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="timeout" from="Timer" to="." method="_on_dash_timeout"]
-[connection signal="timeout" from="Timer2" to="." method="smash_cooldown"]
+[connection signal="timeout" from="dash" to="." method="_on_dash_timeout"]
+[connection signal="timeout" from="smash" to="." method="smash_cooldown"]
+[connection signal="timeout" from="shoot" to="." method="_on_shoot_cooldown"]

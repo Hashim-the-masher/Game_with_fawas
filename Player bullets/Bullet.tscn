@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bc1dyw233yaa2"]
+
+[ext_resource type="Script" uid="uid://cb46r5a2cgi66" path="res://Player bullets/Bullet.gd" id="1_dyopk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6g606"]
+radius = 1.0
+height = 4.0
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3umxu"]
+
+[sub_resource type="Gradient" id="Gradient_3umxu"]
+colors = PackedColorArray(0, 1, 0, 1, 1, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_ro7d3"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_do7fw"]
+noise = SubResource("FastNoiseLite_ro7d3")
+color_ramp = SubResource("Gradient_3umxu")
+seamless = true
+in_3d_space = true
+seamless_blend_skirt = 0.394
+
+[node name="Bullet" type="Area2D" unique_id=742534070]
+scale = Vector2(3, 3)
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_dyopk")
+speed = 999
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1239789039]
+shape = SubResource("CapsuleShape2D_6g606")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=297596574]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1865883895]
+mesh = SubResource("CapsuleMesh_3umxu")
+texture = SubResource("NoiseTexture2D_do7fw")
+
+[connection signal="area_entered" from="." to="." method="_on_enemy"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

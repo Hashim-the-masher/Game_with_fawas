@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5vkxxl424041"]
 
-[ext_resource type="Script" uid="uid://b3xtdp2wvmpgt" path="res://Menus/settings.gd" id="1_5jw0b"]
+[ext_resource type="Script" uid="uid://cba64lsqsjpbo" path="res://Menus/settings.gd" id="1_5jw0b"]
 [ext_resource type="LabelSettings" uid="uid://b4ckevhw0xmal" path="res://Assets/Textures/UI_settings.tres" id="1_eklo8"]
 [ext_resource type="LabelSettings" uid="uid://bi6gm77mgn5ao" path="res://Assets/Textures/UI_settings_hidden.tres" id="3_bktsr"]
 [ext_resource type="Texture2D" uid="uid://dyf64kjp5hdow" path="res://Assets/Textures/arrow.png" id="4_y3pb0"]
@@ -12,7 +12,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5jw0b")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1854075011]
 layout_mode = 1
@@ -27,6 +26,7 @@ layout_mode = 1
 offset_right = 145.0
 offset_bottom = 128.0
 alignment = 1
+script = ExtResource("1_5jw0b")
 
 [node name="SliderSettings" type="HBoxContainer" parent="settings" unique_id=1847324486]
 layout_mode = 2

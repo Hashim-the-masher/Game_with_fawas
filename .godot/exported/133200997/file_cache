@@ -1,0 +1,23 @@
+res://Assets/Textures/Black colour.tres::726857886ec5873f7a603f2cc25359dd::1778101997::res://.godot/exported/133200997/export-d5397b6633f3cb50f53275f9a5994e65-Black colour.res
+res://Assets/Textures/Red colour.tres::71f0a9a047b6d18d536cf4eac1810a5b::1778101997::res://.godot/exported/133200997/export-9da0f77303be88c5350f805f4d22ba43-Red colour.res
+res://Assets/Textures/UI.tres::9fa0f7287349bc57707cec75e347edea::1778059686::res://.godot/exported/133200997/export-7e92856783a32e31dfcb47288cb3e5ec-UI.res
+res://Assets/Textures/UI_selected.tres::20da47d69e585b01ba19faae3393ad22::1778084857::res://.godot/exported/133200997/export-cb04687c2d536e2ac30f2792fe9e6800-UI_selected.res
+res://Assets/Textures/UI_settings.tres::a5d953f19de363cc6612d930b7a90b0a::1778095197::res://.godot/exported/133200997/export-dd451fd9fd37a07f0621cd7166bc1741-UI_settings.res
+res://Assets/Textures/UI_settings_hidden.tres::253f3d07c33345d02d3232e2dbd337f8::1778095197::res://.godot/exported/133200997/export-4b3f263a73750103fba8bb0681e6300d-UI_settings_hidden.res
+res://Assets/Textures/UI_settings_selected.tres::6df3e07373a9acb584724b9e647799b4::1778096641::res://.godot/exported/133200997/export-9e90e02744eaa7b3ca29cf58caf1bf56-UI_settings_selected.res
+res://Effects/Screen effects/Death screen.tscn::fde94447ea21fdfd7f0d8b5265d4e3af::1778052986::res://.godot/exported/133200997/export-5c25b4d7a597c10733a3b81886d53768-Death screen.scn
+res://Effects/Screen effects/overlay.tscn::995cd98936bac05b6e61b2391a402240::1777982255::res://.godot/exported/133200997/export-85e53788dd311078621dc4755691f7ec-overlay.scn
+res://Effects/Screen effects/You_win.tscn::c393251c2393d54fee4b173260ab0467::1778052979::res://.godot/exported/133200997/export-b49f47a720284a2ee49e228563b979d7-You_win.scn
+res://Enemies/Dash enemy.tscn::53fb099b76d3d48a1b635dcf04b1bf1d::1778052900::res://.godot/exported/133200997/export-bf317a8d88824ad5802ad8a4fcf0ad1c-Dash enemy.scn
+res://Enemies/Smash enemy.tscn::68fc7b04bf2e2f05963c577a89513ca4::1778052906::res://.godot/exported/133200997/export-81bee7d4bb178d6458a9742642c2b8e3-Smash enemy.scn
+res://Levels/base.tscn::d36418d2bdb7e94db4a785ce3a18c7f9::1778057389::res://.godot/exported/133200997/export-27d3a304d3ae1973b4286e1600695b8a-base.scn
+res://Levels/level_1.tscn::1fdbbdb2c005b4ac2dc166980f5e7482::1778058088::res://.godot/exported/133200997/export-fa9c54ec1f9d41bf90d27046a9bac1a2-level_1.scn
+res://Levels/level_2.tscn::905d573251eef2d70b72d50fd9a0b22e::1778058087::res://.godot/exported/133200997/export-8009157c263a4ecd21ebf2223f1d9cc3-level_2.scn
+res://Menus/Settings.tscn::6bbd95ad29c09badd75de687563dc69c::1778100498::res://.godot/exported/133200997/export-b062e0cced5b8e0ebf5d15ceae091740-Settings.scn
+res://Menus/Title_screen.tscn::f295a4053515e63b09fe405fdd567776::1778095924::res://.godot/exported/133200997/export-92aaf1c75be927f84ca2a9c4c1639d9d-Title_screen.scn
+res://Player/Player character.tscn::488f6bf05169bdc8203dd1ac053b9898::1778101998::res://.godot/exported/133200997/export-a837bd5806d99b44fce9632b9ebf43b0-Player character.scn
+res://Player bullets/player,bullet.tscn::7d1a04bc1cfbbdf1c307425228e6dcf2::1778051093::res://.godot/exported/133200997/export-8158f45053ed1836abd631bbca8e2e02-player,bullet.scn
+res://Player bullets/player,dash.tscn::e8378bce5c5e24ffd6b8cf069f81794b::1778052900::res://.godot/exported/133200997/export-5c7c612738d26eb5f036a7d8bb8eae58-player,dash.scn
+res://Player bullets/player,smash.tscn::a3019f5544fc67796d80df5c4272f9f6::1778050882::res://.godot/exported/133200997/export-d383f550481e9ce96e1b7f8bedd96445-player,smash.scn
+res://Special tiles/Smash(able) tiles.tscn::8b4db2577583e760674711ebcd8d5fe5::1778050794::res://.godot/exported/133200997/export-613ee292c400c074364ca25ff22a9788-Smash(able) tiles.scn
+res://overlay.tscn::c48159046cb74a822c8a4cee9fa4f642::1778055635::res://.godot/exported/133200997/export-7b5697b90c0f80cacf3f687a26e5fa31-overlay.scn
