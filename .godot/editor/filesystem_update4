@@ -1,19 +1,11 @@
-res://Enemies/Dash enemy.tscn
+res://Levels/level.gd
+res://Player/Player code.gd
+res://Player/Player character.tscn
 res://Assets/Textures/Black colour.tres
 res://Assets/Textures/Red colour.tres
+res://Player bullets/dash.gd
+res://Player bullets/dash.tscn
 res://Levels/level_3.tscn
-res://Player/Player code.gd
-res://Player bullets/player,bullet.gd
-res://Player/Player character.tscn
-res://Player bullets/player,bullet.tscn
-res://Levels/base.tscn
-res://Levels/level.gd
 res://Levels/level_1.tscn
+res://Enemies/enemy.tscn
 res://Levels/level_2.tscn
-res://Player bullets/player,dash.gd
-res://savedata.json
-res://Menus/Title_screen.gd
-res://Special tiles/win_area.gd
-res://Player bullets/Bullet.tscn
-res://Player bullets/player,dash.tscn
-res://Player bullets/smash.gd

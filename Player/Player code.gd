@@ -17,7 +17,7 @@ var current_state:StringName
 var d
 @export var cooldown = 0.25
 @onready var bullet_scenes = {"bullet":preload("res://Player bullets/Bullet.tscn"),"smash":preload("res://Player bullets/smash.tscn"),"dash":preload("res://Player bullets/dash.tscn")}
-var flags = {"dash":false,"smash":false,"shoot":true}
+var flags = {"dash":false,"smash":false,"shoot":true,"spawn":false,"cooldown":true}
 var dash_position
 var dash_rotation
 @onready var meshes = $"Mesh(es)"
@@ -27,6 +27,7 @@ var states = {0:"Normal state",1:"Smash state",2:"Dash state"}
 func _ready() -> void:
 	current_state = states[0]
 	switch_mesh(current_state)
+	
 
 func switch_mesh(state:StringName):
 	for num in states:
@@ -55,6 +56,7 @@ func switch_ablity(state:StringName):
 			flags["dash"] = true
 			return
 	Death()
+	print("died from a lack of choice, Player code 58")
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("Shoot"):  
@@ -71,7 +73,7 @@ func _physics_process(delta: float) -> void:
 			
 		else:
 			_on_dash_timeout()
-	else:
+	elif flags["spawn"] == true:
 		if Input.get_vector("down","up","NA","NA"):
 			if sqrt(velocity.x**2+velocity.y**2) < max_velocity:
 				character.velocity += Input.get_vector("down","up","NA","NA").rotated(character.rotation)*speed*delta
@@ -80,7 +82,7 @@ func _physics_process(delta: float) -> void:
 				character.velocity /= friction
 		elif sqrt(velocity.x**2+velocity.y**2)>min_velocity: 
 			character.velocity /= breaking_friction
-		else: character.velocity = Vector2.ZERO
+		else: pass
 		rotaion_velocity += Input.get_vector("NA","NA","left","right").y*rotation_speed*delta
 		rotaion_velocity /= rotation_friction
 		rotaion_velocity = clampf(rotaion_velocity,min_rotation,max_rotation)
@@ -104,13 +106,15 @@ func shoot():
 		var bullet = bullet_scenes["bullet"].instantiate()
 		get_tree().root.add_child(bullet)
 		bullet.start(position,rotation)
-	elif flags["smash"] == true:
+	elif flags["smash"] == true and flags["cooldown"] == false:
+		flags["cooldown"] = true
 		flags["smash"] = false
 		timers["smash"].start()
 		var bullet = bullet_scenes["smash"].instantiate()
 		get_tree().root.add_child(bullet)
 		bullet.start(position,rotation)
-	elif flags["dash"] == true:
+	elif flags["dash"] == true and flags["cooldown"] == false:
+		flags["cooldown"] = true
 		timers["dash"].start()
 		d = bullet_scenes["dash"].instantiate()
 		get_tree().root.add_child(d)
@@ -148,3 +152,11 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_shoot_cooldown() -> void:
 	if current_state == states[0]:
 		flags["shoot"] = true
+
+
+func _on_spawn_timeout() -> void:
+	flags["spawn"] = true
+
+
+func _on_cooldown_timeout() -> void:
+	flags["cooldown"] = false

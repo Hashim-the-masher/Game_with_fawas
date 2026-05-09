@@ -10,3 +10,7 @@ func start(pos,The_rotaion):
 
 func _process(delta):
 	position += Vector2(1,0).rotated(line_of_fire)*speed*delta
+
+
+func _on_body_entered(body: Node2D) -> void:
+	queue_free()

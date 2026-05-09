@@ -62,6 +62,7 @@ position = Vector2(163, -1)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1036703186]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1798929901]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
