@@ -124,7 +124,7 @@ func shoot():
 
 
 func _on_Enemy_contact(area: Area2D) -> void:
-	print("this area killed me:"+str(area))
+	print("this area killed me:"+area.name)
 	Death()
 
 func Death():

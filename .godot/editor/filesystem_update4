@@ -1,8 +1,16 @@
-res://savedata.json
-res://Levels/level_2.tscn
-res://Assets/Textures/Black colour.tres
-res://Assets/Textures/Red colour.tres
 res://Enemies/enemy.gd
 res://Enemies/enemy.tscn
-res://Player/Player character.tscn
+res://Assets/Textures/Black colour.tres
+res://Assets/Textures/Red, black gradient.tres
 res://Assets/Textures/red colour.tres
+res://Player bullets/Bullet.gd
+res://Player bullets/Bullet.tscn
+res://Levels/level_2.tscn
+res://Levels/level_1.tscn
+res://Enemy bullets/dash.gd
+res://Enemy bullets/smash.tscn
+res://Enemy bullets/smash.gd
+res://Enemy bullets/dash.tscn
+res://Enemy bullets/Bullet.gd
+res://Enemy bullets/Bullet.tscn
+res://Player/Player code.gd

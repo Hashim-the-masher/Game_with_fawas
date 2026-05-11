@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1778478107
+::res://::1778493945
 export_presets.cfg::TextFile::-1::1778102008::0::1::::<><><>0<>0<><>::
 icon.icns::OtherFile::-1::1778084494::0::1::::<><><>0<>0<><>::
 icon.ico::OtherFile::-1::1778084418::0::1::::<><><>0<>0<><>::
@@ -9,12 +9,13 @@ savedata.json::JSON::-1::1778478107::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1778052882
 ::res://Assets/fonts/::1778059518
 UbuntuSans[wdth,wght].ttf::FontFile::2748916584678577548::1778059517::1778059518::1::::<><><>0<>0<>ff685a35f6b70bc3bf73e77bca60e4f8<>res://.godot/imported/UbuntuSans[wdth,wght].ttf-8b2255b76e43fd5aa37100da6c74c4ad.fontdata::
-::res://Assets/Textures/::1778478107
+::res://Assets/Textures/::1778479889
 arrow.png::CompressedTexture2D::8856050741820023350::1778060377::1778060397::1::::<><><>0<>0<>ebfff479fad14bccf4718663ee4bd042<>res://.godot/imported/arrow.png-96689c530bd7cedf05b902f1c91baef8.ctex::
 bi-arrow.png::CompressedTexture2D::9114622762466948104::1778098160::1778098300::1::::<><><>0<>0<>20c6930d3826b73e57b20ffd16d12498<>res://.godot/imported/bi-arrow.png-aaaebac8515fef8248794d02840d235c.ctex::
 Black colour.tres::CurveXYZTexture::8159515979238121401::1778478107::0::1::::<><><>0<>0<><>::
 Map.png::CompressedTexture2D::1542929626586489947::1778225467::1778225473::1::::<><><>0<>0<>7412a70b8e7d4d5b52443219514eda70<>res://.godot/imported/Map.png-01906d54f0ca5258429eba41a33914ec.ctex::
-Red colour.tres::CurveXYZTexture::4194766768480230310::1778478107::0::1::::<><><>0<>0<><>::
+red colour.tres::CurveXYZTexture::7795705009989025040::1778479889::0::1::::<><><>0<>0<><>::
+Red, black gradient.tres::CurveXYZTexture::4194766768480230310::1778478107::0::1::::<><><>0<>0<><>::
 UI.tres::LabelSettings::4523554573155564543::1778059686::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 UI_selected.tres::LabelSettings::8665479134500436914::1778084857::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 UI_settings.tres::LabelSettings::4426641332645333507::1778095197::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
@@ -27,12 +28,12 @@ death_screen.gd::GDScript::1066541170070407542::1777981379::0::1::::<>Control<><
 overlay.tscn::PackedScene::2547369560978868571::1777982255::0::1::::<><><>0<>0<><>::
 Win_effects.gd::GDScript::6490184480069237477::1777981379::0::1::::<>Control<><>0<>0<><>::
 You_win.tscn::PackedScene::4742611249319589752::1778052979::0::1::::<><><>0<>0<><>::uid://cyp5nja2n8xgf::::res://Effects/Screen effects/Win_effects.gd
-::res://Enemies/::1778478971
+::res://Enemies/::1778479968
 Dash enemy.tscn::PackedScene::7367856622394001130::1778322728::0::1::::<><><>0<>0<><>::uid://doisbhxhnuw30::::res://Assets/Textures/Black colour.tres
 dash_enemy.gd::GDScript::8638638817406141097::1777981379::0::1::::<>CharacterBody2D<><>0<>0<><>::
 enemy.gd::GDScript::3226146080364151637::1778478318::0::1::::<>CharacterBody2D<><>0<>0<><>::
-enemy.tscn::PackedScene::7705619844157079576::1778479745::0::1::::<><><>0<>0<><>::uid://bl71fiyksux1f::::res://Enemies/enemy.gd<>uid://b008gwmi84u4e::::res://Assets/Textures/Red colour.tres
-Smash enemy.tscn::PackedScene::6860049397509104383::1778052906::0::1::::<><><>0<>0<><>::uid://lfo2fdips0cg::::res://Enemies/smash_enemy.gd<>uid://b008gwmi84u4e::::res://Assets/Textures/Red colour.tres
+enemy.tscn::PackedScene::7705619844157079576::1778479968::0::1::::<><><>0<>0<><>::uid://bl71fiyksux1f::::res://Enemies/enemy.gd<>uid://djckefwu8tvem::::res://Assets/Textures/red colour.tres
+Smash enemy.tscn::PackedScene::6860049397509104383::1778479745::0::1::::<><><>0<>0<><>::uid://lfo2fdips0cg::::res://Enemies/smash_enemy.gd<>uid://b008gwmi84u4e::::res://Assets/Textures/Red, black gradient.tres
 smash_enemy.gd::GDScript::783297690758246638::1777981379::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://Levels/::1778479537
 base.tscn::PackedScene::8888671326173005747::1778319653::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn
@@ -45,8 +46,8 @@ settings.gd::GDScript::4844964832137959892::1778229106::0::1::::<>Control<><>0<>
 Settings.tscn::PackedScene::6922508078934686160::1778228964::0::1::::<><><>0<>0<><>::uid://cba64lsqsjpbo::::res://Menus/settings.gd<>uid://b4ckevhw0xmal::::res://Assets/Textures/UI_settings.tres<>uid://bi6gm77mgn5ao::::res://Assets/Textures/UI_settings_hidden.tres<>uid://dyf64kjp5hdow::::res://Assets/Textures/arrow.png
 Title_screen.gd::GDScript::6440249478743928972::1778321126::0::1::::<>Control<><>0<>0<><>::
 Title_screen.tscn::PackedScene::5255480076715592370::1778224028::0::1::::<><><>0<>0<><>::uid://cx0x758ud34u7::::res://Menus/Title_screen.gd<>uid://dvpvf7wdsrfxi::::res://Assets/Textures/UI_selected.tres<>uid://b5pijvb5s1ujn::::res://Assets/Textures/UI.tres<>uid://dyf64kjp5hdow::::res://Assets/Textures/arrow.png
-::res://Player/::1778331244
-Player character.tscn::PackedScene::6850936080249859111::1778479745::0::1::::<><><>0<>0<><>::uid://c1yq5e3ldovvc::::res://Player/Player code.gd<>uid://doisbhxhnuw30::::res://Assets/Textures/Black colour.tres<>uid://b008gwmi84u4e::::res://Assets/Textures/Red colour.tres
+::res://Player/::1778479745
+Player character.tscn::PackedScene::6850936080249859111::1778479745::0::1::::<><><>0<>0<><>::uid://c1yq5e3ldovvc::::res://Player/Player code.gd<>uid://doisbhxhnuw30::::res://Assets/Textures/Black colour.tres<>uid://b008gwmi84u4e::::res://Assets/Textures/Red, black gradient.tres
 Player code.gd::GDScript::6648321667626187168::1778331162::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://Player bullets/::1778347138
 Bullet.gd::GDScript::4904811328094291213::1778347138::0::1::::<>Area2D<><>0<>0<><>::

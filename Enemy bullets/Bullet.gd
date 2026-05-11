@@ -11,7 +11,11 @@ func start(pos,the_rotation):
 
 func _process(delta):
 	position += Vector2(1,0).rotated(line_of_fire)*speed*delta
+
+
 func _on_enemy(area: Area2D) -> void:
+	if area.name == "player":
+		return
 	print(name+",despawned from hitting:"+area.name)
 	queue_free()
 
@@ -21,5 +25,7 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 
 
 func _on_body_entered(body: Node2D) -> void:
+	if body.name == "player":
+		return
 	print(name+",despawned from hitting:"+body.name)
 	queue_free()

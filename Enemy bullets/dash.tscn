@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://d1qb6lhoa5jax"]
+
+[ext_resource type="Script" uid="uid://bfbeio7gdojxw" path="res://Enemy bullets/dash.gd" id="1_271u7"]
+[ext_resource type="Texture2D" uid="uid://doisbhxhnuw30" path="res://Assets/Textures/Black colour.tres" id="2_4041h"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_wie6m"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cdbac"]
+height = 20.0
+
+[node name="Dash" type="Area2D" unique_id=1308103005]
+scale = Vector2(3, 3)
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_271u7")
+speed = 999
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=1425327333]
+position = Vector2(2.6508234, -5.364418e-07)
+rotation = -1.5707964
+scale = Vector2(18.122608, 14.674477)
+mesh = SubResource("PrismMesh_wie6m")
+texture = ExtResource("2_4041h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=788358610]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_cdbac")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

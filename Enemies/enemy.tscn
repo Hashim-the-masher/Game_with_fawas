@@ -34,8 +34,11 @@ curve_z = SubResource("Curve_572h1")
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ih25"]
 radius = 7.666667
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bxkaj"]
+
 [node name="Enemy" type="CharacterBody2D" unique_id=1664216516]
 scale = Vector2(3, 3)
+disable_mode = 1
 collision_layer = 4
 collision_mask = 2
 script = ExtResource("1_bxkaj")
@@ -63,3 +66,17 @@ texture = ExtResource("2_bxkaj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=44249120]
 shape = SubResource("CircleShape2D_3ih25")
+
+[node name="Timer" type="Timer" parent="." unique_id=1439394359]
+autostart = true
+
+[node name="hitbox" type="Area2D" parent="." unique_id=2044605587]
+collision_layer = 4
+collision_mask = 40
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1999869751]
+shape = SubResource("CircleShape2D_bxkaj")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
