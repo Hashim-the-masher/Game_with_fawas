@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c1yq5e3ldovvc" path="res://Player/Player code.gd" id="1_h07og"]
 [ext_resource type="Texture2D" uid="uid://doisbhxhnuw30" path="res://Assets/Textures/Black colour.tres" id="2_xwma6"]
-[ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Assets/Textures/Red colour.tres" id="3_nif78"]
+[ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Assets/Textures/Red, black gradient.tres" id="3_nif78"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_se0j5"]
 radius = 10.049875

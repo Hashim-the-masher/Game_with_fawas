@@ -54,6 +54,7 @@ tile_map_data = PackedByteArray("AAD8//z/AAAMAAAAAAD9//3/AAAAAAQAAAD8//3/AAAAAAQ
 tile_set = SubResource("TileSet_bia53")
 
 [node name="player" parent="." unique_id=768464723 instance=ExtResource("2_3mhv4")]
+max_velocity = 1500.0
 
 [node name="Win_area3" parent="." unique_id=1107535226 instance=ExtResource("3_3mhv4")]
 position = Vector2(-768, -128)

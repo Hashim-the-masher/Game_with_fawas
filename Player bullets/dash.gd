@@ -13,4 +13,5 @@ func _process(delta):
 
 
 func _on_body_entered(body: Node2D) -> void:
+	print(name+"despawned from hitting"+str(body))
 	queue_free()

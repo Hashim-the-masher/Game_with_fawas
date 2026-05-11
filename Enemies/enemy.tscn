@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dh1woyt0cftt5"]
+
+[ext_resource type="Script" uid="uid://bl71fiyksux1f" path="res://Enemies/enemy.gd" id="1_bxkaj"]
+[ext_resource type="Texture2D" uid="uid://djckefwu8tvem" path="res://Assets/Textures/red colour.tres" id="2_bxkaj"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_3ih25"]
+radial_segments = 4
+rings = 3
+
+[sub_resource type="Curve" id="Curve_bxkaj"]
+bake_resolution = 1
+_data = [Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_47qgu"]
+bake_resolution = 1
+_data = [Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_572h1"]
+bake_resolution = 1
+_data = [Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_rt1x0"]
+curve_x = SubResource("Curve_bxkaj")
+curve_y = SubResource("Curve_47qgu")
+curve_z = SubResource("Curve_572h1")
+
+[sub_resource type="QuadMesh" id="QuadMesh_572h1"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_rt1x0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3ih25"]
+radius = 7.666667
+
+[node name="Enemy" type="CharacterBody2D" unique_id=1664216516]
+scale = Vector2(3, 3)
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_bxkaj")
+
+[node name="Normal state" type="Node2D" parent="." unique_id=949869445]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Normal state" unique_id=238560165]
+position = Vector2(0, 1.9073486e-06)
+scale = Vector2(20, 19.977)
+mesh = SubResource("SphereMesh_3ih25")
+texture = SubResource("CurveXYZTexture_rt1x0")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Normal state" unique_id=1596082727]
+position = Vector2(-1, 0)
+scale = Vector2(16, 1)
+mesh = SubResource("QuadMesh_572h1")
+texture = ExtResource("2_bxkaj")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="Normal state" unique_id=1889371668]
+position = Vector2(8.355841, -1.5554292e-08)
+rotation = -1.5707964
+scale = Vector2(4.000001, 3.2644424)
+mesh = SubResource("PrismMesh_rt1x0")
+texture = ExtResource("2_bxkaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=44249120]
+shape = SubResource("CircleShape2D_3ih25")

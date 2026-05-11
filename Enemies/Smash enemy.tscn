@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c40canctt3jv8"]
 
 [ext_resource type="Script" uid="uid://lfo2fdips0cg" path="res://Enemies/smash_enemy.gd" id="1_2kmf5"]
-[ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Assets/Textures/Red colour.tres" id="1_d2lgf"]
+[ext_resource type="Texture2D" uid="uid://b008gwmi84u4e" path="res://Assets/Textures/Red, black gradient.tres" id="1_d2lgf"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_2kmf5"]
 

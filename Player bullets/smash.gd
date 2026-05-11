@@ -12,6 +12,7 @@ func _process(delta):
 
 
 func _on_enemy(area: Area2D) -> void:
+	print(name+":despawned from hitting:"+str(area))
 	queue_free()
 
 func _on_visible_on_screen_notifier_2d_screen_exited():

@@ -1,11 +1,8 @@
-res://Levels/level.gd
-res://Player/Player code.gd
-res://Player/Player character.tscn
+res://savedata.json
+res://Levels/level_2.tscn
 res://Assets/Textures/Black colour.tres
 res://Assets/Textures/Red colour.tres
-res://Player bullets/dash.gd
-res://Player bullets/dash.tscn
-res://Levels/level_3.tscn
-res://Levels/level_1.tscn
+res://Enemies/enemy.gd
 res://Enemies/enemy.tscn
-res://Levels/level_2.tscn
+res://Player/Player character.tscn
+res://Assets/Textures/red colour.tres
