@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://p8v6rpanovbs" path="res://Special tiles/win_area.tscn" id="3_arsda"]
 [ext_resource type="PackedScene" uid="uid://dh1woyt0cftt5" path="res://Enemies/enemy.tscn" id="5_bcgyv"]
 [ext_resource type="PackedScene" uid="uid://ddy8mdgbc0yqw" path="res://Special tiles/seeing_radius.tscn" id="6_fbld2"]
+[ext_resource type="PackedScene" uid="uid://bidb27it8shdk" path="res://Special tiles/spawn_area.tscn" id="7_s275v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_kbe2v")
@@ -121,9 +122,19 @@ rotation = 3.108557
 
 [node name="seeing radius" parent="." unique_id=681896170 instance=ExtResource("6_fbld2")]
 position = Vector2(-756, 7)
-scale = Vector2(37.505, 37.505)
+scale = Vector2(53.38, 32.715)
 collision_layer = 0
-monitorable = false
+
+[node name="spawn area pos" type="Node2D" parent="." unique_id=325575898]
+position = Vector2(-766, 1930)
+
+[node name="Spawn_area" parent="." unique_id=1393238871 instance=ExtResource("7_s275v")]
+position = Vector2(-956.99994, 2177)
+scale = Vector2(19.24, 4.48)
+spawn_enemies = {
+"enemy": [ExtResource("5_bcgyv"), ExtResource("5_bcgyv"), ExtResource("5_bcgyv"), ExtResource("5_bcgyv")],
+"location": [Vector2(-799, 2214), Vector2(-736, 2215), Vector2(-801, 1634), Vector2(-738, 1633)]
+}
 
 [connection signal="body_entered" from="seeing radius" to="Enemy" method="_on_seeing_radius_body_entered"]
 [connection signal="body_exited" from="seeing radius" to="Enemy" method="_on_seeing_radius_body_exited"]

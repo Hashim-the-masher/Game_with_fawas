@@ -16,16 +16,16 @@ func _process(delta):
 func _on_enemy(area: Area2D) -> void:
 	if area.name == "player":
 		return
-	print(name+",despawned from hitting:"+area.name)
+	print("Enemy"+name+",despawned from hitting:"+area.name)
 	queue_free()
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
-	
+	print("Enemy,"+name+",despawned from going offscreen")
 	queue_free()
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		return
-	print(name+",despawned from hitting:"+body.name)
+	print("Enemy"+name+",despawned from hitting:"+body.name)
 	queue_free()

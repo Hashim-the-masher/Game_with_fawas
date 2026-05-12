@@ -1,6 +1,7 @@
 extends CharacterBody2D
 var rotaion_velocity:float
 @export var speed:float = 150
+@export var tank_speed = speed*3
 @export var rotation_speed:float = .5
 @export var max_rotation:float = .1
 @export var min_rotation:float = -.1
@@ -74,16 +75,19 @@ func _physics_process(delta: float) -> void:
 		else:
 			_on_dash_timeout()
 	elif flags["spawn"] == true:
-		if Input.get_vector("down","up","NA","NA"):
+		if Input.get_vector("backwards","forwards","NA","NA"):#forwards/backwards velocity going to where the player is facing
 			if sqrt(velocity.x**2+velocity.y**2) < max_velocity:
-				character.velocity += Input.get_vector("down","up","NA","NA").rotated(character.rotation)*speed*delta
-				if Input.is_action_pressed("down"):
-					character.velocity -= (Input.get_vector("down","up","NA","NA").rotated(character.rotation)*speed*delta)*back_slow_mutiplyer
+				character.velocity += Input.get_vector("backwards","forwards","NA","NA").rotated(character.rotation)*speed*delta
+				if Input.is_action_pressed("backwards"):
+					character.velocity -= (Input.get_vector("backwards","forwards","NA","NA").rotated(character.rotation)*speed*delta)*back_slow_mutiplyer
 				character.velocity /= friction
+		elif Input.get_vector("left","right","up","down"):
+			character.velocity += Input.get_vector("left","right","up","down")*tank_speed*delta
+			character.velocity /= breaking_friction
 		elif sqrt(velocity.x**2+velocity.y**2)>min_velocity: 
 			character.velocity /= breaking_friction
-		else: pass
-		rotaion_velocity += Input.get_vector("NA","NA","left","right").y*rotation_speed*delta
+		else:pass
+		rotaion_velocity += Input.get_vector("NA","NA","turn left","turn right").y*rotation_speed*delta
 		rotaion_velocity /= rotation_friction
 		rotaion_velocity = clampf(rotaion_velocity,min_rotation,max_rotation)
 		character.rotation += rotaion_velocity
@@ -126,6 +130,7 @@ func shoot():
 func _on_Enemy_contact(area: Area2D) -> void:
 	print("this area killed me:"+area.name)
 	Death()
+
 
 func Death():
 	get_tree().change_scene_to_file("res://Effects/Screen effects/Death screen.tscn")

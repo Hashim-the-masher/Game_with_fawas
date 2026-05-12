@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://djckefwu8tvem" path="res://Assets/Textures/red colour.tres" id="2_k20gr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6g606"]
-radius = 1.0
-height = 4.0
+radius = 0.6666667
+height = 2.6666667
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3umxu"]
 
@@ -28,3 +28,4 @@ texture = ExtResource("2_k20gr")
 
 [connection signal="area_entered" from="." to="." method="_on_enemy"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

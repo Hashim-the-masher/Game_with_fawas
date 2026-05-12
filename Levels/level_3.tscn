@@ -3,8 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://v8n3cko3hc2f" path="res://Assets/Textures/Map.png" id="1_5lru4"]
 [ext_resource type="Script" uid="uid://bo4y332gakbbj" path="res://Levels/level.gd" id="1_absw3"]
 [ext_resource type="PackedScene" uid="uid://c4uv6fisup5fn" path="res://Player/Player character.tscn" id="2_ej5lj"]
-[ext_resource type="PackedScene" uid="uid://dc8br0tfcp4pa" path="res://Enemies/Dash enemy.tscn" id="3_ej5lj"]
-[ext_resource type="PackedScene" uid="uid://c40canctt3jv8" path="res://Enemies/Smash enemy.tscn" id="5_padch"]
+[ext_resource type="PackedScene" uid="uid://dh1woyt0cftt5" path="res://Enemies/enemy.tscn" id="6_uwxw1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_5lru4")
@@ -56,9 +55,6 @@ tile_set = SubResource("TileSet_bia53")
 
 [node name="player" parent="." unique_id=768464723 instance=ExtResource("2_ej5lj")]
 
-[node name="dash" parent="." unique_id=1750941581 instance=ExtResource("3_ej5lj")]
-position = Vector2(163, -1)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1036703186]
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1798929901]
@@ -70,8 +66,5 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="smash" parent="." unique_id=2132735446 instance=ExtResource("5_padch")]
-position = Vector2(153, -144)
-
-[connection signal="kill" from="dash" to="player" method="_on_dash_kill"]
-[connection signal="kill" from="smash" to="player" method="_on_smash_kill"]
+[node name="Enemy" parent="." unique_id=1664216516 instance=ExtResource("6_uwxw1")]
+position = Vector2(-1, 114)

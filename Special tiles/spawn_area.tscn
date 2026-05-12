@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bidb27it8shdk"]
+
+[ext_resource type="Script" uid="uid://37e4wfbo88pe" path="res://Special tiles/spawn_area.gd" id="1_fcley"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8kyk"]
+
+[node name="Spawn_area" type="Area2D" unique_id=681896170]
+monitorable = false
+script = ExtResource("1_fcley")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=971068717]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_i8kyk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

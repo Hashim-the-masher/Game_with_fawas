@@ -7,16 +7,22 @@ var enemy_detected_flag = false
 const BULLET = preload("uid://dvxvq2aiuyox4")
 
 func _process(delta: float) -> void:
+	var desireable_rotation = atan2((player.position.y-position.y),(player.position.x-position.x))
+	print(desireable_rotation)
 	if enemy_detected_flag == true:
-		if rotation >= atan2((player.position.y-position.y),(player.position.x-position.x)):
+		if rotation >= desireable_rotation:
 			rotation -= rotation_speed*delta
-		else: rotation += rotation_speed*delta
+		else: 
+			rotation += rotation_speed*delta
+
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
+	enemy_detected_flag = true
 	print(name+",took damge from:"+area.name)
 	if hp == 1:
 		queue_free()
 	else: hp -= 1 
+	
 
 
 func _on_timer_timeout() -> void:
