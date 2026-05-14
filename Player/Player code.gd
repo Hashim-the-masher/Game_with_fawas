@@ -5,11 +5,12 @@ var rotaion_velocity:float
 @export var max_rotation:float = .1
 @export var min_rotation:float = -.1
 @export var rotation_friction:float = 1.15
+
 #these are for the character's speed and velocity manipulatuaion
 @export var speed:float = 150 #this one is the speed of the movment respective of the player
 @export var tank_speed = speed*PI #this one is the speed of the movment irrespective of the player, this one is slower despite having a bigger number because of the braking fiction always applies to this movment mode
-@export var max_velocity:float = 250 #this one caps the max velocity at a value
-@export var min_velocity:float = 0.1  #this removes any velocity when its under a value
+@export var max_velocity:float = 250 #this one caps the max velocity above a value
+@export var min_velocity:float = 0.1  #this caps the velocity when its under a value
 @export var back_slow_mutiplyer:float = .2 #this one slows you down when going backwards
 @export var friction:float = 1.03 #this one applies a fiction to the movment
 @export var breaking_friction:float = 1.1 #larger firction applied when the character stopped moving(inputing movment)
