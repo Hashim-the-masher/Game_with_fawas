@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ddy8mdgbc0yqw" path="res://Special tiles/seeing_radius.tscn" id="6_fa81k"]
 [ext_resource type="PackedScene" uid="uid://p8v6rpanovbs" path="res://Special tiles/win_area.tscn" id="6_uwxw1"]
 [ext_resource type="PackedScene" uid="uid://bidb27it8shdk" path="res://Special tiles/spawn_area.tscn" id="7_ck3gp"]
+[ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="8_fa81k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_5lru4")
@@ -124,6 +125,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("8_fa81k")]
+visible = false
 
 [connection signal="body_entered" from="seeing radius" to="Enemy" method="_on_seeing_radius_body_entered"]
 [connection signal="body_exited" from="seeing radius" to="Enemy" method="_on_seeing_radius_body_exited"]

@@ -30,9 +30,9 @@ scale = Vector2(3, 3)
 collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_h07og")
+rotation_friction = 1.18
 speed = 450.0
 max_velocity = 750.0
-rotation_friction = 1.18
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1000197918]
 shape = SubResource("CircleShape2D_se0j5")
@@ -115,6 +115,7 @@ one_shot = true
 autostart = true
 
 [node name="cooldown" type="Timer" parent="." unique_id=1874697940]
+wait_time = 0.5
 autostart = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Enemy_contact"]

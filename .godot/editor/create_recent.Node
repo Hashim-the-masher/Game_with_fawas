@@ -1,3 +1,5 @@
+TextureRect
+TextEdit
 Node2D
 Node
 CollisionShape2D
@@ -8,8 +10,5 @@ ColorRect
 CanvasLayer
 TileMapLayer
 Control
-TextureRect
 VBoxContainer
 HBoxContainer
-Label
-OpenXRCompositionLayerEquirect

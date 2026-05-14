@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddy8mdgbc0yqw" path="res://Special tiles/seeing_radius.tscn" id="6_fbld2"]
 [ext_resource type="PackedScene" uid="uid://bidb27it8shdk" path="res://Special tiles/spawn_area.tscn" id="7_s275v"]
 [ext_resource type="PackedScene" uid="uid://b52t2i5n46wm3" path="res://Special tiles/enemy_killed_tile.tscn" id="8_pml6m"]
+[ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="9_vltsr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_kbe2v")
@@ -100,17 +101,6 @@ position = Vector2(-896, 2688)
 scale = Vector2(4, 1)
 next_level = "res://Levels/level_?.tscn"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1480469006]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1234382526]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
 [node name="Enemy" parent="." unique_id=1664216516 instance=ExtResource("5_bcgyv")]
 position = Vector2(-757, 2)
 rotation = 3.108557
@@ -135,6 +125,20 @@ spawn_enemies = {
 position = Vector2(192, -128)
 scale = Vector2(3.2, 12.8)
 number_of_enemies_requred = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1480469006]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1234382526]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("9_vltsr")]
+visible = false
 
 [connection signal="kill" from="Enemy" to="Kill_Gate" method="on_enemy_killed"]
 [connection signal="body_entered" from="seeing radius" to="Enemy" method="_on_seeing_radius_body_entered"]

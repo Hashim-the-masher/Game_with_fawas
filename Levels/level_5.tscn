@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dh1woyt0cftt5" path="res://Enemies/enemy.tscn" id="6_321yd"]
 [ext_resource type="PackedScene" uid="uid://p8v6rpanovbs" path="res://Special tiles/win_area.tscn" id="6_rpnhq"]
 [ext_resource type="PackedScene" uid="uid://ddy8mdgbc0yqw" path="res://Special tiles/seeing_radius.tscn" id="7_1xify"]
+[ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="8_kgnlk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("2_1xify")
@@ -63,17 +64,6 @@ position = Vector2(3584, -128)
 scale = Vector2(1, 4)
 next_level = "res://Effects/Screen effects/You_win.tscn"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1036703186]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1798929901]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
 [node name="Breakables" parent="." unique_id=362770151 instance=ExtResource("3_kgnlk")]
 position = Vector2(384, -5.9604645e-08)
 
@@ -107,6 +97,20 @@ scale = Vector2(25.724998, -6.555)
 
 [node name="Enemy4" parent="." unique_id=1773907755 instance=ExtResource("6_321yd")]
 position = Vector2(-1248, 1120)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1036703186]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1798929901]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("8_kgnlk")]
+visible = false
 
 [connection signal="body_entered" from="seeing radius3" to="Enemy" method="_on_seeing_radius_body_entered"]
 [connection signal="body_exited" from="seeing radius3" to="Enemy" method="_on_seeing_radius_body_exited"]

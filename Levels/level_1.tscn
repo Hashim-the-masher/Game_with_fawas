@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bo4y332gakbbj" path="res://Levels/level.gd" id="1_rf6l5"]
 [ext_resource type="PackedScene" uid="uid://c4uv6fisup5fn" path="res://Player/Player character.tscn" id="2_3mhv4"]
 [ext_resource type="PackedScene" uid="uid://p8v6rpanovbs" path="res://Special tiles/win_area.tscn" id="3_3mhv4"]
+[ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="5_syshm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_dilhk")
@@ -71,3 +72,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("5_syshm")]
+visible = false

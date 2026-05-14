@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://78ct1eqw08ic"]
 
 [ext_resource type="Script" uid="uid://pgv1oq60gvww" path="res://Effects/Screen effects/death_screen.gd" id="1_hjv52"]
+[ext_resource type="FontFile" uid="uid://bffuiwh7227js" path="res://Assets/fonts/UbuntuSans[wdth,wght].ttf" id="2_g0pa0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hjv52"]
+font = ExtResource("2_g0pa0")
 font_color = Color(1, 0, 0, 1)
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" unique_id=1489311292]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hjv52")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=366429503]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,11 +25,11 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1080785008]
 wait_time = 2.0
 autostart = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=191498446]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
