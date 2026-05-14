@@ -56,20 +56,9 @@ tile_set = SubResource("TileSet_bia53")
 [node name="player" parent="." unique_id=768464723 instance=ExtResource("2_3mhv4")]
 max_velocity = 1500.0
 
-[node name="Win_area3" parent="." unique_id=1107535226 instance=ExtResource("3_3mhv4")]
+[node name="Win_area" parent="." unique_id=1107535226 instance=ExtResource("3_3mhv4")]
 position = Vector2(-768, -128)
-next_level = "res://Levels/level_2.tscn"
-
-[node name="Win_area4" parent="." unique_id=1291404209 instance=ExtResource("3_3mhv4")]
-position = Vector2(-768, -64)
-next_level = "res://Levels/level_2.tscn"
-
-[node name="Win_area2" parent="." unique_id=1385832897 instance=ExtResource("3_3mhv4")]
-position = Vector2(-768, 0)
-next_level = "res://Levels/level_2.tscn"
-
-[node name="Win_area" parent="." unique_id=1612395938 instance=ExtResource("3_3mhv4")]
-position = Vector2(-768, 64)
+scale = Vector2(1, 4)
 next_level = "res://Levels/level_2.tscn"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1215110293]

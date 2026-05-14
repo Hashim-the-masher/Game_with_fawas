@@ -1,14 +1,17 @@
-res://Special tiles/spawn_area.gd
-res://Levels/level_2.tscn
+res://Enemies/smash_enemy.gd
+res://Enemies/Smash enemy.tscn
 res://Assets/Textures/Black colour.tres
 res://Assets/Textures/Red, black gradient.tres
 res://Assets/Textures/red colour.tres
-res://Special tiles/spawn_area.tscn
-res://Enemy bullets/Bullet.tscn
-res://savedata.json
-res://Player/Player code.gd
-res://Enemy bullets/Bullet.gd
 res://Player bullets/Bullet.gd
-res://Player bullets/Bullet.tscn
 res://Levels/level_3.tscn
+res://Levels/level_4.tscn
+res://Levels/level_2.tscn
+res://Levels/level_1.tscn
+res://Special tiles/enemy_killed_tile.tscn
+res://Special tiles/enemy_killed_tile.gd
 res://Enemies/enemy.gd
+res://Effects/Screen effects/death_screen.gd
+res://Player/Player code.gd
+res://Levels/level_5.tscn
+res://savedata.json
