@@ -130,7 +130,7 @@ func shoot():#ahh the shoot function, it sees wich flag you have and shoots the 
 		flags["dash"] = false
 	else: return
 
-#these kill the player when the inner area of the player comes in contact with anything, this wont kill the player for walls because the player has an outer layer that keeps the walls from entering inside fo the player
+#these kill the player when the inner area of the player comes in contact with anything deadly.
 func _on_Enemy_contact(area: Area2D) -> void:
 	print("this area killed me:"+area.name)
 	Death()
