@@ -14,9 +14,15 @@ const UI_SETTINGS = preload("uid://b4ckevhw0xmal")
 const UI_SETTINGS_SELECTED = preload("uid://bu6x8ru5xi2kt")
 const UI_SETTINGS_HIDDEN = preload("uid://bi6gm77mgn5ao")
 const screen = [1024,512]
+@onready var you_did_it: TextureRect = $"../you_did_it"
 
 func _ready() -> void:
 	savedata = load_json_file()
+	match savedata["w/l"][0]:
+		1.0:
+			you_did_it.show()
+		0.0:
+			you_did_it.hide()
 	setting_no = savedata["setting_no"]["visuals"] 
 	setting[0].text = str(savedata["settings"]["visuals"][0])
 	print("Loaded value"+str(savedata["settings"]["visuals"][0])+"to size")

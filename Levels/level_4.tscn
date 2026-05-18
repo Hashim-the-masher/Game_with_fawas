@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c40canctt3jv8" path="res://Enemies/Smash enemy.tscn" id="5_77xid"]
 [ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="7_waaef"]
 [ext_resource type="AudioStream" uid="uid://b4mmvrlgn43aw" path="res://Assets/sounds_aaaaaaaah/ceramic pop.wav" id="8_fqog2"]
+[ext_resource type="AudioStream" uid="uid://crut4mnrt43k1" path="res://Assets/mus/E.wav" id="9_ben3k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_kbe2v")
@@ -98,5 +99,12 @@ position = Vector2(214, -8)
 stream = ExtResource("8_fqog2")
 attenuation = 2.697397
 max_polyphony = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=847862493]
+position = Vector2(-783, 2756)
+stream = ExtResource("9_ben3k")
+autoplay = true
+attenuation = 2.9281766
+panning_strength = 2.25
 
 [connection signal="kill" from="smash" to="player" method="_on_smash_kill"]

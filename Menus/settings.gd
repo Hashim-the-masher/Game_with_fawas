@@ -9,10 +9,16 @@ var savedata:Dictionary
 const ARROW = preload("uid://dyf64kjp5hdow")
 const UI_SETTINGS = preload("uid://b4ckevhw0xmal")
 const UI_SETTINGS_SELECTED = preload("uid://bu6x8ru5xi2kt")
+@onready var you_did_it: TextureRect = $"../you_did_it"
 
 
 func _ready() -> void:
 	savedata = load_json_file()
+	match savedata["w/l"][0]:
+		1.0:
+			you_did_it.show()
+		0.0:
+			you_did_it.hide()
 	setting_no = int(savedata["setting_no"]["settings"])
 	title.get_child(setting_no).label_settings = UI_SETTINGS_SELECTED
 	arrow[setting_no].show()

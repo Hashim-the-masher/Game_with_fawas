@@ -4,6 +4,7 @@
 [ext_resource type="LabelSettings" uid="uid://dvpvf7wdsrfxi" path="res://Assets/Textures/UI_selected.tres" id="2_hfqrc"]
 [ext_resource type="LabelSettings" uid="uid://b5pijvb5s1ujn" path="res://Assets/Textures/UI.tres" id="3_og6q2"]
 [ext_resource type="Texture2D" uid="uid://dyf64kjp5hdow" path="res://Assets/Textures/arrow.png" id="4_tbroc"]
+[ext_resource type="Texture2D" uid="uid://dodcs7kjehofa" path="res://Assets/Textures/you_did_it.png" id="5_hfqrc"]
 
 [node name="Control" type="Control" unique_id=1629708582]
 layout_mode = 3
@@ -82,3 +83,10 @@ expand_mode = 1
 [node name="empty3" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=888312752]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="you_did_it" type="TextureRect" parent="." unique_id=1198323234]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_hfqrc")

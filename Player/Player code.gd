@@ -68,7 +68,7 @@ func switch_ablity(state:StringName):#this one switches the flags so that a cert
 	Death()
 
 func _physics_process(delta: float) -> void:#this one is a bit more complex because it contains all the physics procceses
-	if Input.is_action_pressed("Shoot"):  #this one shoots any bullet
+	if Input.is_action_pressed("Shoot") and flags["spawn"] == true:  #this one shoots any bullet
 		shoot()
 		flags["shoot"]= false
 	if current_state == states[2] and flags["dash"] == false: # if the bullet was a dash, then

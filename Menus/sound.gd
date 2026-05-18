@@ -13,9 +13,15 @@ const BI_ARROW = preload("uid://d24grgb0ooerg")
 const UI_SETTINGS = preload("uid://b4ckevhw0xmal")
 const UI_SETTINGS_SELECTED = preload("uid://bu6x8ru5xi2kt")
 const UI_SETTINGS_HIDDEN = preload("uid://bi6gm77mgn5ao")
+@onready var you_did_it: TextureRect = $"../you_did_it"
 
 func _ready() -> void:
 	savedata = load_json_file()
+	match savedata["w/l"][0]:
+		1.0:
+			you_did_it.show()
+		0.0:
+			you_did_it.hide()
 	setting_no = savedata["setting_no"]["sounds"] 
 	setting[0].text = str(savedata["settings"]["sounds"][0])
 	print("Loaded value"+str(savedata["settings"]["sounds"][0])+"to music")

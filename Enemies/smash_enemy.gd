@@ -3,7 +3,8 @@ extends CharacterBody2D
 @export var speed = 300
 @export var friction = 1.015
 var enemy_detected_flag = false
-var hp = 50
+@export var hp = 40
+@export var extra_smash_damge = 19
 signal kill
 @onready var player: CharacterBody2D = $"../player"
 func _on_hitbox_area_entered(area: Area2D) -> void:
@@ -11,7 +12,7 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	print(name+",took damge from:"+area.name)
 	hp -= 1 
 	if area.name == "Smash":
-		hp -= 24
+		hp -= extra_smash_damge
 	if hp <= 0:
 		kill.emit()
 		queue_free()

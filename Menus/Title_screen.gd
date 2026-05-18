@@ -5,6 +5,7 @@ extends Control
 @onready var start: Label = $HBoxContainer/VBoxContainer/Start
 @onready var options: Label = $HBoxContainer/VBoxContainer/Options
 @onready var sure_flag = false
+@onready var you_did_it: TextureRect = $you_did_it
 var savepath = "res://savedata.json"
 var savedata:Dictionary
 var option_selected:int = 0
@@ -15,6 +16,11 @@ const UI_SELECTED = preload("uid://dvpvf7wdsrfxi")
 func _ready() -> void:
 	savedata = load_json_file()
 	option_selected = savedata["setting_no"]["title"]
+	match savedata["w/l"][0]:
+		1.0:
+			you_did_it.show()
+		0.0:
+			you_did_it.hide()
 	match option_selected:
 		1:
 			start.label_settings = UI

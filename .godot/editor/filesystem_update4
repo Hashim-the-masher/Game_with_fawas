@@ -1,0 +1,26 @@
+res://savedata.json
+res://Menus/Title_screen.tscn
+res://Assets/Textures/red colour.tres
+res://Assets/Textures/Black colour.tres
+res://Player/Player code.gd
+res://Enemies/enemy.tscn
+res://Enemies/enemy.gd
+res://Enemies/Smash enemy.tscn
+res://Assets/Textures/Red, black gradient.tres
+res://Enemies/smash_enemy.gd
+res://Menus/sound.tscn
+res://Levels/level_3.tscn
+res://Special tiles/spawn_area.gd
+res://Levels/level_5.tscn
+res://Effects/Screen effects/Win_effects.gd
+res://Effects/Screen effects/death_screen.gd
+res://Menus/Title_screen.gd
+res://Levels/level_4.tscn
+res://Levels/level_2.tscn
+res://Levels/level_7.tscn
+res://winning again speech.txt
+res://Menus/settings.tscn
+res://Menus/visual.tscn
+res://Menus/settings.gd
+res://Menus/sound.gd
+res://Menus/visual.gd

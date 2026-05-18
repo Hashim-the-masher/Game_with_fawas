@@ -111,9 +111,10 @@ position = Vector2(-766, 1930)
 [node name="Spawn_area" parent="." unique_id=1393238871 instance=ExtResource("7_ck3gp")]
 position = Vector2(-956.99994, 2177)
 scale = Vector2(19.24, 4.48)
+custom_spawn_loc = true
 spawn_enemies = {
-"enemy": [ExtResource("5_ay5qi"), ExtResource("5_ay5qi"), ExtResource("5_ay5qi"), ExtResource("5_ay5qi")],
-"location": [Vector2(-799, 2214), Vector2(-736, 2215), Vector2(-801, 1634), Vector2(-738, 1633)]
+"enemy": [ExtResource("5_ay5qi"), ExtResource("5_ay5qi")],
+"location": [Vector2(-799, 2214), Vector2(-736, 2215)]
 }
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1480469006]

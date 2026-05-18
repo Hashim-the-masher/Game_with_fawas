@@ -2,7 +2,8 @@ extends CharacterBody2D
 var wait_for_it_flag = true
 var enemy_detected_flag = false
 @export var rotation_speed =.3
-@export var hp = 10
+@export var hp = 15
+@export var extra_smash_damge = 14
 @onready var player: CharacterBody2D = $"../player"
 const BULLET = preload("uid://dvxvq2aiuyox4")
 signal kill
@@ -18,7 +19,7 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	print(name+",took damge from:"+area.name)
 	hp -= 1 
 	if area.name == "Smash":
-		hp -= 9
+		hp -= extra_smash_damge
 	if hp <= 0:
 		kill.emit()
 		queue_free()

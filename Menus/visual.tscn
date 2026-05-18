@@ -4,6 +4,7 @@
 [ext_resource type="LabelSettings" uid="uid://b4ckevhw0xmal" path="res://Assets/Textures/UI_settings.tres" id="2_4dx5s"]
 [ext_resource type="LabelSettings" uid="uid://bi6gm77mgn5ao" path="res://Assets/Textures/UI_settings_hidden.tres" id="3_bdkgd"]
 [ext_resource type="Texture2D" uid="uid://dyf64kjp5hdow" path="res://Assets/Textures/arrow.png" id="4_363j0"]
+[ext_resource type="Texture2D" uid="uid://dodcs7kjehofa" path="res://Assets/Textures/you_did_it.png" id="5_4dx5s"]
 
 [node name="Control" type="Control" unique_id=2080130039]
 layout_mode = 3
@@ -127,3 +128,10 @@ offset_right = 160.0
 offset_bottom = 40.0
 texture = ExtResource("4_363j0")
 expand_mode = 1
+
+[node name="you_did_it" type="TextureRect" parent="." unique_id=1902926398]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_4dx5s")
