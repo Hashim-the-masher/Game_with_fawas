@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://pgv1oq60gvww" path="res://Effects/Screen effects/death_screen.gd" id="1_hjv52"]
 [ext_resource type="FontFile" uid="uid://bffuiwh7227js" path="res://Assets/fonts/UbuntuSans[wdth,wght].ttf" id="2_g0pa0"]
+[ext_resource type="AudioStream" uid="uid://nkbk0mofd6gf" path="res://Assets/sounds_aaaaaaaah/lose.wav" id="3_g30hm"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hjv52"]
 font = ExtResource("2_g0pa0")
@@ -26,7 +27,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="." unique_id=1080785008]
-wait_time = 2.0
+wait_time = 4.25
 autostart = true
 
 [node name="Label" type="Label" parent="." unique_id=191498446]
@@ -40,3 +41,7 @@ text = "YOU DIED"
 label_settings = SubResource("LabelSettings_hjv52")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=530600404]
+stream = ExtResource("3_g30hm")
+autoplay = true

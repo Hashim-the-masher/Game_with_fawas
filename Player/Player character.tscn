@@ -34,6 +34,9 @@ rotation_friction = 1.18
 speed = 450.0
 max_velocity = 750.0
 
+[node name="AudioListener2D" type="AudioListener2D" parent="." unique_id=1065131562]
+current = true
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1000197918]
 shape = SubResource("CircleShape2D_se0j5")
 

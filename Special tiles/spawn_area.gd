@@ -4,18 +4,26 @@ extends Area2D
 var finished_spawning_flag = false
 @export var spawn_enemies = {"enemy":[],"location":[]}
 var enemy = []
+@onready var daddy_node: Node2D = $".."
 
 func _on_body_entered(body: Node2D) -> void:
 	if finished_spawning_flag == true:
 		return
-	if body.name == "player":
-		for n in 4:
+	if body.name == "player" and spawn_enemies["enemy"].size() > 0:
+		
+		for n in spawn_enemies["enemy"].size():
 			enemy.append(-1)
 			enemy[n] = spawn_enemies["enemy"][n].instantiate()
-			enemy[n].name = "Enemy"+str(n+2)
 			enemy[n].position = spawn_enemies["location"][n]
 			enemy[n].enemy_detected_flag = true
 			add_sibling(enemy[n])
+		connect_signals()
+
+func connect_signals():
+	for child in daddy_node.get_children():
+		if child.name.containsn("smash"):
+			child.connect("kill",player._on_smash_kill)
+
 	player.position = spawn_area_pos.position
 	player.velocity = Vector2.ZERO
 	finished_spawning_flag = true

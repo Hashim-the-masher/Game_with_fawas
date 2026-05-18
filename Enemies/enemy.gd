@@ -16,10 +16,12 @@ func _process(delta: float) -> void:
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	enemy_detected_flag = true
 	print(name+",took damge from:"+area.name)
-	if hp == 1:
+	hp -= 1 
+	if area.name == "Smash":
+		hp -= 9
+	if hp <= 0:
 		kill.emit()
 		queue_free()
-	else: hp -= 1 
 	
 
 

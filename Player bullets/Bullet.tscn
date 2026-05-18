@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cb46r5a2cgi66" path="res://Player bullets/Bullet.gd" id="1_dyopk"]
 [ext_resource type="Texture2D" uid="uid://doisbhxhnuw30" path="res://Assets/Textures/Black colour.tres" id="2_0jha2"]
+[ext_resource type="AudioStream" uid="uid://dcs838hbv8c2c" path="res://Assets/sounds_aaaaaaaah/shoot.wav" id="3_u230n"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6g606"]
 radius = 1.0
@@ -24,6 +25,11 @@ shape = SubResource("CapsuleShape2D_6g606")
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1865883895]
 mesh = SubResource("CapsuleMesh_3umxu")
 texture = ExtResource("2_0jha2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=878266351]
+stream = ExtResource("3_u230n")
+autoplay = true
+attenuation = 4.2870893
 
 [connection signal="area_entered" from="." to="." method="_on_enemy"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

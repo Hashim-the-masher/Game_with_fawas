@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cyp5nja2n8xgf" path="res://Effects/Screen effects/Win_effects.gd" id="1_t20xw"]
 [ext_resource type="FontFile" uid="uid://bffuiwh7227js" path="res://Assets/fonts/UbuntuSans[wdth,wght].ttf" id="2_or1xv"]
+[ext_resource type="AudioStream" uid="uid://1vgo8dngswxm" path="res://Assets/sounds_aaaaaaaah/win.wav" id="3_nv2yj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5xn12"]
 font = ExtResource("2_or1xv")
@@ -40,5 +41,9 @@ vertical_alignment = 1
 [node name="Timer" type="Timer" parent="." unique_id=1617847344]
 wait_time = 2.0
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=631173200]
+stream = ExtResource("3_nv2yj")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

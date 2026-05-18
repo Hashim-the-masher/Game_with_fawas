@@ -16,7 +16,7 @@ radius = 11.0
 [node name="smash" type="CharacterBody2D" unique_id=2132735446]
 scale = Vector2(3, 3)
 collision_layer = 4
-collision_mask = 7
+collision_mask = 6
 script = ExtResource("1_2kmf5")
 
 [node name="Smash state" type="Node2D" parent="." unique_id=540779467]
@@ -39,10 +39,10 @@ shape = SubResource("CircleShape2D_u11kl")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=841924189]
 collision_layer = 4
-collision_mask = 8
+collision_mask = 40
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1267277425]
 shape = SubResource("CircleShape2D_d2lgf")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

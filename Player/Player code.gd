@@ -15,8 +15,9 @@ var rotaion_velocity:float
 @export var friction:float = 1.03 #this one applies a fiction to the movment
 @export var breaking_friction:float = 1.1 #larger firction applied when the character stopped moving(inputing movment)
 
-#These are for accessing the camera
+#These are for accessing the camera and other mislanous stuff
 @onready var camera: Camera2D = $Camera2D
+@onready var audio_listener: AudioListener2D = $AudioListener2D
 
 #these are for shooting the various wepons in the dispoal of the player...
 var d #this one is for making a dash instance
@@ -34,6 +35,7 @@ func _ready() -> void:#this one makes sure that the state is the normal state an
 	current_state = states[0]
 	switch_mesh(current_state)
 	switch_ablity(current_state)
+	
 	
 
 func switch_mesh(state:StringName):#this one switches the mesh to the desired state
@@ -96,6 +98,7 @@ func _physics_process(delta: float) -> void:#this one is a bit more complex beca
 		rotaion_velocity /= rotation_friction
 		rotaion_velocity = clampf(rotaion_velocity,min_rotation,max_rotation)
 		rotation += rotaion_velocity
+		audio_listener.rotation -= rotaion_velocity
 
 		move_and_slide()#this proccess applies the velocity
 

@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://dw6va7xqge235"]
+
+[ext_resource type="Script" uid="uid://cbnnpbyncswpu" path="res://Menus/settings.gd" id="1_lpudm"]
+[ext_resource type="LabelSettings" uid="uid://b4ckevhw0xmal" path="res://Assets/Textures/UI_settings.tres" id="2_boh0i"]
+[ext_resource type="Texture2D" uid="uid://dyf64kjp5hdow" path="res://Assets/Textures/arrow.png" id="4_kl0jk"]
+
+[node name="Control" type="Control" unique_id=2080130039]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1854075011]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="settings" type="VBoxContainer" parent="." unique_id=11857442]
+layout_mode = 1
+offset_right = 145.0
+offset_bottom = 128.0
+alignment = 1
+script = ExtResource("1_lpudm")
+
+[node name="SliderSettings" type="HBoxContainer" parent="settings" unique_id=1847324486]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Titles" type="VBoxContainer" parent="settings/SliderSettings" unique_id=1529427073]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="Sounds" type="Label" parent="settings/SliderSettings/Titles" unique_id=301088139]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Sounds"
+label_settings = ExtResource("2_boh0i")
+
+[node name="Visuals" type="Label" parent="settings/SliderSettings/Titles" unique_id=97610895]
+layout_mode = 2
+text = "Visuals"
+label_settings = ExtResource("2_boh0i")
+
+[node name="Controls" type="Label" parent="settings/SliderSettings/Titles" unique_id=626913498]
+layout_mode = 2
+text = "Controls"
+label_settings = ExtResource("2_boh0i")
+
+[node name="Quit" type="Label" parent="settings/SliderSettings/Titles" unique_id=456754704]
+layout_mode = 2
+text = "Back"
+label_settings = ExtResource("2_boh0i")
+
+[node name="arrows" type="VBoxContainer" parent="settings/SliderSettings" unique_id=769519589]
+layout_mode = 2
+
+[node name="empty" type="Control" parent="settings/SliderSettings/arrows" unique_id=477423529]
+custom_minimum_size = Vector2(0, 4.525)
+layout_mode = 2
+
+[node name="arrow" type="Control" parent="settings/SliderSettings/arrows" unique_id=1755047843]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="arrow" type="TextureRect" parent="settings/SliderSettings/arrows/arrow" unique_id=1373623784]
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 32.0
+texture = ExtResource("4_kl0jk")
+expand_mode = 1
+
+[node name="empty2" type="Control" parent="settings/SliderSettings/arrows" unique_id=535867249]
+custom_minimum_size = Vector2(0, 31.71)
+layout_mode = 2
+
+[node name="arrow2" type="Control" parent="settings/SliderSettings/arrows" unique_id=1944391217]
+visible = false
+layout_mode = 2
+
+[node name="arrow2" type="TextureRect" parent="settings/SliderSettings/arrows/arrow2" unique_id=830459251]
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("4_kl0jk")
+expand_mode = 1
+
+[node name="empty3" type="Control" parent="settings/SliderSettings/arrows" unique_id=1493478147]
+custom_minimum_size = Vector2(0, 40.455)
+layout_mode = 2
+
+[node name="arrow3" type="Control" parent="settings/SliderSettings/arrows" unique_id=1167961574]
+visible = false
+layout_mode = 2
+
+[node name="arrow3" type="TextureRect" parent="settings/SliderSettings/arrows/arrow3" unique_id=560686437]
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("4_kl0jk")
+expand_mode = 1
+
+[node name="empty4" type="Control" parent="settings/SliderSettings/arrows" unique_id=734203658]
+custom_minimum_size = Vector2(0, 40.51)
+layout_mode = 2
+
+[node name="arrow4" type="Control" parent="settings/SliderSettings/arrows" unique_id=1262148603]
+visible = false
+layout_mode = 2
+
+[node name="arrow3" type="TextureRect" parent="settings/SliderSettings/arrows/arrow4" unique_id=334737827]
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("4_kl0jk")
+expand_mode = 1

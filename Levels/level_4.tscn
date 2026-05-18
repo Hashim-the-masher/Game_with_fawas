@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dfi00lor8lwr0" path="res://Special tiles/Smash(able) tiles.tscn" id="3_fqog2"]
 [ext_resource type="PackedScene" uid="uid://c40canctt3jv8" path="res://Enemies/Smash enemy.tscn" id="5_77xid"]
 [ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="7_waaef"]
+[ext_resource type="AudioStream" uid="uid://b4mmvrlgn43aw" path="res://Assets/sounds_aaaaaaaah/ceramic pop.wav" id="8_fqog2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_kbe2v")
@@ -91,5 +92,11 @@ color = Color(0, 0, 0, 1)
 
 [node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("7_waaef")]
 visible = false
+
+[node name="cracking, sound effects" type="AudioStreamPlayer2D" parent="." unique_id=961473754]
+position = Vector2(214, -8)
+stream = ExtResource("8_fqog2")
+attenuation = 2.697397
+max_polyphony = 2
 
 [connection signal="kill" from="smash" to="player" method="_on_smash_kill"]

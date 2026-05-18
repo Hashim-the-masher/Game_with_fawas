@@ -1,6 +1,9 @@
+AudioStreamPlayer2D
+Node2D
+AudioStreamPlayer
+AudioListener2D
 TextureRect
 TextEdit
-Node2D
 Node
 CollisionShape2D
 Area2D
@@ -9,6 +12,3 @@ CharacterBody2D
 ColorRect
 CanvasLayer
 TileMapLayer
-Control
-VBoxContainer
-HBoxContainer

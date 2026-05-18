@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c4uv6fisup5fn" path="res://Player/Player character.tscn" id="2_3mhv4"]
 [ext_resource type="PackedScene" uid="uid://p8v6rpanovbs" path="res://Special tiles/win_area.tscn" id="3_3mhv4"]
 [ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="5_syshm"]
+[ext_resource type="AudioStream" uid="uid://cfb3g2bqrs1t4" path="res://Assets/mus/C.wav" id="6_rfktq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_dilhk")
@@ -75,3 +76,10 @@ color = Color(0, 0, 0, 1)
 
 [node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("5_syshm")]
 visible = false
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1033497019]
+position = Vector2(-736, -2)
+stream = ExtResource("6_rfktq")
+autoplay = true
+attenuation = 2.9281766
+panning_strength = 2.25
