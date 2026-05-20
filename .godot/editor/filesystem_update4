@@ -1,6 +1,4 @@
-res://Levels/level_7.tscn
-res://Assets/Textures/Black colour.tres
-res://Assets/Textures/Red, black gradient.tres
-res://Assets/Textures/red colour.tres
 res://Levels/level_credits.tscn
-res://savedata.json
+res://Assets/Textures/Black colour.tres
+res://Assets/Textures/red colour.tres
+res://Assets/Textures/Red, black gradient.tres

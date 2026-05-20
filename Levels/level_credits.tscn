@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://btdlgqt1b8kek"]
 
 [ext_resource type="LabelSettings" uid="uid://dvpvf7wdsrfxi" path="res://Assets/Textures/UI_selected.tres" id="1_rokvp"]
+[ext_resource type="Script" uid="uid://dax0hdpyx7u8d" path="res://Levels/level_credits.gd" id="1_wmfid"]
 
 [node name="Node2D2" type="Node2D" unique_id=2137181921]
+script = ExtResource("1_wmfid")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=106412809]
 
