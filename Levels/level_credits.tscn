@@ -1,15 +1,40 @@
 [gd_scene format=3 uid="uid://btdlgqt1b8kek"]
 
-[ext_resource type="LabelSettings" uid="uid://dvpvf7wdsrfxi" path="res://Assets/Textures/UI_selected.tres" id="1_rokvp"]
 [ext_resource type="Script" uid="uid://dax0hdpyx7u8d" path="res://Levels/level_credits.gd" id="1_wmfid"]
+[ext_resource type="LabelSettings" uid="uid://crx8iflknyvf" path="res://Assets/Textures/credits.tres" id="2_wmfid"]
 
 [node name="Node2D2" type="Node2D" unique_id=2137181921]
-script = ExtResource("1_wmfid")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=106412809]
+script = ExtResource("1_wmfid")
 
-[node name="Label" type="Label" parent="CanvasLayer" unique_id=2097292908]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=22557893]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1220555911]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 78.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=1282886431]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=2097292908]
+layout_mode = 2
 text = "Just to see me"
-label_settings = ExtResource("1_rokvp")
+label_settings = ExtResource("2_wmfid")
+
+[node name="Description" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1127676971]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = ExtResource("2_wmfid")
+horizontal_alignment = 2
+
+[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=1089947840]

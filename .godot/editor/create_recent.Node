@@ -1,6 +1,10 @@
-Label
-CanvasLayer
+Timer
+ColorRect
 TextureRect
+Label
+VBoxContainer
+HBoxContainer
+CanvasLayer
 AudioStreamPlayer2D
 Node2D
 AudioStreamPlayer
@@ -9,7 +13,3 @@ TextEdit
 Node
 CollisionShape2D
 Area2D
-Timer
-CharacterBody2D
-ColorRect
-TileMapLayer

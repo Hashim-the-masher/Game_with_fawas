@@ -1,11 +1,41 @@
-extends Node2D
+extends CanvasLayer
+var colour
+var negative_colour
+@onready var color_rect: ColorRect = $ColorRect
+@onready var Labels = $VBoxContainer/HBoxContainer
+var savepath = "res://savedata.json"
+var savedata:Dictionary
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	savedata = load_json_file()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func load_json_file():
+	var file = FileAccess.open(savepath, FileAccess.READ)
+	var json = file.get_as_text()
+	var jsonobject = JSON.new()
+	jsonobject.parse(json)
+	print("Loaded:"+str(jsonobject.data)+"from file")
+	return jsonobject.data
+
+func save_to_json_file():
+	var file = FileAccess.open(savepath, FileAccess.ModeFlags.WRITE)
+	var json_text = JSON.stringify(savedata)
+	print("written:"+json_text+"to file")
+	file.store_string(json_text)
+
+func _physics_process(delta: float) -> void:
+	var val1=randi_range(0,100)
+	var val2=randi_range(0,100)
+	var val3=randi_range(200,255)
+	colour = Color8(val1,val2,val3)
+	for label in Labels.get_children():
+		negative_colour = Color8(255-val1,255-val2,255-val3)
+		var tween = get_tree().create_tween()
+		tween.tween_property(label.label_settings,"font_color",negative_colour,1)
+	var tween = get_tree().create_tween()
+	tween.tween_property(color_rect,"color",colour,1)
+
+
+func _on_timer_timeout() -> void:
+	get_tree().quit()
