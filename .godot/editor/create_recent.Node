@@ -1,3 +1,5 @@
+Label
+CanvasLayer
 TextureRect
 AudioStreamPlayer2D
 Node2D
@@ -10,5 +12,4 @@ Area2D
 Timer
 CharacterBody2D
 ColorRect
-CanvasLayer
 TileMapLayer

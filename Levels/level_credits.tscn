@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://btdlgqt1b8kek"]
+
+[ext_resource type="LabelSettings" uid="uid://dvpvf7wdsrfxi" path="res://Assets/Textures/UI_selected.tres" id="1_rokvp"]
+
+[node name="Node2D2" type="Node2D" unique_id=2137181921]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=106412809]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=2097292908]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Just to see me"
+label_settings = ExtResource("1_rokvp")

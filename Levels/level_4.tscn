@@ -101,10 +101,11 @@ attenuation = 2.697397
 max_polyphony = 2
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=847862493]
-position = Vector2(-783, 2756)
+position = Vector2(283, -5)
 stream = ExtResource("9_ben3k")
 autoplay = true
 attenuation = 2.9281766
+max_polyphony = 2
 panning_strength = 2.25
 
 [connection signal="kill" from="smash" to="player" method="_on_smash_kill"]
