@@ -4,7 +4,7 @@ extends Control
 @onready var title = $SliderSettings/Titles
 var setting_no:int = 3
 var back_confirmation_flag = false
-var savepath = "res://savedata.json"
+var savepath = "/home/haal/.local/share/Game with fawas/savedata.json"
 var savedata:Dictionary
 const ARROW = preload("uid://dyf64kjp5hdow")
 const UI_SETTINGS = preload("uid://b4ckevhw0xmal")

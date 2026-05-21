@@ -1,13 +1,17 @@
-extends CanvasLayer
+extends Control
 var colour
 var negative_colour
 @onready var color_rect: ColorRect = $ColorRect
-@onready var Labels = $VBoxContainer/HBoxContainer
-var savepath = "res://savedata.json"
+@onready var layers = [$VBoxContainer/HBoxContainer, $VBoxContainer/HBoxContainer2, $VBoxContainer/HBoxContainer3, $VBoxContainer/HBoxContainer4, $VBoxContainer/HBoxContainer5, $VBoxContainer/HBoxContainer6]
+
+var savepath = "/home/haal/.local/share/Game with fawas/savedata.json"
 var savedata:Dictionary
+var progress:int = -1
 
 func _ready() -> void:
 	savedata = load_json_file()
+	save_to_json_file()
+	
 
 
 func load_json_file():
@@ -29,13 +33,18 @@ func _physics_process(delta: float) -> void:
 	var val2=randi_range(0,100)
 	var val3=randi_range(200,255)
 	colour = Color8(val1,val2,val3)
-	for label in Labels.get_children():
-		negative_colour = Color8(255-val1,255-val2,255-val3)
+	if layers[0] != null:
+		for label in layers[0].get_children():
+			negative_colour = Color8(255-val1,255-val2,255-val3)
+			var tween = get_tree().create_tween()
+			tween.tween_property(label.label_settings,"font_color",negative_colour,1)
 		var tween = get_tree().create_tween()
-		tween.tween_property(label.label_settings,"font_color",negative_colour,1)
-	var tween = get_tree().create_tween()
-	tween.tween_property(color_rect,"color",colour,1)
+		tween.tween_property(color_rect,"color",colour,1)
+		if progress <= 15 and progress > -1:
+			layers[0].get_child(0).text = savedata["credits"][0][progress]
+	else: pass
 
 
-func _on_timer_timeout() -> void:
-	get_tree().quit()
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept"):
+		progress+=1

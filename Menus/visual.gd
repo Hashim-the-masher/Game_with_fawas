@@ -6,7 +6,7 @@ extends Control
 var setting_no = 2
 var move_mode = 0
 var back_confirmation_flag = false
-var savepath = "res://savedata.json"
+var savepath = "/home/haal/.local/share/Game with fawas/savedata.json"
 var savedata:Dictionary
 const ARROW = preload("uid://dyf64kjp5hdow")
 const BI_ARROW = preload("uid://d24grgb0ooerg")
@@ -102,21 +102,24 @@ func _input(event: InputEvent) -> void:
 			if back_confirmation_flag == true:
 				save_to_json_file()
 				if old_savedata["settings"]["visuals"][0] != savedata["settings"]["visuals"][0] or old_savedata["settings"]["visuals"][1] != savedata["settings"]["visuals"][1]:
-					ProjectSettings.set_setting("display/window/size/viewport_width",round((screen[0]*savedata["settings"]["visuals"][0])))
-					ProjectSettings.set_setting("display/window/size/viewport_height",round((screen[1]*savedata["settings"]["visuals"][0])))
-					ProjectSettings.set_setting("display/window/stretch/scale",savedata["settings"]["visuals"][0])
+					DisplayServer.window_set_size(Vector2i(screen[0]*savedata["settings"]["visuals"][0],screen[1]*savedata["settings"]["visuals"][0]))
+					get_window().content_scale_factor = savedata["settings"]["visuals"][0]
+					print("window size changed")
+					
 					match setting[1].text:
-						"Yes":ProjectSettings.set_setting("display/window/size/mode",Window.Mode.MODE_EXCLUSIVE_FULLSCREEN)
-						"No":ProjectSettings.set_setting("display/window/size/mode",Window.Mode.MODE_WINDOWED)
-					print("Window width="+str(ProjectSettings.get_setting("display/window/size/viewport_width")))
-					print("Window hight="+str(ProjectSettings.get_setting("display/window/size/viewport_height")))
-					ProjectSettings.save()
-					get_tree().quit()
+						"Yes":
+							get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_VIEWPORT
+							DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+							print("window fullsckeen")	
+						"No":
+							get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_DISABLED
+							DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+							print("window windowed")	
 				get_tree().change_scene_to_file("res://Menus/settings.tscn")
 			if back_confirmation_flag == false:
 				if old_savedata["settings"]["visuals"][0] != savedata["settings"]["visuals"][0] or old_savedata["settings"]["visuals"][1] != savedata["settings"]["visuals"][1]:
 					title[2].label_settings = UI_SETTINGS
-					setting[2].text = "Program closes to apply visuals"
+					setting[2].text = "Will apply new visuals"
 					setting[2].label_settings = UI_SETTINGS_SELECTED
 					back_confirmation_flag = true
 				else:

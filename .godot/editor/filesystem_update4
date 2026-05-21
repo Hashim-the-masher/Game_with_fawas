@@ -1,7 +1,5 @@
+res://Menus/visual.gd
 res://Levels/level_credits.tscn
 res://Assets/Textures/Black colour.tres
-res://Assets/Textures/red colour.tres
 res://Assets/Textures/Red, black gradient.tres
-res://Assets/Textures/credits.tres
-res://Levels/level_credits.gd
-res://Levels/level_?.tscn
+res://Assets/Textures/red colour.tres

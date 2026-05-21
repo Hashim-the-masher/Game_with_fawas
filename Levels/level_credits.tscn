@@ -6,9 +6,18 @@
 [node name="Node2D2" type="Node2D" unique_id=2137181921]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=106412809]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=2014142001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_wmfid")
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=22557893]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=22557893]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -16,25 +25,92 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1220555911]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1220555911]
+layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 78.0
+offset_right = 381.0
+offset_bottom = 488.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer" unique_id=1282886431]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1282886431]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=2097292908]
+[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" unique_id=2097292908]
 layout_mode = 2
 text = "Just to see me"
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer" unique_id=1127676971]
+[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer" unique_id=1127676971]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="Timer" type="Timer" parent="CanvasLayer" unique_id=1089947840]
+[node name="HBoxContainer2" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=879825913]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" unique_id=1161934300]
+layout_mode = 2
+label_settings = ExtResource("2_wmfid")
+
+[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer2" unique_id=1391007616]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = ExtResource("2_wmfid")
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=727280311]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer3" unique_id=401506998]
+layout_mode = 2
+label_settings = ExtResource("2_wmfid")
+
+[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer3" unique_id=416855362]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = ExtResource("2_wmfid")
+horizontal_alignment = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=61335789]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer4" unique_id=154903167]
+layout_mode = 2
+label_settings = ExtResource("2_wmfid")
+
+[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer4" unique_id=1666663647]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = ExtResource("2_wmfid")
+horizontal_alignment = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1112069565]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer5" unique_id=1562793988]
+layout_mode = 2
+label_settings = ExtResource("2_wmfid")
+
+[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer5" unique_id=1230350118]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = ExtResource("2_wmfid")
+horizontal_alignment = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1657335680]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer6" unique_id=35559355]
+layout_mode = 2
+label_settings = ExtResource("2_wmfid")
+
+[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/HBoxContainer6" unique_id=528155412]
+layout_mode = 2
+size_flags_horizontal = 10
+label_settings = ExtResource("2_wmfid")
+horizontal_alignment = 2
+
+[node name="Timer" type="Timer" parent="CanvasLayer/Control" unique_id=1089947840]

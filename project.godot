@@ -8,10 +8,6 @@
 
 config_version=5
 
-[animation]
-
-compatibility/default_parent_skeleton_in_mesh_instance_3d=true
-
 [application]
 
 config/name="Game with fawas"
@@ -24,7 +20,7 @@ config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
-Settings="*uid://b3xtdp2wvmpgt"
+LevelCredits="*uid://dax0hdpyx7u8d"
 
 [display]
 
@@ -32,7 +28,6 @@ window/size/viewport_width=1024.0
 window/size/viewport_height=512.0
 window/size/borderless=true
 window/size/sharp_corners=true
-window/stretch/mode="viewport"
 
 [input]
 

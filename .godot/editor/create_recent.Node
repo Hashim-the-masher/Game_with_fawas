@@ -1,3 +1,4 @@
+Control
 Timer
 ColorRect
 TextureRect
@@ -12,4 +13,3 @@ AudioListener2D
 TextEdit
 Node
 CollisionShape2D
-Area2D
