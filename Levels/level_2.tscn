@@ -140,6 +140,7 @@ visible = false
 [node name="mus" type="AudioStreamPlayer2D" parent="." unique_id=875840630]
 position = Vector2(279, 5)
 stream = ExtResource("10_rp5ft")
+volume_db = -80.0
 autoplay = true
 attenuation = 2.9281766
 panning_strength = 2.25
