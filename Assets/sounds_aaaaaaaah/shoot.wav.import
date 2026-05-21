@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dcs838hbv8c2c"
-path="res://.godot/imported/shoot.wav-228808e8266eb5bfe8e98d804bbf1f6e.sample"
+path="res://godot/imported/shoot.wav-228808e8266eb5bfe8e98d804bbf1f6e.sample"
 
 [deps]
 
 source_file="res://Assets/sounds_aaaaaaaah/shoot.wav"
-dest_files=["res://.godot/imported/shoot.wav-228808e8266eb5bfe8e98d804bbf1f6e.sample"]
+dest_files=["res://godot/imported/shoot.wav-228808e8266eb5bfe8e98d804bbf1f6e.sample"]
 
 [params]
 

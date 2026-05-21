@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://crut4mnrt43k1"
-path="res://.godot/imported/E.wav-081f9aa410af4683f1695f492377c425.sample"
+path="res://godot/imported/E.wav-081f9aa410af4683f1695f492377c425.sample"
 
 [deps]
 
 source_file="res://Assets/mus/E.wav"
-dest_files=["res://.godot/imported/E.wav-081f9aa410af4683f1695f492377c425.sample"]
+dest_files=["res://godot/imported/E.wav-081f9aa410af4683f1695f492377c425.sample"]
 
 [params]
 

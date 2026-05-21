@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bffuiwh7227js"
-path="res://.godot/imported/UbuntuSans[wdth,wght].ttf-8b2255b76e43fd5aa37100da6c74c4ad.fontdata"
+path="res://godot/imported/UbuntuSans[wdth,wght].ttf-8b2255b76e43fd5aa37100da6c74c4ad.fontdata"
 
 [deps]
 
 source_file="res://Assets/fonts/UbuntuSans[wdth,wght].ttf"
-dest_files=["res://.godot/imported/UbuntuSans[wdth,wght].ttf-8b2255b76e43fd5aa37100da6c74c4ad.fontdata"]
+dest_files=["res://godot/imported/UbuntuSans[wdth,wght].ttf-8b2255b76e43fd5aa37100da6c74c4ad.fontdata"]
 
 [params]
 

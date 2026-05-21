@@ -3,7 +3,7 @@ var colour
 var negative_colour
 @onready var color_rect: ColorRect = $ColorRect
 @onready var label: Label = $Label
-var savepath = "res://savedata.json"
+var savepath = "/home/work-hashem/.local/share/Game with fawas/savedata.json"
 var savedata:Dictionary
 
 func _ready() -> void:

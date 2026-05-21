@@ -12,6 +12,9 @@ config_version=5
 
 config/name="Game with fawas"
 run/main_scene="uid://cg418vk1chf5k"
+config/use_hidden_project_data_directory=false
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Game with fawas"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/use_filter=false
 config/icon="res://icon.svg"

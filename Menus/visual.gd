@@ -6,7 +6,7 @@ extends Control
 var setting_no = 2
 var move_mode = 0
 var back_confirmation_flag = false
-var savepath = "/home/haal/.local/share/Game with fawas/savedata.json"
+var savepath = "user://savedata.json"
 var savedata:Dictionary
 const ARROW = preload("uid://dyf64kjp5hdow")
 const BI_ARROW = preload("uid://d24grgb0ooerg")

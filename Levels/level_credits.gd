@@ -4,7 +4,7 @@ var negative_colour
 @onready var color_rect: ColorRect = $ColorRect
 @onready var layers = [$VBoxContainer/HBoxContainer, $VBoxContainer/HBoxContainer2, $VBoxContainer/HBoxContainer3, $VBoxContainer/HBoxContainer4, $VBoxContainer/HBoxContainer5, $VBoxContainer/HBoxContainer6]
 
-var savepath = "/home/haal/.local/share/Game with fawas/savedata.json"
+var savepath = "user://savedata.json"
 var savedata:Dictionary
 var progress:int = -1
 

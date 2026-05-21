@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bk2piks626vv2"
-path="res://.godot/imported/B.wav-2ad417c25b5d4ee72c49bcd36a2aebb9.sample"
+path="res://godot/imported/B.wav-2ad417c25b5d4ee72c49bcd36a2aebb9.sample"
 
 [deps]
 
 source_file="res://Assets/mus/B.wav"
-dest_files=["res://.godot/imported/B.wav-2ad417c25b5d4ee72c49bcd36a2aebb9.sample"]
+dest_files=["res://godot/imported/B.wav-2ad417c25b5d4ee72c49bcd36a2aebb9.sample"]
 
 [params]
 

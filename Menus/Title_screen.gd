@@ -6,7 +6,7 @@ extends Control
 @onready var options: Label = $HBoxContainer/VBoxContainer/Options
 @onready var sure_flag = false
 @onready var you_did_it: TextureRect = $you_did_it
-var savepath = "/home/haal/.local/share/Game with fawas/savedata.json"
+var savepath = "user://savedata.json"
 var savedata:Dictionary
 var option_selected:int = 0
 
