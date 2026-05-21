@@ -94,15 +94,16 @@ color = Color(0, 0, 0, 1)
 [node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("7_waaef")]
 visible = false
 
-[node name="cracking, sound effects" type="AudioStreamPlayer2D" parent="." unique_id=961473754]
+[node name="sfx_cracking" type="AudioStreamPlayer2D" parent="." unique_id=961473754]
 position = Vector2(214, -8)
 stream = ExtResource("8_fqog2")
 attenuation = 2.697397
 max_polyphony = 2
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=847862493]
+[node name="mus" type="AudioStreamPlayer2D" parent="." unique_id=847862493]
 position = Vector2(283, -5)
 stream = ExtResource("9_ben3k")
+volume_db = -80.0
 autoplay = true
 attenuation = 2.9281766
 max_polyphony = 2

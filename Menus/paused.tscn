@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bqkn7wtuydlss"]
+
+[ext_resource type="Script" uid="uid://b7ay11noj1e5q" path="res://Menus/paused.gd" id="1_5lqxi"]
+[ext_resource type="Texture2D" uid="uid://bq3vnwmwmyho6" path="res://Assets/Textures/simple_overlay.png" id="2_5lqxi"]
+[ext_resource type="LabelSettings" uid="uid://dvpvf7wdsrfxi" path="res://Assets/Textures/UI_selected.tres" id="2_th6tw"]
+[ext_resource type="LabelSettings" uid="uid://b5pijvb5s1ujn" path="res://Assets/Textures/UI.tres" id="3_eod33"]
+[ext_resource type="Texture2D" uid="uid://dodcs7kjehofa" path="res://Assets/Textures/you_did_it.png" id="5_utox3"]
+
+[node name="Control" type="Control" unique_id=1629708582]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5lqxi")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=943336586]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5lqxi")
+
+[node name="Label" type="Label" parent="." unique_id=1782380580]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Paused"
+label_settings = ExtResource("2_th6tw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2083741596]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -160.0
+offset_right = 230.0
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=2128584590]
+layout_mode = 2
+
+[node name="Resume" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1845538501]
+layout_mode = 2
+text = "Resume"
+label_settings = ExtResource("2_th6tw")
+
+[node name="Options" type="Label" parent="HBoxContainer/VBoxContainer" unique_id=1753880263]
+layout_mode = 2
+text = "Options"
+label_settings = ExtResource("3_eod33")
+
+[node name="you_did_it" type="TextureRect" parent="." unique_id=1198323234]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_utox3")

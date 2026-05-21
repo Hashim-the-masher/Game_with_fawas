@@ -1,10 +1,8 @@
 extends Control
-#
-@onready var arrow: Control = $HBoxContainer/VBoxContainer2/arrow
-@onready var arrow_2: Control = $HBoxContainer/VBoxContainer2/arrow2
-@onready var start: Label = $HBoxContainer/VBoxContainer/Start
+
+
+@onready var resume: Label = $HBoxContainer/VBoxContainer/Resume
 @onready var options: Label = $HBoxContainer/VBoxContainer/Options
-@onready var sure_flag = false
 @onready var you_did_it: TextureRect = $you_did_it
 var savepath = "user://savedata.json"
 var savedata:Dictionary
@@ -23,15 +21,11 @@ func _ready() -> void:
 			you_did_it.hide()
 	match option_selected:
 		1:
-			start.label_settings = UI
+			resume.label_settings = UI
 			options.label_settings = UI_SELECTED
-			arrow.hide()
-			arrow_2.show()
 		0:
-			start.label_settings = UI_SELECTED
+			resume.label_settings = UI_SELECTED
 			options.label_settings = UI
-			arrow.show()
-			arrow_2.hide()
 	DisplayServer.window_set_size(Vector2i(screen[0]*savedata["settings"]["visuals"][0],screen[1]*savedata["settings"]["visuals"][0]))
 	get_window().content_scale_factor = savedata["settings"]["visuals"][0]
 	match savedata["settings"]["visuals"][1]:
@@ -61,18 +55,13 @@ func save_to_json_file():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_down"):
 		option_selected =1
-		start.label_settings = UI
+		resume.label_settings = UI
 		options.label_settings = UI_SELECTED
-		sure_flag = false
-		start.text = "Start"
-		arrow.hide()
-		arrow_2.show()
+		resume.text = "Resume"
 	if event.is_action_pressed("ui_up"):
 		option_selected = 0
-		start.label_settings = UI_SELECTED
+		resume.label_settings = UI_SELECTED
 		options.label_settings = UI
-		arrow.show()
-		arrow_2.hide()
 	if event.is_action_pressed("ui_accept"):
 		match option_selected:
 			1:
@@ -80,11 +69,6 @@ func _input(event: InputEvent) -> void:
 				save_to_json_file()
 				get_tree().change_scene_to_file("res://Menus/settings.tscn")
 			0:
-				match sure_flag:
-					true:
-						savedata["setting_no"]["title"] = option_selected
-						save_to_json_file()
-						get_tree().change_scene_to_file("res://Levels/level_1.tscn")
-					false:
-						sure_flag = true
-						start.text = "You sure?"
+				savedata["setting_no"]["title"] = option_selected
+				save_to_json_file()
+				#exit

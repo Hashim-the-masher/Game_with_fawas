@@ -1,9 +1,6 @@
-res://Effects/Screen effects/death_screen.gd
-res://Effects/Screen effects/Death screen.tscn
+res://Menus/paused.tscn
 res://Assets/Textures/Black colour.tres
+res://Assets/Textures/Red, black gradient.tres
 res://Assets/Textures/red colour.tres
-res://Levels/level_credits.gd
-res://Menus/settings.gd
-res://Menus/sound.gd
-res://Menus/Title_screen.gd
-res://Menus/visual.gd
+res://Menus/paused.gd
+res://Levels/level_1.tscn

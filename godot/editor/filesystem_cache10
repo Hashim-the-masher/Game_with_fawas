@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1779375511
+::res://::1779388882
 export_presets.cfg::TextFile::-1::1779373063::0::1::::<><><>0<>0<><>::
 icon.icns::OtherFile::-1::1779371917::0::1::::<><><>0<>0<><>::
 icon.ico::OtherFile::-1::1779371917::0::1::::<><><>0<>0<><>::
@@ -8,27 +8,27 @@ overlay.tscn::PackedScene::8647996159073114495::1779371917::0::1::::<><><>0<>0<>
 savedata.json::JSON::-1::1779375371::0::1::::<><><>0<>0<><>::
 winning again speech.txt::TextFile::-1::1779371917::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1779371917
-::res://Assets/fonts/::1779371917
+::res://Assets/fonts/::1779375511
 LANGUAGE.ttf::FontFile::3626712634001930049::1779371917::1779375511::1::::<><><>0<>0<>2a1460ca116efbbc2e5f67529f36e781<>res://godot/imported/LANGUAGE.ttf-7e29cd4cd42c71681faab4a2c92ee510.fontdata::
 UbuntuSans[wdth,wght].ttf::FontFile::2748916584678577548::1779371917::1779375511::1::::<><><>0<>0<>e40a77748ead0aa43a3e4c3a244a5a58<>res://godot/imported/UbuntuSans[wdth,wght].ttf-8b2255b76e43fd5aa37100da6c74c4ad.fontdata::
-::res://Assets/mus/::1779371917
+::res://Assets/mus/::1779375512
 B.wav::AudioStreamWAV::3144972915161578561::1779371917::1779375512::1::::<><><>0<>0<>115a4067a8f762127f21ae40b7828278<>res://godot/imported/B.wav-2ad417c25b5d4ee72c49bcd36a2aebb9.sample::
 C.wav::AudioStreamWAV::5127562174316995179::1779371917::1779375512::1::::<><><>0<>0<>c0dceb729fdd12ed20ea389a36f9e465<>res://godot/imported/C.wav-b026bab8285073e25ba8ab04f3e35fb3.sample::
 E.wav::AudioStreamWAV::6008545326361377238::1779371917::1779375512::1::::<><><>0<>0<>2dbfa6c8a545dc8758e82376f4ad1fd7<>res://godot/imported/E.wav-081f9aa410af4683f1695f492377c425.sample::
-::res://Assets/sounds_aaaaaaaah/::1779371917
+::res://Assets/sounds_aaaaaaaah/::1779375512
 ceramic pop.wav::AudioStreamWAV::4447436698010916030::1779371917::1779375511::1::::<><><>0<>0<>47ff893f48ed14358692cb4a8bd0f500<>res://godot/imported/ceramic pop.wav-db5b6ca96538a5a5e662a484950ee478.sample::
 lose.wav::AudioStreamWAV::933178652031172341::1779371917::1779375511::1::::<><><>0<>0<>4662a43a8de470e68adfac01ade8228d<>res://godot/imported/lose.wav-b9f175c9c4a7fa650d18c528ec967618.sample::
 shoot.wav::AudioStreamWAV::7338853945078058712::1779371917::1779375511::1::::<><><>0<>0<>d80e5949f6143cf5d90f9d8b4e3408ed<>res://godot/imported/shoot.wav-228808e8266eb5bfe8e98d804bbf1f6e.sample::
 smash.wav::AudioStreamWAV::4526611808825926516::1779371917::1779375511::1::::<><><>0<>0<>bc0c2a151d23166f93b03a4ebda380d4<>res://godot/imported/smash.wav-06731e6246a707e2e5f542a20552358b.sample::
 win.wav::AudioStreamWAV::1868652908999744834::1779371917::1779375512::1::::<><><>0<>0<>41690662902aee492635ca2e1f8b6965<>res://godot/imported/win.wav-4398f7f092ee33ac2c8761bd6bb5861c.sample::
-::res://Assets/Textures/::1779375371
+::res://Assets/Textures/::1779388773
 arrow.png::CompressedTexture2D::8856050741820023350::1779371917::1779375511::1::::<><><>0<>0<>7005c81ed484348b9a11369075309b3b<>res://godot/imported/arrow.png-96689c530bd7cedf05b902f1c91baef8.ctex::
 bi-arrow.png::CompressedTexture2D::9114622762466948104::1779371917::1779375511::1::::<><><>0<>0<>8d3c379ba2baf5ee9f5472fd11a13ec6<>res://godot/imported/bi-arrow.png-aaaebac8515fef8248794d02840d235c.ctex::
-Black colour.tres::CurveXYZTexture::8159515979238121401::1779375371::0::1::::<><><>0<>0<><>::
+Black colour.tres::CurveXYZTexture::8159515979238121401::1779388773::0::1::::<><><>0<>0<><>::
 credits.tres::LabelSettings::176927959552086871::1779371917::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 Map.png::CompressedTexture2D::1542929626586489947::1779371917::1779375511::1::::<><><>0<>0<>2d4ff932a1d42c155ae7d602a5c57d7a<>res://godot/imported/Map.png-01906d54f0ca5258429eba41a33914ec.ctex::
-red colour.tres::CurveXYZTexture::7795705009989025040::1779375371::0::1::::<><><>0<>0<><>::
-Red, black gradient.tres::CurveXYZTexture::4194766768480230310::1779375371::0::1::::<><><>0<>0<><>::
+red colour.tres::CurveXYZTexture::7795705009989025040::1779388773::0::1::::<><><>0<>0<><>::
+Red, black gradient.tres::CurveXYZTexture::4194766768480230310::1779388773::0::1::::<><><>0<>0<><>::
 simple_overlay.png::CompressedTexture2D::3568544206252075735::1779371917::1779375511::1::::<><><>0<>0<>41dbf1f8781149983dfb15f91e01fc00<>res://godot/imported/simple_overlay.png-c85ff0bd8d9c89b136b084987bce3dc5.ctex::
 UI.tres::LabelSettings::4523554573155564543::1779371917::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 UI_selected.tres::LabelSettings::8665479134500436914::1779371917::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
@@ -37,9 +37,9 @@ UI_settings_hidden.tres::LabelSettings::3012314605391405390::1779371917::0::1:::
 UI_settings_selected.tres::LabelSettings::3855649614049277251::1779371917::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 you_did_it.png::CompressedTexture2D::8148254270159561338::1779371917::1779375511::1::::<><><>0<>0<>b9c44e95fbf6aa5fa0c81f495d25ee6d<>res://godot/imported/you_did_it.png-51a6f7c367d8a06333dad6065c827299.ctex::
 ::res://Effects/::1779371917
-::res://Effects/Screen effects/::1779375387
-Death screen.tscn::PackedScene::2314324198914443454::1779375371::0::1::::<><><>0<>0<><>::uid://pgv1oq60gvww::::res://Effects/Screen effects/death_screen.gd<>uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf<>uid://nkbk0mofd6gf::::res://Assets/sounds_aaaaaaaah/lose.wav
-death_screen.gd::GDScript::1066541170070407542::1779375387::0::1::::<>Control<><>0<>0<><>::
+::res://Effects/Screen effects/::1779382917
+Death screen.tscn::PackedScene::2314324198914443454::1779375937::0::1::::<><><>0<>0<><>::uid://pgv1oq60gvww::::res://Effects/Screen effects/death_screen.gd<>uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf<>uid://nkbk0mofd6gf::::res://Assets/sounds_aaaaaaaah/lose.wav
+death_screen.gd::GDScript::1066541170070407542::1779382917::0::1::::<>Control<><>0<>0<><>::
 overlay.tscn::PackedScene::2547369560978868571::1779371917::0::1::::<><><>0<>0<><>::uid://bq3vnwmwmyho6::::res://Assets/Textures/simple_overlay.png
 Win_effects.gd::GDScript::6490184480069237477::1779373081::0::1::::<>Control<><>0<>0<><>::
 You_win.tscn::PackedScene::4742611249319589752::1779371917::0::1::::<><><>0<>0<><>::uid://cyp5nja2n8xgf::::res://Effects/Screen effects/Win_effects.gd<>uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf<>uid://1vgo8dngswxm::::res://Assets/sounds_aaaaaaaah/win.wav
@@ -57,26 +57,26 @@ dash.gd::GDScript::2739687218997454120::1779371917::0::1::::<>Area2D<><>0<>0<><>
 dash.tscn::PackedScene::9017318695544687787::1779371917::0::1::::<><><>0<>0<><>::uid://bfbeio7gdojxw::::res://Enemy bullets/dash.gd<>uid://doisbhxhnuw30::::res://Assets/Textures/Black colour.tres
 smash.gd::GDScript::7292304632093024315::1779371917::0::1::::<>Area2D<><>0<>0<><>::
 smash.tscn::PackedScene::473166355418096143::1779371917::0::1::::<><><>0<>0<><>::uid://db5pgr2k3nm4j::::res://Enemy bullets/smash.gd
-::res://Levels/::1779372812
+::res://Levels/::1779388864
 base.tscn::PackedScene::8888671326173005747::1779371917::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn
-level.gd::GDScript::3430440172185550207::1779371917::0::1::::<>Node2D<><>0<>0<><>::
-level_1.tscn::PackedScene::2643712472462170264::1779371917::0::1::::<><><>0<>0<><>::uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://cfb3g2bqrs1t4::::res://Assets/mus/C.wav
-level_2.tscn::PackedScene::8421321301432855676::1779371917::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://dh1woyt0cftt5::::res://Enemies/enemy.tscn<>uid://ddy8mdgbc0yqw::::res://Special tiles/seeing_radius.tscn<>uid://b52t2i5n46wm3::::res://Special tiles/enemy_killed_tile.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://cfb3g2bqrs1t4::::res://Assets/mus/C.wav
-level_3.tscn::PackedScene::4056782977429940457::1779371917::0::1::::<><><>0<>0<><>::uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://dh1woyt0cftt5::::res://Enemies/enemy.tscn<>uid://ddy8mdgbc0yqw::::res://Special tiles/seeing_radius.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://bidb27it8shdk::::res://Special tiles/spawn_area.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://cfb3g2bqrs1t4::::res://Assets/mus/C.wav
-level_4.tscn::PackedScene::4056782977429940457::1779371917::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://dfi00lor8lwr0::::res://Special tiles/Smash(able) tiles.tscn<>uid://c40canctt3jv8::::res://Enemies/Smash enemy.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://b4mmvrlgn43aw::::res://Assets/sounds_aaaaaaaah/ceramic pop.wav<>uid://crut4mnrt43k1::::res://Assets/mus/E.wav
-level_5.tscn::PackedScene::2251223866823012943::1779371917::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://dfi00lor8lwr0::::res://Special tiles/Smash(able) tiles.tscn<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://dh1woyt0cftt5::::res://Enemies/enemy.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://ddy8mdgbc0yqw::::res://Special tiles/seeing_radius.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://bk2piks626vv2::::res://Assets/mus/B.wav<>uid://bidb27it8shdk::::res://Special tiles/spawn_area.tscn<>uid://c40canctt3jv8::::res://Enemies/Smash enemy.tscn<>uid://b4mmvrlgn43aw::::res://Assets/sounds_aaaaaaaah/ceramic pop.wav
-level_7.tscn::PackedScene::5941266135016894437::1779371917::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn
-level_?.tscn::PackedScene::2701461889770113283::1779371917::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://bidb27it8shdk::::res://Special tiles/spawn_area.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://cfb3g2bqrs1t4::::res://Assets/mus/C.wav
-level_credits.gd::GDScript::7208273346663758437::1779372812::0::1::::<>Control<><>0<>0<><>::
+level.gd::GDScript::3430440172185550207::1779387985::0::1::::<>Node2D<><>0<>0<><>::
+level_1.tscn::PackedScene::2643712472462170264::1779388864::0::1::::<><><>0<>0<><>::uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://cfb3g2bqrs1t4::::res://Assets/mus/C.wav
+level_2.tscn::PackedScene::8421321301432855676::1779388863::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://dh1woyt0cftt5::::res://Enemies/enemy.tscn<>uid://ddy8mdgbc0yqw::::res://Special tiles/seeing_radius.tscn<>uid://b52t2i5n46wm3::::res://Special tiles/enemy_killed_tile.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://cfb3g2bqrs1t4::::res://Assets/mus/C.wav
+level_3.tscn::PackedScene::4056782977429940457::1779388782::0::1::::<><><>0<>0<><>::uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://dh1woyt0cftt5::::res://Enemies/enemy.tscn<>uid://ddy8mdgbc0yqw::::res://Special tiles/seeing_radius.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://bidb27it8shdk::::res://Special tiles/spawn_area.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://cfb3g2bqrs1t4::::res://Assets/mus/C.wav
+level_4.tscn::PackedScene::4056782977429940457::1779388779::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://dfi00lor8lwr0::::res://Special tiles/Smash(able) tiles.tscn<>uid://c40canctt3jv8::::res://Enemies/Smash enemy.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://b4mmvrlgn43aw::::res://Assets/sounds_aaaaaaaah/ceramic pop.wav<>uid://crut4mnrt43k1::::res://Assets/mus/E.wav
+level_5.tscn::PackedScene::2251223866823012943::1779388777::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://dfi00lor8lwr0::::res://Special tiles/Smash(able) tiles.tscn<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://dh1woyt0cftt5::::res://Enemies/enemy.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://ddy8mdgbc0yqw::::res://Special tiles/seeing_radius.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://bk2piks626vv2::::res://Assets/mus/B.wav<>uid://bidb27it8shdk::::res://Special tiles/spawn_area.tscn<>uid://c40canctt3jv8::::res://Enemies/Smash enemy.tscn<>uid://b4mmvrlgn43aw::::res://Assets/sounds_aaaaaaaah/ceramic pop.wav
+level_7.tscn::PackedScene::5941266135016894437::1779388773::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn
+level_?.tscn::PackedScene::2701461889770113283::1779388774::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://bidb27it8shdk::::res://Special tiles/spawn_area.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://cfb3g2bqrs1t4::::res://Assets/mus/C.wav
+level_credits.gd::GDScript::7208273346663758437::1779375937::0::1::::<>Control<><>0<>0<><>::
 level_credits.tscn::PackedScene::3726881318670608466::1779371917::0::1::::<><><>0<>0<><>::uid://dax0hdpyx7u8d::::res://Levels/level_credits.gd<>uid://crx8iflknyvf::::res://Assets/Textures/credits.tres
-::res://Menus/::1779372876
-settings.gd::GDScript::4870683319834271802::1779372842::0::1::::<>Control<><>0<>0<><>::
+::res://Menus/::1779382718
+settings.gd::GDScript::4870683319834271802::1779375937::0::1::::<>Control<><>0<>0<><>::
 settings.tscn::PackedScene::8768689095352844802::1779371917::0::1::::<><><>0<>0<><>::uid://cbnnpbyncswpu::::res://Menus/settings.gd<>uid://b4ckevhw0xmal::::res://Assets/Textures/UI_settings.tres<>uid://dodcs7kjehofa::::res://Assets/Textures/you_did_it.png<>uid://dyf64kjp5hdow::::res://Assets/Textures/arrow.png
-sound.gd::GDScript::4844964832137959892::1779372858::0::1::::<>Control<><>0<>0<><>::
+sound.gd::GDScript::4844964832137959892::1779375937::0::1::::<>Control<><>0<>0<><>::
 sound.tscn::PackedScene::6922508078934686160::1779371917::0::1::::<><><>0<>0<><>::uid://cba64lsqsjpbo::::res://Menus/sound.gd<>uid://b4ckevhw0xmal::::res://Assets/Textures/UI_settings.tres<>uid://bi6gm77mgn5ao::::res://Assets/Textures/UI_settings_hidden.tres<>uid://dyf64kjp5hdow::::res://Assets/Textures/arrow.png<>uid://dodcs7kjehofa::::res://Assets/Textures/you_did_it.png
-Title_screen.gd::GDScript::6440249478743928972::1779372828::0::1::::<>Control<><>0<>0<><>::
+Title_screen.gd::GDScript::6440249478743928972::1779382718::0::1::::<>Control<><>0<>0<><>::
 Title_screen.tscn::PackedScene::5255480076715592370::1779371917::0::1::::<><><>0<>0<><>::uid://cx0x758ud34u7::::res://Menus/Title_screen.gd<>uid://dvpvf7wdsrfxi::::res://Assets/Textures/UI_selected.tres<>uid://b5pijvb5s1ujn::::res://Assets/Textures/UI.tres<>uid://dyf64kjp5hdow::::res://Assets/Textures/arrow.png<>uid://dodcs7kjehofa::::res://Assets/Textures/you_did_it.png
-visual.gd::GDScript::477115668954538581::1779372876::0::1::::<>Control<><>0<>0<><>::
+visual.gd::GDScript::477115668954538581::1779375937::0::1::::<>Control<><>0<>0<><>::
 visual.tscn::PackedScene::6216437956472884415::1779371917::0::1::::<><><>0<>0<><>::uid://g2ea4k00427r::::res://Menus/visual.gd<>uid://b4ckevhw0xmal::::res://Assets/Textures/UI_settings.tres<>uid://bi6gm77mgn5ao::::res://Assets/Textures/UI_settings_hidden.tres<>uid://dyf64kjp5hdow::::res://Assets/Textures/arrow.png<>uid://dodcs7kjehofa::::res://Assets/Textures/you_did_it.png
 ::res://Player/::1779371917
 Player character.tscn::PackedScene::6850936080249859111::1779371917::0::1::::<><><>0<>0<><>::uid://c1yq5e3ldovvc::::res://Player/Player code.gd<>uid://doisbhxhnuw30::::res://Assets/Textures/Black colour.tres<>uid://b008gwmi84u4e::::res://Assets/Textures/Red, black gradient.tres
