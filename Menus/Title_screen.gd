@@ -9,7 +9,7 @@ extends Control
 var savepath = "user://savedata.json"
 var savedata:Dictionary
 var option_selected:int = 0
-
+const screen = [1024,512]
 const UI = preload("uid://b5pijvb5s1ujn")
 const UI_SELECTED = preload("uid://dvpvf7wdsrfxi")
 
@@ -32,6 +32,17 @@ func _ready() -> void:
 			options.label_settings = UI
 			arrow.show()
 			arrow_2.hide()
+	DisplayServer.window_set_size(Vector2i(screen[0]*savedata["settings"]["visuals"][0],screen[1]*savedata["settings"]["visuals"][0]))
+	get_window().content_scale_factor = savedata["settings"]["visuals"][0]
+	match savedata["settings"]["visuals"][1]:
+		1.0:
+			get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_VIEWPORT
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+			print("window fullsckeen")	
+		0.0:
+			get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_DISABLED
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+			print("window windowed")	
 
 func load_json_file():
 	var file = FileAccess.open(savepath, FileAccess.READ)

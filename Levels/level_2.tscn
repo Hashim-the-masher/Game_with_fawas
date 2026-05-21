@@ -137,7 +137,7 @@ color = Color(0, 0, 0, 1)
 [node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("9_vltsr")]
 visible = false
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=875840630]
+[node name="mus" type="AudioStreamPlayer2D" parent="." unique_id=875840630]
 position = Vector2(279, 5)
 stream = ExtResource("10_rp5ft")
 autoplay = true
