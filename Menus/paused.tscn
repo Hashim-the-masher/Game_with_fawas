@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bq3vnwmwmyho6" path="res://Assets/Textures/simple_overlay.png" id="2_5lqxi"]
 [ext_resource type="LabelSettings" uid="uid://dvpvf7wdsrfxi" path="res://Assets/Textures/UI_selected.tres" id="2_th6tw"]
 [ext_resource type="LabelSettings" uid="uid://b5pijvb5s1ujn" path="res://Assets/Textures/UI.tres" id="3_eod33"]
+[ext_resource type="Script" uid="uid://bx8px8fwrwoq" path="res://Menus/paused_settings.gd" id="5_th6tw"]
+[ext_resource type="LabelSettings" uid="uid://b4ckevhw0xmal" path="res://Assets/Textures/UI_settings.tres" id="6_eod33"]
 
 [node name="menu_pause" type="Control" unique_id=1629708582]
 layout_mode = 3
@@ -56,3 +58,49 @@ label_settings = ExtResource("2_th6tw")
 layout_mode = 2
 text = "Options"
 label_settings = ExtResource("3_eod33")
+
+[node name="settings" type="Control" parent="." unique_id=1054283741]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_th6tw")
+
+[node name="SliderSettings" type="HBoxContainer" parent="settings" unique_id=998369944]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -172.0
+offset_right = 145.0
+grow_vertical = 0
+size_flags_vertical = 4
+
+[node name="Titles" type="VBoxContainer" parent="settings/SliderSettings" unique_id=1454417757]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="Sounds" type="Label" parent="settings/SliderSettings/Titles" unique_id=705714981]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Sounds"
+label_settings = ExtResource("6_eod33")
+
+[node name="Visuals" type="Label" parent="settings/SliderSettings/Titles" unique_id=1922293545]
+layout_mode = 2
+text = "Visuals"
+label_settings = ExtResource("6_eod33")
+
+[node name="Controls" type="Label" parent="settings/SliderSettings/Titles" unique_id=1355512060]
+layout_mode = 2
+text = "Controls"
+label_settings = ExtResource("6_eod33")
+
+[node name="Quit" type="Label" parent="settings/SliderSettings/Titles" unique_id=44534256]
+layout_mode = 2
+text = "Back"
+label_settings = ExtResource("6_eod33")

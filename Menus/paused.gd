@@ -1,19 +1,19 @@
 extends Control
 
-
+@onready var hbox: HBoxContainer = $HBoxContainer
 @onready var resume: Label = $HBoxContainer/VBoxContainer/Resume
 @onready var options: Label = $HBoxContainer/VBoxContainer/Options
 var savepath = "user://savedata.json"
 var savedata:Dictionary
 var option_selected:int = 0
 var active:bool = false
+var settings:bool = false
 const screen = [1024,512]
 const UI = preload("uid://b5pijvb5s1ujn")
 const UI_SELECTED = preload("uid://dvpvf7wdsrfxi")
 
 func _ready() -> void:
 	savedata = load_json_file()
-	option_selected = savedata["setting_no"]["title"]
 	match option_selected:
 		1:
 			resume.label_settings = UI
@@ -56,6 +56,9 @@ func _input(event: InputEvent) -> void:
 		hide()
 		return
 	show()
+	if settings == true:
+		hbox.hide()
+		return
 	if event.is_action_pressed("ui_down"):
 		option_selected =1
 		resume.label_settings = UI
@@ -68,7 +71,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
 		match option_selected:
 			1:
-				#make pause settings
-				pass
+				settings = true
 			0:
 				active = false
