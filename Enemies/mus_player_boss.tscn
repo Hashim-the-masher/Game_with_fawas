@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bids144gdpgh2"]
+
+[ext_resource type="Script" uid="uid://bre2g6byj3gs0" path="res://Enemies/mus_player_boss.gd" id="1_rl4n2"]
+
+[node name="mus_player_boss" type="AudioStreamPlayer" unique_id=235046598]
+script = ExtResource("1_rl4n2")

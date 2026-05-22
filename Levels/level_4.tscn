@@ -8,7 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://c40canctt3jv8" path="res://Enemies/Smash enemy.tscn" id="5_77xid"]
 [ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="7_waaef"]
 [ext_resource type="AudioStream" uid="uid://b4mmvrlgn43aw" path="res://Assets/sounds_aaaaaaaah/ceramic pop.wav" id="8_fqog2"]
+[ext_resource type="PackedScene" uid="uid://bqkn7wtuydlss" path="res://Menus/paused.tscn" id="8_utic7"]
 [ext_resource type="AudioStream" uid="uid://crut4mnrt43k1" path="res://Assets/mus/E.wav" id="9_ben3k"]
+[ext_resource type="PackedScene" uid="uid://bids144gdpgh2" path="res://Enemies/mus_player_boss.tscn" id="9_m0m22"]
+[ext_resource type="AudioStream" uid="uid://dehd4dacndwlr" path="res://Assets/mus/boss.wav" id="10_utic7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_kbe2v")
@@ -94,11 +97,17 @@ color = Color(0, 0, 0, 1)
 [node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("7_waaef")]
 visible = false
 
+[node name="menu_pause" parent="CanvasLayer" unique_id=1629708582 instance=ExtResource("8_utic7")]
+visible = false
+
 [node name="sfx_cracking" type="AudioStreamPlayer2D" parent="." unique_id=961473754]
 position = Vector2(214, -8)
 stream = ExtResource("8_fqog2")
 attenuation = 2.697397
 max_polyphony = 2
+
+[node name="mus_player_boss" parent="." unique_id=235046598 instance=ExtResource("9_m0m22")]
+stream = ExtResource("10_utic7")
 
 [node name="mus" type="AudioStreamPlayer2D" parent="." unique_id=847862493]
 position = Vector2(283, -5)
@@ -109,4 +118,6 @@ attenuation = 2.9281766
 max_polyphony = 2
 panning_strength = 2.25
 
+[connection signal="enemy_detetected" from="smash" to="mus_player_boss" method="boss_start_mus"]
 [connection signal="kill" from="smash" to="player" method="_on_smash_kill"]
+[connection signal="kill" from="smash" to="mus_player_boss" method="boss_stop_mus"]

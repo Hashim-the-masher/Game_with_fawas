@@ -6,9 +6,11 @@ var enemy_detected_flag = false
 @export var hp = 40
 @export var extra_smash_damge = 19
 signal kill
+signal enemy_detetected
 @onready var player: CharacterBody2D = $"../player"
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	enemy_detected_flag = true
+	enemy_detetected.emit()
 	print(name+",took damge from:"+area.name)
 	hp -= 1 
 	if area.name == "Smash":

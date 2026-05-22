@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bidb27it8shdk" path="res://Special tiles/spawn_area.tscn" id="7_ck3gp"]
 [ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="8_fa81k"]
 [ext_resource type="AudioStream" uid="uid://cfb3g2bqrs1t4" path="res://Assets/mus/C.wav" id="9_ck3gp"]
+[ext_resource type="PackedScene" uid="uid://bqkn7wtuydlss" path="res://Menus/paused.tscn" id="9_trpa2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2wwn"]
 texture = ExtResource("1_5lru4")
@@ -129,6 +130,9 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("8_fa81k")]
+visible = false
+
+[node name="menu_pause" parent="CanvasLayer" unique_id=1629708582 instance=ExtResource("9_trpa2")]
 visible = false
 
 [node name="mus" type="AudioStreamPlayer2D" parent="." unique_id=164305978]

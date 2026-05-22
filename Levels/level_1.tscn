@@ -78,7 +78,8 @@ color = Color(0, 0, 0, 1)
 [node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("5_syshm")]
 visible = false
 
-[node name="Control" parent="CanvasLayer" unique_id=1629708582 instance=ExtResource("6_0urlm")]
+[node name="menu_pause" parent="CanvasLayer" unique_id=1629708582 instance=ExtResource("6_0urlm")]
+visible = false
 
 [node name="mus" type="AudioStreamPlayer2D" parent="." unique_id=1033497019]
 position = Vector2(-736, -2)

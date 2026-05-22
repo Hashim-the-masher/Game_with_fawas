@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ddy8mdgbc0yqw" path="res://Special tiles/seeing_radius.tscn" id="7_1xify"]
 [ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="8_kgnlk"]
 [ext_resource type="AudioStream" uid="uid://bk2piks626vv2" path="res://Assets/mus/B.wav" id="9_hu0ol"]
+[ext_resource type="PackedScene" uid="uid://bqkn7wtuydlss" path="res://Menus/paused.tscn" id="9_m47b0"]
 [ext_resource type="PackedScene" uid="uid://bidb27it8shdk" path="res://Special tiles/spawn_area.tscn" id="10_ytgun"]
 [ext_resource type="PackedScene" uid="uid://c40canctt3jv8" path="res://Enemies/Smash enemy.tscn" id="11_rpnhq"]
 [ext_resource type="AudioStream" uid="uid://b4mmvrlgn43aw" path="res://Assets/sounds_aaaaaaaah/ceramic pop.wav" id="12_hu0ol"]
@@ -118,6 +119,9 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("8_kgnlk")]
+visible = false
+
+[node name="menu_pause" parent="CanvasLayer" unique_id=1629708582 instance=ExtResource("9_m47b0")]
 visible = false
 
 [node name="mus" type="AudioStreamPlayer2D" parent="." unique_id=1568883239]

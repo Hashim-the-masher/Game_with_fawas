@@ -4,9 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bq3vnwmwmyho6" path="res://Assets/Textures/simple_overlay.png" id="2_5lqxi"]
 [ext_resource type="LabelSettings" uid="uid://dvpvf7wdsrfxi" path="res://Assets/Textures/UI_selected.tres" id="2_th6tw"]
 [ext_resource type="LabelSettings" uid="uid://b5pijvb5s1ujn" path="res://Assets/Textures/UI.tres" id="3_eod33"]
-[ext_resource type="Texture2D" uid="uid://dodcs7kjehofa" path="res://Assets/Textures/you_did_it.png" id="5_utox3"]
 
-[node name="Control" type="Control" unique_id=1629708582]
+[node name="menu_pause" type="Control" unique_id=1629708582]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,10 +56,3 @@ label_settings = ExtResource("2_th6tw")
 layout_mode = 2
 text = "Options"
 label_settings = ExtResource("3_eod33")
-
-[node name="you_did_it" type="TextureRect" parent="." unique_id=1198323234]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("5_utox3")

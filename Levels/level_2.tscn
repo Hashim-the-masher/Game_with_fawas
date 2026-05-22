@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dh1woyt0cftt5" path="res://Enemies/enemy.tscn" id="5_bcgyv"]
 [ext_resource type="PackedScene" uid="uid://ddy8mdgbc0yqw" path="res://Special tiles/seeing_radius.tscn" id="6_fbld2"]
 [ext_resource type="PackedScene" uid="uid://b52t2i5n46wm3" path="res://Special tiles/enemy_killed_tile.tscn" id="8_pml6m"]
+[ext_resource type="PackedScene" uid="uid://bqkn7wtuydlss" path="res://Menus/paused.tscn" id="9_rp5ft"]
 [ext_resource type="PackedScene" uid="uid://bcj72l83ixs56" path="res://Effects/Screen effects/overlay.tscn" id="9_vltsr"]
 [ext_resource type="AudioStream" uid="uid://cfb3g2bqrs1t4" path="res://Assets/mus/C.wav" id="10_rp5ft"]
 
@@ -135,6 +136,9 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Overlay" parent="CanvasLayer" unique_id=180967212 instance=ExtResource("9_vltsr")]
+visible = false
+
+[node name="menu_pause" parent="CanvasLayer" unique_id=1629708582 instance=ExtResource("9_rp5ft")]
 visible = false
 
 [node name="mus" type="AudioStreamPlayer2D" parent="." unique_id=875840630]
