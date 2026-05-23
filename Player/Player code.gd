@@ -29,14 +29,31 @@ var flags = {"dash":false,"smash":false,"shoot":true,"spawn":false,"cooldown":tr
 @onready var meshes = $"Mesh(es)" #this one gets the parent of the meshes for easy access
 var current_state:StringName #this one is used to display the current state
 var states = {0:"Normal state",1:"Smash state",2:"Dash state"} #dictionary contains all the posible states
-
+var bullet_volume
+var savepath = "user://savedata.json"
+var savedata:Dictionary
 
 func _ready() -> void:#this one makes sure that the state is the normal state and no some other bullshit
+	savedata = load_json_file()
 	current_state = states[0]
 	switch_mesh(current_state)
 	switch_ablity(current_state)
+	bullet_volume = linear_to_db(savedata["settings"]["sounds"][1])
 	
-	
+
+func load_json_file():
+	var file = FileAccess.open(savepath, FileAccess.READ)
+	var json = file.get_as_text()
+	var jsonobject = JSON.new()
+	jsonobject.parse(json)
+	print("Loaded:"+str(jsonobject.data)+"from file")
+	return jsonobject.data
+
+func save_to_json_file():
+	var file = FileAccess.open(savepath, FileAccess.ModeFlags.WRITE)
+	var json_text = JSON.stringify(savedata)
+	print("written:"+json_text+"to file")
+	file.store_string(json_text)
 
 func switch_mesh(state:StringName):#this one switches the mesh to the desired state
 	for num in states:
@@ -119,14 +136,14 @@ func shoot():#ahh the shoot function, it sees wich flag you have and shoots the 
 	if flags["shoot"] == true:#the shoot varriable works differently because it uses the shoot flag as a cooldown, while the dash and smash use the cooldown flag, this is becasuse the smash and dash flags are used are a bullet life time
 		var bullet = bullet_scenes["bullet"].instantiate()
 		get_tree().root.add_child(bullet)
-		bullet.start(position,rotation)
+		bullet.start(position,rotation,bullet_volume)
 	elif flags["smash"] == true and flags["cooldown"] == false:
 		flags["cooldown"] = true
 		flags["smash"] = false
 		timers["smash"].start()
 		var bullet = bullet_scenes["smash"].instantiate()
 		get_tree().root.add_child(bullet)
-		bullet.start(position,rotation)
+		bullet.start(position,rotation,bullet_volume)
 	elif flags["dash"] == true and flags["cooldown"] == false:
 		flags["cooldown"] = true
 		timers["dash"].start()

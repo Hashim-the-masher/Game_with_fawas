@@ -6,6 +6,7 @@
 [ext_resource type="LabelSettings" uid="uid://b5pijvb5s1ujn" path="res://Assets/Textures/UI.tres" id="3_eod33"]
 [ext_resource type="Script" uid="uid://bx8px8fwrwoq" path="res://Menus/paused_settings.gd" id="5_th6tw"]
 [ext_resource type="LabelSettings" uid="uid://b4ckevhw0xmal" path="res://Assets/Textures/UI_settings.tres" id="6_eod33"]
+[ext_resource type="LabelSettings" uid="uid://bi6gm77mgn5ao" path="res://Assets/Textures/UI_settings_hidden.tres" id="7_eod33"]
 
 [node name="menu_pause" type="Control" unique_id=1629708582]
 layout_mode = 3
@@ -60,7 +61,6 @@ text = "Options"
 label_settings = ExtResource("3_eod33")
 
 [node name="settings" type="Control" parent="." unique_id=1054283741]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,7 +69,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5_th6tw")
 
-[node name="SliderSettings" type="HBoxContainer" parent="settings" unique_id=998369944]
+[node name="main" type="HBoxContainer" parent="settings" unique_id=998369944]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -79,28 +79,132 @@ offset_right = 145.0
 grow_vertical = 0
 size_flags_vertical = 4
 
-[node name="Titles" type="VBoxContainer" parent="settings/SliderSettings" unique_id=1454417757]
+[node name="Titles" type="VBoxContainer" parent="settings/main" unique_id=1454417757]
 layout_mode = 2
 size_flags_horizontal = 0
 alignment = 1
 
-[node name="Sounds" type="Label" parent="settings/SliderSettings/Titles" unique_id=705714981]
+[node name="Sounds" type="Label" parent="settings/main/Titles" unique_id=705714981]
 layout_mode = 2
 size_flags_vertical = 0
 text = "Sounds"
 label_settings = ExtResource("6_eod33")
 
-[node name="Visuals" type="Label" parent="settings/SliderSettings/Titles" unique_id=1922293545]
+[node name="Visuals" type="Label" parent="settings/main/Titles" unique_id=1922293545]
 layout_mode = 2
 text = "Visuals"
 label_settings = ExtResource("6_eod33")
 
-[node name="Controls" type="Label" parent="settings/SliderSettings/Titles" unique_id=1355512060]
+[node name="Controls" type="Label" parent="settings/main/Titles" unique_id=1355512060]
 layout_mode = 2
 text = "Controls"
 label_settings = ExtResource("6_eod33")
 
-[node name="Quit" type="Label" parent="settings/SliderSettings/Titles" unique_id=44534256]
+[node name="Quit" type="Label" parent="settings/main/Titles" unique_id=44534256]
 layout_mode = 2
 text = "Back"
 label_settings = ExtResource("6_eod33")
+
+[node name="sound" type="VBoxContainer" parent="settings" unique_id=1938179655]
+visible = false
+layout_mode = 0
+offset_right = 145.0
+offset_bottom = 128.0
+alignment = 1
+
+[node name="SliderSettings" type="HBoxContainer" parent="settings/sound" unique_id=326590595]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Titles" type="VBoxContainer" parent="settings/sound/SliderSettings" unique_id=1576377096]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="Music" type="Label" parent="settings/sound/SliderSettings/Titles" unique_id=134842328]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Music"
+label_settings = ExtResource("6_eod33")
+
+[node name="Sounds" type="Label" parent="settings/sound/SliderSettings/Titles" unique_id=1409831860]
+layout_mode = 2
+text = "Sounds"
+label_settings = ExtResource("6_eod33")
+
+[node name="Quit" type="Label" parent="settings/sound/SliderSettings/Titles" unique_id=13001060]
+layout_mode = 2
+text = "Back"
+label_settings = ExtResource("6_eod33")
+
+[node name="Display value" type="VBoxContainer" parent="settings/sound/SliderSettings" unique_id=981204411]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="Music" type="Label" parent="settings/sound/SliderSettings/Display value" unique_id=545820612]
+layout_mode = 2
+text = "10"
+label_settings = ExtResource("6_eod33")
+
+[node name="Sounds" type="Label" parent="settings/sound/SliderSettings/Display value" unique_id=1505284371]
+layout_mode = 2
+text = "10"
+label_settings = ExtResource("6_eod33")
+
+[node name="Quit" type="Label" parent="settings/sound/SliderSettings/Display value" unique_id=299798448]
+layout_mode = 2
+text = "HI"
+label_settings = ExtResource("7_eod33")
+
+[node name="visual" type="VBoxContainer" parent="settings" unique_id=1799811823]
+visible = false
+layout_mode = 0
+offset_right = 145.0
+offset_bottom = 128.0
+alignment = 1
+
+[node name="SliderSettings" type="HBoxContainer" parent="settings/visual" unique_id=1793362189]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Titles" type="VBoxContainer" parent="settings/visual/SliderSettings" unique_id=1618447836]
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="Size" type="Label" parent="settings/visual/SliderSettings/Titles" unique_id=233796217]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Screen size"
+label_settings = ExtResource("6_eod33")
+
+[node name="Fullscreen?" type="Label" parent="settings/visual/SliderSettings/Titles" unique_id=207474895]
+layout_mode = 2
+text = "Fullscreen?"
+label_settings = ExtResource("6_eod33")
+
+[node name="Quit" type="Label" parent="settings/visual/SliderSettings/Titles" unique_id=2992548]
+layout_mode = 2
+text = "Back"
+label_settings = ExtResource("6_eod33")
+
+[node name="Display value" type="VBoxContainer" parent="settings/visual/SliderSettings" unique_id=519935884]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="Size" type="Label" parent="settings/visual/SliderSettings/Display value" unique_id=596029000]
+layout_mode = 2
+text = "10"
+label_settings = ExtResource("6_eod33")
+
+[node name="Fullscreen?" type="Label" parent="settings/visual/SliderSettings/Display value" unique_id=290859708]
+layout_mode = 2
+text = "10"
+label_settings = ExtResource("6_eod33")
+
+[node name="Quit" type="Label" parent="settings/visual/SliderSettings/Display value" unique_id=941133935]
+layout_mode = 2
+text = "HI"
+label_settings = ExtResource("7_eod33")

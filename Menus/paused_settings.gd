@@ -1,7 +1,8 @@
 extends Control
 
 @onready var menu_pause: Control = $".."
-@onready var title = $SliderSettings/Titles
+@onready var titles = [$main/Titles,$sound/SliderSettings/Titles,$visual/SliderSettings/Titles]
+@onready var values = [null,$"sound/SliderSettings/Display value",$"visual/SliderSettings/Display value"]
 var setting_no:int = 3
 const UI_SETTINGS = preload("uid://b4ckevhw0xmal")
 const UI_SETTINGS_SELECTED = preload("uid://bu6x8ru5xi2kt")
@@ -15,16 +16,16 @@ func _input(event: InputEvent) -> void:
 		setting_no -= 1
 		setting_no = clampi(setting_no,0,3)
 		back_confirmation_flag = false
-		title.get_child(3).text = "Back"
+		titles[0].get_child(3).text = "Back"
 	if event.is_action_pressed("ui_down"):
 		setting_no += 1
 		setting_no = clampi(setting_no,0,3)
 	if back_confirmation_flag == false:
 		for numbers in 4:
 			if numbers == setting_no:
-				title.get_child(numbers).label_settings = UI_SETTINGS_SELECTED
+				titles[0].get_child(numbers).label_settings = UI_SETTINGS_SELECTED
 			else:
-				title.get_child(numbers).label_settings = UI_SETTINGS
+				titles[0].get_child(numbers).label_settings = UI_SETTINGS
 	if event.is_action_pressed("ui_accept"):
 		print(setting_no)
 		match setting_no:

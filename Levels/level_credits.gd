@@ -4,15 +4,12 @@ var negative_colour
 @onready var color_rect: ColorRect = $ColorRect
 @onready var layers = [$VBoxContainer/HBoxContainer, $VBoxContainer/HBoxContainer2, $VBoxContainer/HBoxContainer3, $VBoxContainer/HBoxContainer4, $VBoxContainer/HBoxContainer5, $VBoxContainer/HBoxContainer6]
 
-var savepath = "user://savedata.json"
+var savepath = "res://credits.json"
 var savedata:Dictionary
 var progress:int = -1
 
 func _ready() -> void:
 	savedata = load_json_file()
-	save_to_json_file()
-	
-
 
 func load_json_file():
 	var file = FileAccess.open(savepath, FileAccess.READ)
@@ -21,12 +18,6 @@ func load_json_file():
 	jsonobject.parse(json)
 	print("Loaded:"+str(jsonobject.data)+"from file")
 	return jsonobject.data
-
-func save_to_json_file():
-	var file = FileAccess.open(savepath, FileAccess.ModeFlags.WRITE)
-	var json_text = JSON.stringify(savedata)
-	print("written:"+json_text+"to file")
-	file.store_string(json_text)
 
 func _physics_process(delta: float) -> void:
 	var val1=randi_range(0,100)

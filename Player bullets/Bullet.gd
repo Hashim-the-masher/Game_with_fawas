@@ -1,11 +1,12 @@
 extends Area2D
-
+@onready var sfx: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @export var speed = 333
 @export var damage = 1
 var line_of_fire
-func start(pos,the_rotation):
+func start(pos,the_rotation,volume):
 	position = pos
 	line_of_fire = the_rotation
+	sfx.volume_db = volume
 	rotate(deg_to_rad(90))
 	rotation += the_rotation
 

@@ -7,14 +7,17 @@ var savedata:Dictionary
 func _ready() -> void:
 	color_rect.show()
 	savedata = load_json_file()
+	for child in get_children():
+		if child.name.containsn("mus"):
+			child.volume_db = linear_to_db(savedata["settings"]["sounds"][0])
+	for child in get_children():
+		if child.name.containsn("sfx"):
+			child.volume_db = linear_to_db(savedata["settings"]["sounds"][1])
 	var tween = get_tree().create_tween()
 	tween.tween_property(color_rect, "color", Color.TRANSPARENT, 1.0)
 	tween.play()
 	await tween.finished
 	tween.kill()
-	for child in get_children():
-		if child.name.containsn("mus"):
-			child.volume_db = linear_to_db(savedata["settings"]["sounds"][0])
 
 
 func load_json_file():
