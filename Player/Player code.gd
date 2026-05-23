@@ -18,7 +18,7 @@ var rotaion_velocity:float
 #These are for accessing the camera and other mislanous stuff
 @onready var camera: Camera2D = $Camera2D
 @onready var audio_listener: AudioListener2D = $AudioListener2D
-
+@onready var menu_pause: Control = $"../CanvasLayer/menu_pause"
 #these are for shooting the various wepons in the dispoal of the player...
 var d #this one is for making a dash instance
 @onready var area: Area2D = $Area2D #this one is for removing some collitions for the dash
@@ -68,6 +68,9 @@ func switch_ablity(state:StringName):#this one switches the flags so that a cert
 	Death()
 
 func _physics_process(delta: float) -> void:#this one is a bit more complex because it contains all the physics procceses
+	if menu_pause != null:
+		if menu_pause.active == true:
+			return
 	if Input.is_action_pressed("Shoot") and flags["spawn"] == true:  #this one shoots any bullet
 		shoot()
 		flags["shoot"]= false

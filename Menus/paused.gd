@@ -11,7 +11,7 @@ var settings:bool = false
 const screen = [1024,512]
 const UI = preload("uid://b5pijvb5s1ujn")
 const UI_SELECTED = preload("uid://dvpvf7wdsrfxi")
-
+var ignore= false
 func _ready() -> void:
 	savedata = load_json_file()
 	match option_selected:
@@ -47,17 +47,29 @@ func save_to_json_file():
 	print("written:"+json_text+"to file")
 	file.store_string(json_text)
 
+func _process(delta: float) -> void:
+	if active == false:
+		hide()
+		print("active is false")
+		return
+	if settings == true:
+		hbox.hide()
+		print("settigns is true")
+		return
+	show()
+	hbox.show()
+
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("ui_accept") and ignore == true:
+		ignore = false
+		return
 	if event.is_action_pressed("esc"):
 		if active == true:
 			active=false
 		else:active=true
 	if active == false:
-		hide()
 		return
-	show()
 	if settings == true:
-		hbox.hide()
 		return
 	if event.is_action_pressed("ui_down"):
 		option_selected =1
@@ -69,6 +81,7 @@ func _input(event: InputEvent) -> void:
 		resume.label_settings = UI_SELECTED
 		options.label_settings = UI
 	if event.is_action_pressed("ui_accept"):
+		print(option_selected)
 		match option_selected:
 			1:
 				settings = true
