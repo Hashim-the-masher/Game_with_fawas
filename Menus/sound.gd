@@ -22,7 +22,7 @@ func _ready() -> void:
 			you_did_it.show()
 		0.0:
 			you_did_it.hide()
-	setting_no = savedata["setting_no"]["sounds"] 
+	setting_no = int(savedata["setting_no"]["sounds"])
 	setting[0].text = str(savedata["settings"]["sounds"][0])
 	print("Loaded value"+str(savedata["settings"]["sounds"][0])+"to music")
 	setting[1].text  = str(savedata["settings"]["sounds"][1])
@@ -46,6 +46,7 @@ func save_to_json_file():
 	file.store_string(json_text)
 
 func _input(event: InputEvent) -> void:
+	savedata["setting_no"]["sounds"] = setting_no
 	if move_mode == 0:
 		if event.is_action_pressed("ui_up"):
 			setting_no -= 1
@@ -80,9 +81,9 @@ func _input(event: InputEvent) -> void:
 			save_to_json_file()
 			return
 	if event.is_action_pressed("ui_accept"):
-		savedata["setting_no"]["sounds"] = setting_no
 		if setting_no == 2:
 			if back_confirmation_flag == true:
+				save_to_json_file()
 				get_tree().change_scene_to_file("res://Menus/settings.tscn")
 			if back_confirmation_flag == false:
 				title[2].label_settings = UI_SETTINGS

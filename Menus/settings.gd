@@ -64,7 +64,7 @@ func _input(event: InputEvent) -> void:
 			1:
 				get_tree().change_scene_to_file("res://Menus/visual.tscn")
 			2:
-				pass
+				get_tree().change_scene_to_file("res://Menus/controls.tscn")
 			3:
 				if back_confirmation_flag == true:
 					get_tree().change_scene_to_file("res://Menus/Title_screen.tscn")

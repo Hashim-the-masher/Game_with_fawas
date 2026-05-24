@@ -1,15 +1,8 @@
-res://Menus/paused_settings.gd
-res://Menus/paused.tscn
+res://Menus/controls.tscn
 res://Assets/Textures/Black colour.tres
-res://Assets/Textures/red colour.tres
-res://Menus/paused.gd
-res://Player/Player code.gd
-res://Levels/level_1.tscn
 res://Assets/Textures/Red, black gradient.tres
-res://Levels/level.gd
-res://Player bullets/smash.tscn
-res://Player bullets/Bullet.gd
-res://Player bullets/smash.gd
-res://credits.json
+res://Assets/Textures/red colour.tres
+res://Menus/controls.gd
+res://Menus/settings.gd
 res://savedata.json
-res://Levels/level_credits.gd
+res://Menus/sound.gd
