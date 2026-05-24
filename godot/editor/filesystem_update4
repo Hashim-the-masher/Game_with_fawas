@@ -1,8 +1,4 @@
-res://Menus/controls.tscn
+res://Menus/sound.tscn
 res://Assets/Textures/Black colour.tres
 res://Assets/Textures/Red, black gradient.tres
 res://Assets/Textures/red colour.tres
-res://Menus/controls.gd
-res://Menus/settings.gd
-res://savedata.json
-res://Menus/sound.gd
