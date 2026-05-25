@@ -39,13 +39,13 @@ func save_to_json_file():
 	file.store_string(json_text)
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_up"):
+	if event.is_action_pressed("ui_up") and on[1] == false and on[0] == false:
 		setting_no -= 1
 		setting_no = clampi(setting_no,0,2)
 		setting[2].text = ""
 		setting[2].label_settings = UI_SETTINGS_HIDDEN
 		back_confirmation_flag = false
-	if event.is_action_pressed("ui_down"):
+	if event.is_action_pressed("ui_down") and on[1] == false and on[0] == false:
 		setting_no += 1
 		setting_no = clampi(setting_no,0,2)
 	if back_confirmation_flag == false and on[1] == false and on[0] == false:

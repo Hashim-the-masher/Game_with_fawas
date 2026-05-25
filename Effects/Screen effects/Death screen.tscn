@@ -27,7 +27,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="Timer" type="Timer" parent="." unique_id=1080785008]
-wait_time = 4.25
+wait_time = 3.5
 autostart = true
 
 [node name="Label" type="Label" parent="." unique_id=191498446]

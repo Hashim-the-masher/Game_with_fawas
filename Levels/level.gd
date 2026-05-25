@@ -5,6 +5,8 @@ var savedata:Dictionary
 
 
 func _ready() -> void:
+	get_window().content_scale_factor = 1
+	get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_VIEWPORT
 	color_rect.show()
 	savedata = load_json_file()
 	for child in get_children():
