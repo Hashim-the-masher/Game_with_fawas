@@ -64,6 +64,8 @@ func _input(event: InputEvent) -> void:
 		ignore = false
 		return
 	if event.is_action_pressed("esc"):
+		if settings == true:
+			return
 		if active == true:
 			active=false
 		else:active=true
