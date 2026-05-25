@@ -70,6 +70,7 @@ grow_vertical = 2
 script = ExtResource("5_th6tw")
 
 [node name="main" type="HBoxContainer" parent="settings" unique_id=998369944]
+visible = false
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -107,9 +108,13 @@ label_settings = ExtResource("6_eod33")
 
 [node name="sound" type="VBoxContainer" parent="settings" unique_id=1938179655]
 visible = false
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
 offset_right = 145.0
-offset_bottom = 128.0
+grow_vertical = 0
 alignment = 1
 
 [node name="SliderSettings" type="HBoxContainer" parent="settings/sound" unique_id=326590595]
@@ -159,9 +164,13 @@ label_settings = ExtResource("7_eod33")
 
 [node name="visual" type="VBoxContainer" parent="settings" unique_id=1799811823]
 visible = false
-layout_mode = 0
-offset_right = 145.0
-offset_bottom = 128.0
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_right = 198.0
+grow_vertical = 0
 alignment = 1
 
 [node name="SliderSettings" type="HBoxContainer" parent="settings/visual" unique_id=1793362189]
