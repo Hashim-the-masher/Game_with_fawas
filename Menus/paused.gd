@@ -50,11 +50,9 @@ func save_to_json_file():
 func _process(delta: float) -> void:
 	if active == false:
 		hide()
-		print("active is false")
 		return
 	if settings == true:
 		hbox.hide()
-		print("settigns is true")
 		return
 	show()
 	hbox.show()

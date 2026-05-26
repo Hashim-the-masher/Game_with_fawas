@@ -13,8 +13,51 @@ var current_setting = 0
 var on = [false,false]
 @onready var keyboard: TextureRect = $keyboard
 @onready var controler: TextureRect = $controler
+var move_mode = 0
+var savepath = "user://savedata.json"
+var savedata:Dictionary
+
+func _ready() -> void: 
+	savedata = load_json_file()
+	values[1].get_child(0).text =  str(savedata["settings"]["sounds"][0])
+	values[1].get_child(1).text =  str(savedata["settings"]["sounds"][1])
+
+func load_json_file():
+	var file = FileAccess.open(savepath, FileAccess.READ)
+	var json = file.get_as_text()
+	var jsonobject = JSON.new()
+	jsonobject.parse(json)
+	print("Loaded:"+str(jsonobject.data)+"from file")
+	return jsonobject.data
+
+func save_to_json_file():
+	var file = FileAccess.open(savepath, FileAccess.ModeFlags.WRITE)
+	var json_text = JSON.stringify(savedata)
+	print("written:"+json_text+"to file")
+	file.store_string(json_text)
 
 func _input(event: InputEvent) -> void:
+	if move_mode == 1:
+		titles[current_setting].get_child(setting_no[current_setting]).label_settings = UI_SETTINGS
+		values[current_setting].get_child(setting_no[current_setting]).label_settings = UI_SETTINGS_SELECTED
+		match current_setting:
+			1:
+				if event.is_action_pressed("ui_left"):
+					savedata["settings"]["sounds"][setting_no[current_setting]] -=.1
+					savedata["settings"]["sounds"][setting_no[current_setting]] = clampf(savedata["settings"]["sounds"][setting_no[current_setting]],0.0,1.0)
+					values[current_setting].get_child(setting_no[current_setting]).text = str(savedata["settings"]["sounds"][setting_no[current_setting]])
+				if event.is_action_pressed("ui_right"):
+					savedata["settings"]["sounds"][setting_no[current_setting]] +=.1
+					savedata["settings"]["sounds"][setting_no[current_setting]] = clampf(savedata["settings"]["sounds"][setting_no[current_setting]],0.0,1.0)
+					values[current_setting].get_child(setting_no[current_setting]).text = str(savedata["settings"]["sounds"][setting_no[current_setting]])
+				if event.is_action_pressed("ui_accept"):
+					values[current_setting].get_child(setting_no[current_setting]).label_settings = UI_SETTINGS
+					move_mode=0
+					save_to_json_file()
+					return
+			2:
+				pass
+		return
 	if menu_pause.settings == false:
 		asettings[current_setting].hide()
 		return
@@ -60,9 +103,9 @@ func _input(event: InputEvent) -> void:
 			1:
 				match setting_no[current_setting]:
 					0:
-						pass
+						move_mode = 1
 					1:
-						pass
+						move_mode = 1
 					2:
 						current_setting = 0
 						return
