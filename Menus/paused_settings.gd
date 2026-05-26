@@ -16,11 +16,18 @@ var on = [false,false]
 var move_mode = 0
 var savepath = "user://savedata.json"
 var savedata:Dictionary
-
+const screen = [1024,512]
 func _ready() -> void: 
 	savedata = load_json_file()
 	values[1].get_child(0).text =  str(savedata["settings"]["sounds"][0])
 	values[1].get_child(1).text =  str(savedata["settings"]["sounds"][1])
+	values[2].get_child(0).text = str(savedata["settings"]["visuals"][0])
+	values[2].get_child(1).text = str(savedata["settings"]["visuals"][1])
+	match values[2].get_child(1).text:
+		"1.0":
+			values[2].get_child(1).text = "Yes"
+		"0.0":
+			values[2].get_child(1).text = "No"
 
 func load_json_file():
 	var file = FileAccess.open(savepath, FileAccess.READ)
@@ -56,7 +63,39 @@ func _input(event: InputEvent) -> void:
 					save_to_json_file()
 					return
 			2:
-				pass
+				if event.is_action_pressed("ui_left"):
+					match setting_no[current_setting]:
+						0:
+							savedata["settings"]["visuals"][setting_no[current_setting]] -=.5
+							savedata["settings"]["visuals"][setting_no[current_setting]] = clampf(savedata["settings"]["visuals"][setting_no[current_setting]],0.5,2.0)
+						1:
+							savedata["settings"]["visuals"][setting_no[current_setting]] -=1
+							savedata["settings"]["visuals"][setting_no[current_setting]] = clampf(savedata["settings"]["visuals"][setting_no[current_setting]],0,1.0)
+					values[current_setting].get_child(setting_no[current_setting]).text = str(savedata["settings"]["visuals"][setting_no[current_setting]])
+					match values[current_setting].get_child(1).text:
+						"1.0":
+							values[current_setting].get_child(1).text = "Yes"
+						"0.0":
+							values[current_setting].get_child(1).text = "No"
+				if event.is_action_pressed("ui_right"):
+					match setting_no[current_setting]:
+						0:
+							savedata["settings"]["visuals"][setting_no[current_setting]] +=.5
+							savedata["settings"]["visuals"][setting_no[current_setting]] = clampf(savedata["settings"]["visuals"][setting_no[current_setting]],0.5,2.0)
+						1:
+							savedata["settings"]["visuals"][setting_no[current_setting]] +=1
+							savedata["settings"]["visuals"][setting_no[current_setting]] = clampf(savedata["settings"]["visuals"][setting_no[current_setting]],0,1.0)
+					values[current_setting].get_child(setting_no[current_setting]).text = str(savedata["settings"]["visuals"][setting_no[current_setting]])
+					match values[current_setting].get_child(1).text:
+						"1.0":
+							values[current_setting].get_child(1).text = "Yes"
+						"0.0":
+							values[current_setting].get_child(1).text = "No"
+				if event.is_action_pressed("ui_accept"):
+					values[current_setting].get_child(setting_no[current_setting]).label_settings = UI_SETTINGS
+					move_mode=0
+					save_to_json_file()
+					return
 		return
 	if menu_pause.settings == false:
 		asettings[current_setting].hide()
@@ -112,10 +151,18 @@ func _input(event: InputEvent) -> void:
 			2:
 				match setting_no[current_setting]:
 					0:
-						pass
+						move_mode = 1
 					1:
-						pass
+						move_mode = 1
 					2:
+						DisplayServer.window_set_size(Vector2i(screen[0]*savedata["settings"]["visuals"][0],screen[1]*savedata["settings"]["visuals"][0]))
+						match values[2].get_child(1).text:
+							"Yes":
+								DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+								print("window fullsckeen")	
+							"No":
+								DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+								print("window windowed")	
 						current_setting = 0
 						return
 			3:
