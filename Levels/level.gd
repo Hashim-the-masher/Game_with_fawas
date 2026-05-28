@@ -21,6 +21,14 @@ func _ready() -> void:
 	await tween.finished
 	tween.kill()
 
+func reset_volume():
+	savedata = load_json_file()
+	for child in get_children():
+		if child.name.containsn("mus"):
+			child.volume_db = linear_to_db(savedata["settings"]["sounds"][0])
+	for child in get_children():
+		if child.name.containsn("sfx"):
+			child.volume_db = linear_to_db(savedata["settings"]["sounds"][1])
 
 func load_json_file():
 	var file = FileAccess.open(savepath, FileAccess.READ)

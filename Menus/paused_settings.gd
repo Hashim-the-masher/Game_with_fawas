@@ -4,6 +4,8 @@ extends Control
 @onready var titles = [$main/Titles,$sound/SliderSettings/Titles,$visual/SliderSettings/Titles,$controls/SliderSettings/Titles,$controls/SliderSettings/Titles]
 var titles_sizes = [[0,0,0,0],[0,0,0],[0,0,0],[0,0,0]]
 @onready var values = [null,$"sound/SliderSettings/Display value",$"visual/SliderSettings/Display value",null]
+@onready var level: Node2D = $"../../.."
+@onready var player: CharacterBody2D = $"../../../player"
 var setting_no = [3,2,2,2]
 const UI_SETTINGS = preload("uid://b4ckevhw0xmal")
 const UI_SETTINGS_SELECTED = preload("uid://bu6x8ru5xi2kt")
@@ -61,6 +63,8 @@ func _input(event: InputEvent) -> void:
 					values[current_setting].get_child(setting_no[current_setting]).label_settings = UI_SETTINGS
 					move_mode=0
 					save_to_json_file()
+					level.reset_volume()
+					player.reset_volume()
 					return
 			2:
 				if event.is_action_pressed("ui_left"):

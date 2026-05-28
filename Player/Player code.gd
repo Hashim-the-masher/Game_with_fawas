@@ -39,7 +39,10 @@ func _ready() -> void:#this one makes sure that the state is the normal state an
 	switch_mesh(current_state)
 	switch_ablity(current_state)
 	bullet_volume = linear_to_db(savedata["settings"]["sounds"][1])
-	
+
+func reset_volume():
+	savedata = load_json_file()
+	bullet_volume = linear_to_db(savedata["settings"]["sounds"][1])
 
 func load_json_file():
 	var file = FileAccess.open(savepath, FileAccess.READ)

@@ -1,6 +1,3 @@
+res://Levels/level.gd
 res://Menus/paused_settings.gd
-res://Menus/paused.tscn
-res://Assets/Textures/Black colour.tres
-res://Assets/Textures/Red, black gradient.tres
-res://Assets/Textures/red colour.tres
-res://Menus/paused.gd
+res://Player/Player code.gd
