@@ -194,3 +194,13 @@ func _input(event: InputEvent) -> void:
 					2:
 						current_setting = 0
 						return
+
+func exit_settings():
+	on[0] = false
+	on[1] = false
+	current_setting = 0
+	move_mode = 0 
+	keyboard.hide()
+	controler.hide()
+	for node in asettings:
+		node.hide()

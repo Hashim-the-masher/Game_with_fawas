@@ -1,0 +1,8 @@
+res://notes.txt
+res://Levels/level_5.tscn
+res://Assets/Textures/Black colour.tres
+res://Assets/Textures/red colour.tres
+res://Assets/Textures/Red, black gradient.tres
+res://Menus/paused.tscn
+res://Menus/paused_settings.gd
+res://Menus/paused.gd

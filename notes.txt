@@ -1,0 +1,2 @@
+When hitting an enemy, the player does not realise that it took damge
+When hitting esc the pause menue does not esc when on the settings

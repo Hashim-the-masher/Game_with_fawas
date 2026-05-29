@@ -63,6 +63,9 @@ func _input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("esc"):
 		if settings == true:
+			settings = false
+			$settings.exit_settings()
+			active = false
 			return
 		if active == true:
 			active=false
