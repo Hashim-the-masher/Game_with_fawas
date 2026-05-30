@@ -8,8 +8,8 @@ var titles_sizes = [[0,0,0,0],[0,0,0],[0,0,0],[0,0,0]]
 @onready var level: Node2D = $"../../.."
 @onready var player: CharacterBody2D = $"../../../player"
 var setting_no = [3,2,2,2]
-const UI_SETTINGS = preload("uid://b4ckevhw0xmal")
 const UI_SETTINGS_SELECTED = preload("uid://bu6x8ru5xi2kt")
+const UI_SETTINGS = preload("uid://cc1invi444o3p")
 var back_confirmation_flag = false
 @onready var asettings = get_children(false)
 var current_setting = 0
@@ -52,6 +52,7 @@ func _input(event: InputEvent) -> void:
 	if move_mode == 1:
 		titles[current_setting].get_child(setting_no[current_setting]).label_settings = UI_SETTINGS
 		values[current_setting].get_child(setting_no[current_setting]).label_settings = UI_SETTINGS_SELECTED
+		arrows[current_setting][setting_no[current_setting]].texture = LIGHT_BI_ARROW
 		match current_setting:
 			1:
 				if event.is_action_pressed("ui_left"):
@@ -63,6 +64,7 @@ func _input(event: InputEvent) -> void:
 					savedata["settings"]["sounds"][setting_no[current_setting]] = clampf(savedata["settings"]["sounds"][setting_no[current_setting]],0.0,1.0)
 					values[current_setting].get_child(setting_no[current_setting]).text = str(savedata["settings"]["sounds"][setting_no[current_setting]])
 				if event.is_action_pressed("ui_accept"):
+					arrows[current_setting][setting_no[current_setting]].texture = LIGHT_ARROW
 					values[current_setting].get_child(setting_no[current_setting]).label_settings = UI_SETTINGS
 					move_mode=0
 					save_to_json_file()
@@ -100,6 +102,7 @@ func _input(event: InputEvent) -> void:
 							values[current_setting].get_child(1).text = "No"
 				if event.is_action_pressed("ui_accept"):
 					values[current_setting].get_child(setting_no[current_setting]).label_settings = UI_SETTINGS
+					arrows[current_setting][setting_no[current_setting]].texture = LIGHT_ARROW
 					move_mode=0
 					save_to_json_file()
 					return

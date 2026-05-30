@@ -10,7 +10,7 @@ var option_selected:int = 0
 var active:bool = false
 var settings:bool = false
 const screen = [1024,512]
-const UI = preload("uid://b5pijvb5s1ujn")
+const UI = preload("uid://clnnygmiqiu1")
 const UI_SELECTED = preload("uid://dvpvf7wdsrfxi")
 var ignore= false
 func _ready() -> void:

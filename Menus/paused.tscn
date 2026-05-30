@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bx8px8fwrwoq" path="res://Menus/paused_settings.gd" id="5_th6tw"]
 [ext_resource type="LabelSettings" uid="uid://b4ckevhw0xmal" path="res://Assets/Textures/UI_settings.tres" id="6_eod33"]
 [ext_resource type="LabelSettings" uid="uid://bi6gm77mgn5ao" path="res://Assets/Textures/UI_settings_hidden.tres" id="7_eod33"]
+[ext_resource type="LabelSettings" uid="uid://cc1invi444o3p" path="res://Assets/Textures/UI_settings_light.tres" id="8_5duk1"]
 [ext_resource type="Texture2D" uid="uid://dtq32lcq2avv" path="res://Assets/Textures/keyboard_high_quality.png" id="8_yvqh5"]
 [ext_resource type="LabelSettings" uid="uid://bu6x8ru5xi2kt" path="res://Assets/Textures/UI_settings_selected.tres" id="9_0tufv"]
 [ext_resource type="Texture2D" uid="uid://c22hdpty5ylgo" path="res://Assets/Textures/contoler_high_quality.png" id="10_5duk1"]
@@ -270,17 +271,16 @@ size_flags_vertical = 4
 [node name="Music" type="Label" parent="settings/sound/SliderSettings/Display value" unique_id=545820612]
 layout_mode = 2
 text = "10"
-label_settings = ExtResource("6_eod33")
+label_settings = ExtResource("8_5duk1")
 
 [node name="Sounds" type="Label" parent="settings/sound/SliderSettings/Display value" unique_id=1505284371]
 layout_mode = 2
 text = "10"
-label_settings = ExtResource("6_eod33")
+label_settings = ExtResource("8_5duk1")
 
 [node name="Quit" type="Label" parent="settings/sound/SliderSettings/Display value" unique_id=299798448]
 layout_mode = 2
-text = "HI"
-label_settings = ExtResource("7_eod33")
+label_settings = ExtResource("8_5duk1")
 
 [node name="arrows" type="VBoxContainer" parent="settings/sound/SliderSettings" unique_id=888689597]
 layout_mode = 2
@@ -381,17 +381,16 @@ size_flags_vertical = 4
 [node name="Size" type="Label" parent="settings/visual/SliderSettings/Display value" unique_id=596029000]
 layout_mode = 2
 text = "10"
-label_settings = ExtResource("6_eod33")
+label_settings = ExtResource("8_5duk1")
 
 [node name="Fullscreen?" type="Label" parent="settings/visual/SliderSettings/Display value" unique_id=290859708]
 layout_mode = 2
 text = "10"
-label_settings = ExtResource("6_eod33")
+label_settings = ExtResource("8_5duk1")
 
 [node name="Quit" type="Label" parent="settings/visual/SliderSettings/Display value" unique_id=941133935]
 layout_mode = 2
-text = "HI"
-label_settings = ExtResource("7_eod33")
+label_settings = ExtResource("8_5duk1")
 
 [node name="arrows" type="VBoxContainer" parent="settings/visual/SliderSettings" unique_id=827547262]
 layout_mode = 2
