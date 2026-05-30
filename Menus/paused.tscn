@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bq3vnwmwmyho6" path="res://Assets/Textures/simple_overlay.png" id="2_5lqxi"]
 [ext_resource type="LabelSettings" uid="uid://dvpvf7wdsrfxi" path="res://Assets/Textures/UI_selected.tres" id="2_th6tw"]
 [ext_resource type="LabelSettings" uid="uid://b5pijvb5s1ujn" path="res://Assets/Textures/UI.tres" id="3_eod33"]
+[ext_resource type="Texture2D" uid="uid://cv5f0412ftkvv" path="res://Assets/Textures/light_arrow.png" id="5_5duk1"]
 [ext_resource type="Script" uid="uid://bx8px8fwrwoq" path="res://Menus/paused_settings.gd" id="5_th6tw"]
 [ext_resource type="LabelSettings" uid="uid://b4ckevhw0xmal" path="res://Assets/Textures/UI_settings.tres" id="6_eod33"]
 [ext_resource type="LabelSettings" uid="uid://bi6gm77mgn5ao" path="res://Assets/Textures/UI_settings_hidden.tres" id="7_eod33"]
@@ -64,6 +65,49 @@ layout_mode = 2
 text = "Options"
 label_settings = ExtResource("3_eod33")
 
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer" unique_id=228487665]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="empty" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=2143859355]
+custom_minimum_size = Vector2(0, 5.18)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="arrow" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=11905659]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer2/arrow" unique_id=1891040468]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 64.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty2" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=911241255]
+custom_minimum_size = Vector2(0, 81.63)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="arrow2" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=1761336388]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/VBoxContainer2/arrow2" unique_id=1866669292]
+custom_minimum_size = Vector2(320, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty3" type="Control" parent="HBoxContainer/VBoxContainer2" unique_id=1218250425]
+layout_mode = 2
+size_flags_vertical = 3
+
 [node name="settings" type="Control" parent="." unique_id=1054283741]
 layout_mode = 1
 anchors_preset = 15
@@ -109,6 +153,78 @@ label_settings = ExtResource("6_eod33")
 layout_mode = 2
 text = "Back"
 label_settings = ExtResource("6_eod33")
+
+[node name="arrows" type="VBoxContainer" parent="settings/main" unique_id=1504942413]
+layout_mode = 2
+
+[node name="empty" type="Control" parent="settings/main/arrows" unique_id=365469158]
+custom_minimum_size = Vector2(0, 4.525)
+layout_mode = 2
+
+[node name="arrow" type="Control" parent="settings/main/arrows" unique_id=854058981]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="arrow" type="TextureRect" parent="settings/main/arrows/arrow" unique_id=224704685]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 32.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty2" type="Control" parent="settings/main/arrows" unique_id=1622308982]
+custom_minimum_size = Vector2(0, 26.17)
+layout_mode = 2
+
+[node name="arrow2" type="Control" parent="settings/main/arrows" unique_id=2424556]
+layout_mode = 2
+
+[node name="arrow2" type="TextureRect" parent="settings/main/arrows/arrow2" unique_id=911454359]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty3" type="Control" parent="settings/main/arrows" unique_id=1492452479]
+custom_minimum_size = Vector2(0, 37.06)
+layout_mode = 2
+
+[node name="arrow3" type="Control" parent="settings/main/arrows" unique_id=885289258]
+layout_mode = 2
+
+[node name="arrow3" type="TextureRect" parent="settings/main/arrows/arrow3" unique_id=1564810758]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty4" type="Control" parent="settings/main/arrows" unique_id=1788506581]
+custom_minimum_size = Vector2(0, 38.54)
+layout_mode = 2
+
+[node name="arrow4" type="Control" parent="settings/main/arrows" unique_id=496792323]
+layout_mode = 2
+
+[node name="arrow3" type="TextureRect" parent="settings/main/arrows/arrow4" unique_id=841594746]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
 
 [node name="sound" type="VBoxContainer" parent="settings" unique_id=1938179655]
 visible = false
@@ -166,6 +282,61 @@ layout_mode = 2
 text = "HI"
 label_settings = ExtResource("7_eod33")
 
+[node name="arrows" type="VBoxContainer" parent="settings/sound/SliderSettings" unique_id=888689597]
+layout_mode = 2
+
+[node name="empty" type="Control" parent="settings/sound/SliderSettings/arrows" unique_id=244552625]
+custom_minimum_size = Vector2(0, 1.655)
+layout_mode = 2
+
+[node name="arrow" type="Control" parent="settings/sound/SliderSettings/arrows" unique_id=53471874]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="arrow" type="TextureRect" parent="settings/sound/SliderSettings/arrows/arrow" unique_id=1070764137]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 32.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty2" type="Control" parent="settings/sound/SliderSettings/arrows" unique_id=744950757]
+custom_minimum_size = Vector2(0, 32.24)
+layout_mode = 2
+
+[node name="arrow2" type="Control" parent="settings/sound/SliderSettings/arrows" unique_id=57528531]
+layout_mode = 2
+
+[node name="arrow2" type="TextureRect" parent="settings/sound/SliderSettings/arrows/arrow2" unique_id=82663845]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty3" type="Control" parent="settings/sound/SliderSettings/arrows" unique_id=528320099]
+custom_minimum_size = Vector2(0, 42.095)
+layout_mode = 2
+
+[node name="arrow3" type="Control" parent="settings/sound/SliderSettings/arrows" unique_id=522825333]
+layout_mode = 2
+
+[node name="arrow3" type="TextureRect" parent="settings/sound/SliderSettings/arrows/arrow3" unique_id=1937741853]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
 [node name="visual" type="VBoxContainer" parent="settings" unique_id=1799811823]
 visible = false
 layout_mode = 1
@@ -222,6 +393,61 @@ layout_mode = 2
 text = "HI"
 label_settings = ExtResource("7_eod33")
 
+[node name="arrows" type="VBoxContainer" parent="settings/visual/SliderSettings" unique_id=827547262]
+layout_mode = 2
+
+[node name="empty" type="Control" parent="settings/visual/SliderSettings/arrows" unique_id=1018630739]
+custom_minimum_size = Vector2(0, 1.655)
+layout_mode = 2
+
+[node name="arrow" type="Control" parent="settings/visual/SliderSettings/arrows" unique_id=1925831968]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="arrow" type="TextureRect" parent="settings/visual/SliderSettings/arrows/arrow" unique_id=356606898]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 32.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty2" type="Control" parent="settings/visual/SliderSettings/arrows" unique_id=1759256053]
+custom_minimum_size = Vector2(0, 32.24)
+layout_mode = 2
+
+[node name="arrow2" type="Control" parent="settings/visual/SliderSettings/arrows" unique_id=258228795]
+layout_mode = 2
+
+[node name="arrow2" type="TextureRect" parent="settings/visual/SliderSettings/arrows/arrow2" unique_id=1584248200]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty3" type="Control" parent="settings/visual/SliderSettings/arrows" unique_id=1400962247]
+custom_minimum_size = Vector2(0, 42.095)
+layout_mode = 2
+
+[node name="arrow3" type="Control" parent="settings/visual/SliderSettings/arrows" unique_id=674705754]
+layout_mode = 2
+
+[node name="arrow3" type="TextureRect" parent="settings/visual/SliderSettings/arrows/arrow3" unique_id=595898533]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
 [node name="controls" type="VBoxContainer" parent="settings" unique_id=220961984]
 visible = false
 layout_mode = 1
@@ -274,6 +500,61 @@ label_settings = ExtResource("6_eod33")
 [node name="Quit" type="Label" parent="settings/controls/SliderSettings/Display value" unique_id=967731653]
 layout_mode = 2
 label_settings = ExtResource("7_eod33")
+
+[node name="arrows" type="VBoxContainer" parent="settings/controls/SliderSettings" unique_id=1270748163]
+layout_mode = 2
+
+[node name="empty" type="Control" parent="settings/controls/SliderSettings/arrows" unique_id=1328877398]
+custom_minimum_size = Vector2(0, 1.655)
+layout_mode = 2
+
+[node name="arrow" type="Control" parent="settings/controls/SliderSettings/arrows" unique_id=1063790122]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="arrow" type="TextureRect" parent="settings/controls/SliderSettings/arrows/arrow" unique_id=1588138725]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_right = 160.0
+offset_bottom = 32.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty2" type="Control" parent="settings/controls/SliderSettings/arrows" unique_id=1145217234]
+custom_minimum_size = Vector2(0, 32.24)
+layout_mode = 2
+
+[node name="arrow2" type="Control" parent="settings/controls/SliderSettings/arrows" unique_id=1707148738]
+layout_mode = 2
+
+[node name="arrow2" type="TextureRect" parent="settings/controls/SliderSettings/arrows/arrow2" unique_id=83378460]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
+
+[node name="empty3" type="Control" parent="settings/controls/SliderSettings/arrows" unique_id=1420001559]
+custom_minimum_size = Vector2(0, 42.095)
+layout_mode = 2
+
+[node name="arrow3" type="Control" parent="settings/controls/SliderSettings/arrows" unique_id=793406140]
+layout_mode = 2
+
+[node name="arrow3" type="TextureRect" parent="settings/controls/SliderSettings/arrows/arrow3" unique_id=999920243]
+visible = false
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 160.0
+offset_bottom = 40.0
+texture = ExtResource("5_5duk1")
+expand_mode = 1
 
 [node name="keyboard" type="TextureRect" parent="settings" unique_id=159532361]
 visible = false

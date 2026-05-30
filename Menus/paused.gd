@@ -3,6 +3,7 @@ extends Control
 @onready var hbox: HBoxContainer = $HBoxContainer
 @onready var resume: Label = $HBoxContainer/VBoxContainer/Resume
 @onready var options: Label = $HBoxContainer/VBoxContainer/Options
+@onready var arrow = [$HBoxContainer/VBoxContainer2/arrow, $HBoxContainer/VBoxContainer2/arrow2]
 var savepath = "user://savedata.json"
 var savedata:Dictionary
 var option_selected:int = 0
@@ -79,10 +80,14 @@ func _input(event: InputEvent) -> void:
 		resume.label_settings = UI
 		options.label_settings = UI_SELECTED
 		resume.text = "Resume"
+		arrow[1].show()
+		arrow[0].hide()
 	if event.is_action_pressed("ui_up"):
 		option_selected = 0
 		resume.label_settings = UI_SELECTED
 		options.label_settings = UI
+		arrow[0].show()
+		arrow[1].hide()
 	if event.is_action_pressed("ui_accept"):
 		print(option_selected)
 		match option_selected:

@@ -4,6 +4,7 @@ extends Control
 @onready var titles = [$main/Titles,$sound/SliderSettings/Titles,$visual/SliderSettings/Titles,$controls/SliderSettings/Titles,$controls/SliderSettings/Titles]
 var titles_sizes = [[0,0,0,0],[0,0,0],[0,0,0],[0,0,0]]
 @onready var values = [null,$"sound/SliderSettings/Display value",$"visual/SliderSettings/Display value",null]
+@onready var arrows = [[$main/arrows/arrow/arrow, $main/arrows/arrow2/arrow2, $main/arrows/arrow3/arrow3, $main/arrows/arrow4/arrow3],[$sound/SliderSettings/arrows/arrow/arrow, $sound/SliderSettings/arrows/arrow2/arrow2, $sound/SliderSettings/arrows/arrow3/arrow3],[$visual/SliderSettings/arrows/arrow/arrow, $visual/SliderSettings/arrows/arrow2/arrow2, $visual/SliderSettings/arrows/arrow3/arrow3],[$controls/SliderSettings/arrows/arrow/arrow, $controls/SliderSettings/arrows/arrow2/arrow2, $controls/SliderSettings/arrows/arrow3/arrow3]]
 @onready var level: Node2D = $"../../.."
 @onready var player: CharacterBody2D = $"../../../player"
 var setting_no = [3,2,2,2]
@@ -15,6 +16,8 @@ var current_setting = 0
 var on = [false,false]
 @onready var keyboard: TextureRect = $keyboard
 @onready var controler: TextureRect = $controler
+const LIGHT_BI_ARROW = preload("uid://pjnv4b1w6ef7")
+const LIGHT_ARROW = preload("uid://cv5f0412ftkvv")
 var move_mode = 0
 var savepath = "user://savedata.json"
 var savedata:Dictionary
@@ -118,8 +121,10 @@ func _input(event: InputEvent) -> void:
 		for numbers in titles_sizes[current_setting].size():
 			if numbers == setting_no[current_setting]:
 				titles[current_setting].get_child(numbers).label_settings = UI_SETTINGS_SELECTED
+				arrows[current_setting][numbers].show()
 			else:
 				titles[current_setting].get_child(numbers).label_settings = UI_SETTINGS
+				arrows[current_setting][numbers].hide()
 		for nodes in asettings:
 			if nodes != asettings[current_setting]:
 				nodes.hide()
