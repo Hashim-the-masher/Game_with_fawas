@@ -1,8 +1,7 @@
-res://Effects/Screen effects/You_win....tscn
+res://Levels/level_credits.tscn
 res://Assets/Textures/Black colour.tres
 res://Assets/Textures/Red, black gradient.tres
 res://Assets/Textures/red colour.tres
-res://Effects/Screen effects/you_win....gd
-res://Effects/Screen effects/Win_effects.gd
-res://winning again speech.json
-res://Effects/Screen effects/You_win.tscn
+res://Levels/level_credits.gd
+res://Assets/Textures/credits.tres
+res://savedata.json
