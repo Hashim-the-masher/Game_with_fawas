@@ -20,6 +20,8 @@ func _ready() -> void:
 	savedata = load_json_file()
 	option_selected = savedata["setting_no"]["title"]
 	match savedata["w/l"][0]:
+		2.0:
+			you_did_it.show()
 		1.0:
 			you_did_it.show()
 		0.0:

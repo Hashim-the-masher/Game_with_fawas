@@ -15,6 +15,8 @@ const UI_SETTINGS_SELECTED = preload("uid://bu6x8ru5xi2kt")
 func _ready() -> void:
 	savedata = load_json_file()
 	match savedata["w/l"][0]:
+		2.0:
+			you_did_it.show()
 		1.0:
 			you_did_it.show()
 		0.0:

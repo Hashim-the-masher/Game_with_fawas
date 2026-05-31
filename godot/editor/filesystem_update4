@@ -1,2 +1,7 @@
-res://Enemies/smash_enemy.gd
-res://export_presets.cfg
+res://Menus/settings.gd
+res://Menus/sound.gd
+res://Menus/Title_screen.gd
+res://Menus/visual.gd
+res://Menus/Title_screen.tscn
+res://Assets/Textures/Black colour.tres
+res://Assets/Textures/red colour.tres

@@ -18,6 +18,8 @@ const UI_SETTINGS_HIDDEN = preload("uid://bi6gm77mgn5ao")
 func _ready() -> void:
 	savedata = load_json_file()
 	match savedata["w/l"][0]:
+		2.0:
+			you_did_it.show()
 		1.0:
 			you_did_it.show()
 		0.0:
