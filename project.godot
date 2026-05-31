@@ -164,3 +164,7 @@ esc={
 2d_physics/layer_6="Player smashes"
 2d_physics/layer_7="lava"
 2d_physics/layer_8="dashable lava"
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

@@ -21,6 +21,7 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	enemy_detetected.emit()
 	print(name+",took damge from:"+area.name)
 	hp -= 1 
+	dmg_sound.play()
 	if area.name == "Smash":
 		hp -= extra_smash_damge
 	if hp <= 0:

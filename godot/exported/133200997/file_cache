@@ -42,3 +42,6 @@ res://Menus/sound.tscn::34f3575a5a7c14e060e9300695a1381b::1780040779::res://godo
 res://Menus/Title_screen.tscn::7d5ed2fab12973a36a816caefb7083cb::1780234292::res://godot/exported/133200997/export-92aaf1c75be927f84ca2a9c4c1639d9d-Title_screen.scn
 res://Menus/visual.tscn::75fda2b4a4160cfbda11971e635ad8aa::1780040779::res://godot/exported/133200997/export-790f6694575b5e733d12ac738a8ce6ac-visual.scn
 res://Assets/Textures/UI_settings_light.tres::1a1d34a9f77395c6d3e5af449bb86cc7::1780140536::res://godot/exported/133200997/export-e87cff83834c0dbe9f4157392489ed95-UI_settings_light.res
+res://Assets/Textures/UI_light.tres::b062c454590e6c22468cebd309ad0a67::1780140536::res://godot/exported/133200997/export-66fe8c93a72774708f6dc4e06a4bd5f1-UI_light.res
+res://Effects/Screen effects/You_win....tscn::928d17d72c19f52beca554ab90b0b4d8::1780148807::res://godot/exported/133200997/export-25b87444dd1a35e344e5cdbf2bca6542-You_win....scn
+res://Menus/controls.tscn::1cc30b88cdb5a11110fb52d6f284bd15::1780040779::res://godot/exported/133200997/export-0acd62ee2c3d429400be8bb08935bd70-controls.scn
