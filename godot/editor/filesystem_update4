@@ -1,0 +1,6 @@
+res://Menus/Title_screen.gd
+res://Levels/level_credits.gd
+res://Menus/Title_screen.tscn
+res://Assets/Textures/Black colour.tres
+res://Assets/Textures/red colour.tres
+res://Levels/level_credits.tscn

@@ -9,7 +9,7 @@
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=106412809]
 
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=2014142001]
+[node name="???" type="Control" parent="CanvasLayer" unique_id=2014142001]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wmfid")
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=22557893]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/???" unique_id=22557893]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1220555911]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/???" unique_id=1220555911]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,161 +36,161 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 
-[node name="0" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1282886431]
+[node name="0" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=1282886431]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/0" unique_id=2097292908]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/0" unique_id=2097292908]
 layout_mode = 2
 text = "Just to see me"
 label_settings = ExtResource("2_5d2qf")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/0" unique_id=1127676971]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/0" unique_id=1127676971]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="1" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=879825913]
+[node name="1" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=879825913]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/1" unique_id=1161934300]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/1" unique_id=1161934300]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/1" unique_id=1391007616]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/1" unique_id=1391007616]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="2" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=727280311]
+[node name="2" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=727280311]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/2" unique_id=401506998]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/2" unique_id=401506998]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/2" unique_id=416855362]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/2" unique_id=416855362]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="3" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=61335789]
+[node name="3" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=61335789]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/3" unique_id=154903167]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/3" unique_id=154903167]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/3" unique_id=1666663647]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/3" unique_id=1666663647]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="4" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1112069565]
+[node name="4" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=1112069565]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/4" unique_id=1562793988]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/4" unique_id=1562793988]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/4" unique_id=1230350118]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/4" unique_id=1230350118]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="5" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1657335680]
+[node name="5" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=1657335680]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/5" unique_id=35559355]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/5" unique_id=35559355]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/5" unique_id=528155412]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/5" unique_id=528155412]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="6" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=1719635392]
+[node name="6" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=1719635392]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/6" unique_id=1676445239]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/6" unique_id=1676445239]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/6" unique_id=1014293730]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/6" unique_id=1014293730]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="7" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=433921872]
+[node name="7" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=433921872]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/7" unique_id=1291784808]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/7" unique_id=1291784808]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/7" unique_id=1824844673]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/7" unique_id=1824844673]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="8" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=311509584]
+[node name="8" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=311509584]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/8" unique_id=1244915640]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/8" unique_id=1244915640]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/8" unique_id=2002956242]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/8" unique_id=2002956242]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="9" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=2058253460]
+[node name="9" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=2058253460]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/9" unique_id=1680215885]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/9" unique_id=1680215885]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/9" unique_id=1039655314]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/9" unique_id=1039655314]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="10" type="HBoxContainer" parent="CanvasLayer/Control/VBoxContainer" unique_id=2032979305]
+[node name="10" type="HBoxContainer" parent="CanvasLayer/???/VBoxContainer" unique_id=2032979305]
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Title" type="Label" parent="CanvasLayer/Control/VBoxContainer/10" unique_id=634800428]
+[node name="Title" type="Label" parent="CanvasLayer/???/VBoxContainer/10" unique_id=634800428]
 layout_mode = 2
 label_settings = ExtResource("2_wmfid")
 
-[node name="Description" type="Label" parent="CanvasLayer/Control/VBoxContainer/10" unique_id=294824281]
+[node name="Description" type="Label" parent="CanvasLayer/???/VBoxContainer/10" unique_id=294824281]
 layout_mode = 2
 size_flags_horizontal = 10
 label_settings = ExtResource("2_wmfid")
 horizontal_alignment = 2
 
-[node name="Timer" type="Timer" parent="CanvasLayer/Control" unique_id=1089947840]
+[node name="Timer" type="Timer" parent="CanvasLayer/???" unique_id=1089947840]
 wait_time = 2.167
 autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer" unique_id=1373763083]
 stream = ExtResource("4_q7yf2")
 
-[connection signal="timeout" from="CanvasLayer/Control/Timer" to="CanvasLayer/Control" method="_on_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/???/Timer" to="CanvasLayer/???" method="_on_timer_timeout"]

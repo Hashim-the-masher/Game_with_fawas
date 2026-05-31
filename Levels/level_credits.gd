@@ -14,6 +14,8 @@ var savedata2:Dictionary
 var progress:int = -1
 
 func _ready() -> void:
+	if name != "???":
+		return
 	savedata = load_json_file()[0]
 	savedata2 = load_json_file()[1]
 	if music != null:
@@ -23,17 +25,21 @@ func _ready() -> void:
 func load_json_file():
 	var file = FileAccess.open(savepath, FileAccess.READ)
 	var file2 = FileAccess.open(savepath2, FileAccess.READ)
-	var json = file.get_as_text()
-	var json2 = file2.get_as_text()
-	var jsonobject = JSON.new()
-	var jsonobject2 = JSON.new()
-	jsonobject.parse(json)
-	jsonobject2.parse(json2)
-	print("Loaded:"+str(jsonobject.data)+"from file")
-	print("Loaded:"+str(jsonobject2.data)+"from file")
-	return [jsonobject.data,jsonobject2.data]
+	if file2 != null:
+		var json = file.get_as_text()
+		var json2 = file2.get_as_text()
+		var jsonobject = JSON.new()
+		var jsonobject2 = JSON.new()
+		jsonobject.parse(json)
+		jsonobject2.parse(json2)
+		print("Loaded:"+str(jsonobject.data)+"from file")
+		print("Loaded:"+str(jsonobject2.data)+"from file")
+		return [jsonobject.data,jsonobject2.data]
+	return null
 
 func _physics_process(delta: float) -> void:
+	if name != "???":
+		return
 	var val1=randi_range(0,100)
 	var val2=randi_range(0,100)
 	var val3=randi_range(200,255)

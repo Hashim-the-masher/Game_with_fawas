@@ -7,6 +7,7 @@ extends Control
 @onready var sure_flag = false
 @onready var you_did_it: TextureRect = $you_did_it
 var savepath = "user://savedata.json"
+var newsavepath = "res://savedata.json"
 var savedata:Dictionary
 var option_selected:int = 0
 const screen = [1024,512]
@@ -14,6 +15,8 @@ const UI = preload("uid://b5pijvb5s1ujn")
 const UI_SELECTED = preload("uid://dvpvf7wdsrfxi")
 
 func _ready() -> void:
+	if load_json_file() == null:
+		make_new_json_file()
 	savedata = load_json_file()
 	option_selected = savedata["setting_no"]["title"]
 	match savedata["w/l"][0]:
@@ -46,6 +49,8 @@ func _ready() -> void:
 
 func load_json_file():
 	var file = FileAccess.open(savepath, FileAccess.READ)
+	if file == null:
+		return null
 	var json = file.get_as_text()
 	var jsonobject = JSON.new()
 	jsonobject.parse(json)
@@ -57,6 +62,18 @@ func save_to_json_file():
 	var json_text = JSON.stringify(savedata)
 	print("written:"+json_text+"to file")
 	file.store_string(json_text)
+
+func make_new_json_file():
+	var file = FileAccess.open(newsavepath, FileAccess.READ)
+	var json = file.get_as_text()
+	var jsonobject = JSON.new()
+	jsonobject.parse(json)
+	print("Loaded:"+str(jsonobject.data)+"from res")
+	savedata = jsonobject.data
+	file.close()
+	var file2 = FileAccess.open(savepath, FileAccess.ModeFlags.WRITE)
+	var json_text = JSON.stringify(savedata)
+	file2.store_string(json_text)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_down"):
