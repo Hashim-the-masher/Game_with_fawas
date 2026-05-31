@@ -1,2 +1,2 @@
-When hitting an enemy, the player does not realise that it took damge
-The player does not know that the ram enemy will dash towards them
+When hitting an enemy, the player does not realise that it took damge/ lazliy did it
+The player does not know that the ram enemy will dash towards them/ canceled

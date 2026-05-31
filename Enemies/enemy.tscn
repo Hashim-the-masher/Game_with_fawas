@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bl71fiyksux1f" path="res://Enemies/enemy.gd" id="1_bxkaj"]
 [ext_resource type="Texture2D" uid="uid://djckefwu8tvem" path="res://Assets/Textures/red colour.tres" id="2_bxkaj"]
+[ext_resource type="AudioStream" uid="uid://cxaa56wosoild" path="res://Assets/sounds_aaaaaaaah/dmg.wav" id="3_47qgu"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_3ih25"]
 radial_segments = 4
@@ -76,6 +77,10 @@ collision_mask = 40
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1999869751]
 shape = SubResource("CircleShape2D_bxkaj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=123132542]
+stream = ExtResource("3_47qgu")
+max_polyphony = 10
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]

@@ -5,9 +5,17 @@ extends CharacterBody2D
 var enemy_detected_flag = false
 @export var hp = 40
 @export var extra_smash_damge = 19
+@onready var dmg_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D
+var savepath = "user://savedata.json"
+var savedata:Dictionary
 signal kill
 signal enemy_detetected
 @onready var player: CharacterBody2D = $"../player"
+
+func _ready() -> void:
+	savedata = load_json_file()
+	dmg_sound.volume_linear = savedata["settings"]["sounds"][1]
+
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	enemy_detected_flag = true
 	enemy_detetected.emit()
@@ -18,6 +26,15 @@ func _on_hitbox_area_entered(area: Area2D) -> void:
 	if hp <= 0:
 		kill.emit()
 		queue_free()
+
+func load_json_file():
+	var file = FileAccess.open(savepath, FileAccess.READ)
+	var json = file.get_as_text()
+	var jsonobject = JSON.new()
+	jsonobject.parse(json)
+	print("Loaded:"+str(jsonobject.data)+"from file")
+	return jsonobject.data
+
 
 func _process(delta: float) -> void:
 	if enemy_detected_flag == true:

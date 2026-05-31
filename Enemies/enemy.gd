@@ -4,20 +4,37 @@ var enemy_detected_flag = false
 @export var rotation_speed =.3
 @export var hp = 15
 @export var extra_smash_damge = 14
+@onready var dmg_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D
+var savepath = "user://savedata.json"
+var savedata:Dictionary
 @onready var player: CharacterBody2D = $"../player"
 const BULLET = preload("uid://dvxvq2aiuyox4")
 signal kill
+
+func _ready() -> void:
+	savedata = load_json_file()
+	dmg_sound.volume_linear = savedata["settings"]["sounds"][1]
+
 func _process(delta: float) -> void:
 	if enemy_detected_flag == true:
 		var desireable_rotation = atan2((player.position.y-position.y),(player.position.x-position.x))
 		var tween = get_tree().create_tween()
 		tween.tween_property(self, "rotation",lerp_angle(rotation,desireable_rotation, 1),rotation_speed)
 
+func load_json_file():
+	var file = FileAccess.open(savepath, FileAccess.READ)
+	var json = file.get_as_text()
+	var jsonobject = JSON.new()
+	jsonobject.parse(json)
+	print("Loaded:"+str(jsonobject.data)+"from file")
+	return jsonobject.data
+
 
 func _on_hitbox_area_entered(area: Area2D) -> void:
 	enemy_detected_flag = true
 	print(name+",took damge from:"+area.name)
 	hp -= 1 
+	dmg_sound.play()
 	if area.name == "Smash":
 		hp -= extra_smash_damge
 	if hp <= 0:
