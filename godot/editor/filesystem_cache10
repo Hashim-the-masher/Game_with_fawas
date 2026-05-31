@@ -1,14 +1,14 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1780131225
+::res://::1780144162
 credits.json::JSON::-1::1780040779::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1780040779::0::1::::<><><>0<>0<><>::
 icon.icns::OtherFile::-1::1780040779::0::1::::<><><>0<>0<><>::
 icon.ico::OtherFile::-1::1780124937::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::5278408587739377647::1780040779::1780040779::1::::<><><>0<>0<>15f641767a8e4a241f1be4d5acbd0f1c<>res://godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-notes.txt::TextFile::-1::1780131225::0::1::::<><><>0<>0<><>::
+notes.txt::TextFile::-1::1780142278::0::1::::<><><>0<>0<><>::
 overlay.tscn::PackedScene::8647996159073114495::1780040779::0::1::::<><><>0<>0<><>::
-savedata.json::JSON::-1::1780040779::0::1::::<><><>0<>0<><>::
-winning again speech.txt::TextFile::-1::1780040779::0::1::::<><><>0<>0<><>::
+savedata.json::JSON::-1::1780143491::0::1::::<><><>0<>0<><>::
+winning again speech.json::JSON::-1::1780144153::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1780040779
 ::res://Assets/fonts/::1780040778
 LANGUAGE.ttf::FontFile::3626712634001930049::1780040778::1780040778::1::::<><><>0<>0<>2a1460ca116efbbc2e5f67529f36e781<>res://godot/imported/LANGUAGE.ttf-7e29cd4cd42c71681faab4a2c92ee510.fontdata::
@@ -24,32 +24,35 @@ lose.wav::AudioStreamWAV::933178652031172341::1780040779::1780040779::1::::<><><
 shoot.wav::AudioStreamWAV::7338853945078058712::1780040779::1780040779::1::::<><><>0<>0<>d80e5949f6143cf5d90f9d8b4e3408ed<>res://godot/imported/shoot.wav-228808e8266eb5bfe8e98d804bbf1f6e.sample::
 smash.wav::AudioStreamWAV::4526611808825926516::1780040779::1780040779::1::::<><><>0<>0<>bc0c2a151d23166f93b03a4ebda380d4<>res://godot/imported/smash.wav-06731e6246a707e2e5f542a20552358b.sample::
 win.wav::AudioStreamWAV::1868652908999744834::1780040779::1780040779::1::::<><><>0<>0<>41690662902aee492635ca2e1f8b6965<>res://godot/imported/win.wav-4398f7f092ee33ac2c8761bd6bb5861c.sample::
-::res://Assets/Textures/::1780139655
+::res://Assets/Textures/::1780142278
 arrow.png::CompressedTexture2D::8856050741820023350::1780040778::1780040778::1::::<><><>0<>0<>7005c81ed484348b9a11369075309b3b<>res://godot/imported/arrow.png-96689c530bd7cedf05b902f1c91baef8.ctex::
 bi-arrow.png::CompressedTexture2D::9114622762466948104::1780040778::1780040778::1::::<><><>0<>0<>8d3c379ba2baf5ee9f5472fd11a13ec6<>res://godot/imported/bi-arrow.png-aaaebac8515fef8248794d02840d235c.ctex::
-Black colour.tres::CurveXYZTexture::8159515979238121401::1780123774::0::1::::<><><>0<>0<><>::
+Black colour.tres::CurveXYZTexture::8159515979238121401::1780142278::0::1::::<><><>0<>0<><>::
 contoler_high_quality.png::CompressedTexture2D::6724109539636802918::1780040778::1780040778::1::::<><><>0<>0<>031c78e415b61a0b4d84deef67461c97<>res://godot/imported/contoler_high_quality.png-26c7c8db5b2896385d38ee64084d3e18.ctex::
 credits.tres::LabelSettings::176927959552086871::1780040778::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 keyboard_high_quality.png::CompressedTexture2D::250812617591450039::1780040778::1780040778::1::::<><><>0<>0<>16d5085b9975af4f383eb66b56881b74<>res://godot/imported/keyboard_high_quality.png-7b68bd6bc7ddbb6579645fc74cb1d273.ctex::
 light_arrow.png::CompressedTexture2D::6309088210794396367::1780042552::1780046320::1::::<><><>0<>0<>cc069903742d18b30e38071585a81c42<>res://godot/imported/light_arrow.png-22b8dc896c06a0c69b899f284e542a76.ctex::
 light_bi-arrow.png::CompressedTexture2D::1072240402868892850::1780139641::1780139658::1::::<><><>0<>0<>fe31b980efbb6b2c0e19b2e79cd018c5<>res://godot/imported/light_bi-arrow.png-5f9800a165108e87b6a723c1fc49755a.ctex::
 Map.png::CompressedTexture2D::1542929626586489947::1780040778::1780040778::1::::<><><>0<>0<>2d4ff932a1d42c155ae7d602a5c57d7a<>res://godot/imported/Map.png-01906d54f0ca5258429eba41a33914ec.ctex::
-red colour.tres::CurveXYZTexture::7795705009989025040::1780123774::0::1::::<><><>0<>0<><>::
-Red, black gradient.tres::CurveXYZTexture::4194766768480230310::1780123774::0::1::::<><><>0<>0<><>::
+red colour.tres::CurveXYZTexture::7795705009989025040::1780142278::0::1::::<><><>0<>0<><>::
+Red, black gradient.tres::CurveXYZTexture::4194766768480230310::1780142278::0::1::::<><><>0<>0<><>::
 simple_overlay.png::CompressedTexture2D::3568544206252075735::1780040778::1780040778::1::::<><><>0<>0<>41dbf1f8781149983dfb15f91e01fc00<>res://godot/imported/simple_overlay.png-c85ff0bd8d9c89b136b084987bce3dc5.ctex::
 UI.tres::LabelSettings::4523554573155564543::1780040778::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
+UI_light.tres::LabelSettings::163899649183234530::1780140536::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 UI_selected.tres::LabelSettings::8665479134500436914::1780040778::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 UI_settings.tres::LabelSettings::4426641332645333507::1780040778::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 UI_settings_hidden.tres::LabelSettings::3012314605391405390::1780040778::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
+UI_settings_light.tres::LabelSettings::4967402944237042775::1780140536::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 UI_settings_selected.tres::LabelSettings::3855649614049277251::1780040778::0::1::::<><><>0<>0<><>::uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf
 xtra_arrow.png::CompressedTexture2D::6899967161128969426::1780040778::1780040778::1::::<><><>0<>0<>7827fde05ba20fff367b308bcb7ca27f<>res://godot/imported/xtra_arrow.png-bc979bc626e16498402df6d795906553.ctex::
 you_did_it.png::CompressedTexture2D::8148254270159561338::1780040778::1780040778::1::::<><><>0<>0<>b9c44e95fbf6aa5fa0c81f495d25ee6d<>res://godot/imported/you_did_it.png-51a6f7c367d8a06333dad6065c827299.ctex::
 ::res://Effects/::1780040779
-::res://Effects/Screen effects/::1780040779
+::res://Effects/Screen effects/::1780143491
 Death screen.tscn::PackedScene::2314324198914443454::1780040779::0::1::::<><><>0<>0<><>::uid://pgv1oq60gvww::::res://Effects/Screen effects/death_screen.gd<>uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf<>uid://nkbk0mofd6gf::::res://Assets/sounds_aaaaaaaah/lose.wav
 death_screen.gd::GDScript::1066541170070407542::1780040779::0::1::::<>Control<><>0<>0<><>::
 overlay.tscn::PackedScene::2547369560978868571::1780040779::0::1::::<><><>0<>0<><>::uid://bq3vnwmwmyho6::::res://Assets/Textures/simple_overlay.png
-Win_effects.gd::GDScript::6490184480069237477::1780040779::0::1::::<>Control<><>0<>0<><>::
+Win_effects.gd::GDScript::6490184480069237477::1780143127::0::1::::<>Control<><>0<>0<><>::
+You_win....tscn::PackedScene::7700714621046786916::1780143491::0::1::::<><><>0<>0<><>::uid://cyp5nja2n8xgf::::res://Effects/Screen effects/Win_effects.gd<>uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf<>uid://1vgo8dngswxm::::res://Assets/sounds_aaaaaaaah/win.wav
 You_win.tscn::PackedScene::4742611249319589752::1780040779::0::1::::<><><>0<>0<><>::uid://cyp5nja2n8xgf::::res://Effects/Screen effects/Win_effects.gd<>uid://bffuiwh7227js::::res://Assets/fonts/UbuntuSans[wdth,wght].ttf<>uid://1vgo8dngswxm::::res://Assets/sounds_aaaaaaaah/win.wav
 ::res://Enemies/::1780040779
 Dash enemy.tscn::PackedScene::7367856622394001130::1780040779::0::1::::<><><>0<>0<><>::uid://doisbhxhnuw30::::res://Assets/Textures/Black colour.tres
@@ -79,12 +82,12 @@ level_7.tscn::PackedScene::5941266135016894437::1780040779::0::1::::<><><>0<>0<>
 level_?.tscn::PackedScene::2701461889770113283::1780040779::0::1::::<><><>0<>0<><>::uid://bo4y332gakbbj::::res://Levels/level.gd<>uid://v8n3cko3hc2f::::res://Assets/Textures/Map.png<>uid://c4uv6fisup5fn::::res://Player/Player character.tscn<>uid://p8v6rpanovbs::::res://Special tiles/win_area.tscn<>uid://bqkn7wtuydlss::::res://Menus/paused.tscn<>uid://bidb27it8shdk::::res://Special tiles/spawn_area.tscn<>uid://bcj72l83ixs56::::res://Effects/Screen effects/overlay.tscn<>uid://cfb3g2bqrs1t4::::res://Assets/mus/C.wav
 level_credits.gd::GDScript::7208273346663758437::1780040779::0::1::::<>Control<><>0<>0<><>::
 level_credits.tscn::PackedScene::3726881318670608466::1780040779::0::1::::<><><>0<>0<><>::uid://dax0hdpyx7u8d::::res://Levels/level_credits.gd<>uid://crx8iflknyvf::::res://Assets/Textures/credits.tres
-::res://Menus/::1780131743
+::res://Menus/::1780142277
 controls.gd::GDScript::8754408042486197605::1780040779::0::1::::<>Control<><>0<>0<><>::
 controls.tscn::PackedScene::7478182963264875731::1780040779::0::1::::<><><>0<>0<><>::uid://dwyx26tjoxom4::::res://Menus/controls.gd<>uid://b4ckevhw0xmal::::res://Assets/Textures/UI_settings.tres<>uid://bi6gm77mgn5ao::::res://Assets/Textures/UI_settings_hidden.tres<>uid://dyf64kjp5hdow::::res://Assets/Textures/arrow.png<>uid://dtq32lcq2avv::::res://Assets/Textures/keyboard_high_quality.png<>uid://c22hdpty5ylgo::::res://Assets/Textures/contoler_high_quality.png<>uid://bu6x8ru5xi2kt::::res://Assets/Textures/UI_settings_selected.tres<>uid://c5knpln58e3fi::::res://Assets/Textures/xtra_arrow.png
-paused.gd::GDScript::4633968704916771452::1780123799::0::1::::<>Control<><>0<>0<><>::
-paused.tscn::PackedScene::3530933611559036538::1780131225::0::1::::<><><>0<>0<><>::uid://b7ay11noj1e5q::::res://Menus/paused.gd<>uid://bq3vnwmwmyho6::::res://Assets/Textures/simple_overlay.png<>uid://dvpvf7wdsrfxi::::res://Assets/Textures/UI_selected.tres<>uid://b5pijvb5s1ujn::::res://Assets/Textures/UI.tres<>uid://cv5f0412ftkvv::::res://Assets/Textures/light_arrow.png<>uid://bx8px8fwrwoq::::res://Menus/paused_settings.gd<>uid://b4ckevhw0xmal::::res://Assets/Textures/UI_settings.tres<>uid://bi6gm77mgn5ao::::res://Assets/Textures/UI_settings_hidden.tres<>uid://dtq32lcq2avv::::res://Assets/Textures/keyboard_high_quality.png<>uid://bu6x8ru5xi2kt::::res://Assets/Textures/UI_settings_selected.tres<>uid://c22hdpty5ylgo::::res://Assets/Textures/contoler_high_quality.png<>uid://c5knpln58e3fi::::res://Assets/Textures/xtra_arrow.png
-paused_settings.gd::GDScript::119701238924143628::1780131743::0::1::::<>Control<><>0<>0<><>::
+paused.gd::GDScript::4633968704916771452::1780140536::0::1::::<>Control<><>0<>0<><>::
+paused.tscn::PackedScene::3530933611559036538::1780142277::0::1::::<><><>0<>0<><>::uid://b7ay11noj1e5q::::res://Menus/paused.gd<>uid://bq3vnwmwmyho6::::res://Assets/Textures/simple_overlay.png<>uid://dvpvf7wdsrfxi::::res://Assets/Textures/UI_selected.tres<>uid://b5pijvb5s1ujn::::res://Assets/Textures/UI.tres<>uid://cv5f0412ftkvv::::res://Assets/Textures/light_arrow.png<>uid://bx8px8fwrwoq::::res://Menus/paused_settings.gd<>uid://b4ckevhw0xmal::::res://Assets/Textures/UI_settings.tres<>uid://bi6gm77mgn5ao::::res://Assets/Textures/UI_settings_hidden.tres<>uid://cc1invi444o3p::::res://Assets/Textures/UI_settings_light.tres<>uid://dtq32lcq2avv::::res://Assets/Textures/keyboard_high_quality.png<>uid://bu6x8ru5xi2kt::::res://Assets/Textures/UI_settings_selected.tres<>uid://c22hdpty5ylgo::::res://Assets/Textures/contoler_high_quality.png<>uid://c5knpln58e3fi::::res://Assets/Textures/xtra_arrow.png
+paused_settings.gd::GDScript::119701238924143628::1780140536::0::1::::<>Control<><>0<>0<><>::
 settings.gd::GDScript::4870683319834271802::1780040779::0::1::::<>Control<><>0<>0<><>::
 settings.tscn::PackedScene::8768689095352844802::1780040779::0::1::::<><><>0<>0<><>::uid://cbnnpbyncswpu::::res://Menus/settings.gd<>uid://b4ckevhw0xmal::::res://Assets/Textures/UI_settings.tres<>uid://dodcs7kjehofa::::res://Assets/Textures/you_did_it.png<>uid://dyf64kjp5hdow::::res://Assets/Textures/arrow.png
 sound.gd::GDScript::4844964832137959892::1780040779::0::1::::<>Control<><>0<>0<><>::

@@ -8,7 +8,9 @@ var savedata:Dictionary
 
 func _ready() -> void:
 	savedata = load_json_file()
-	savedata["w/l"][0] = 1
+	if savedata["w/l"][0] == 1.0:
+		savedata["w/l"][0] = 2.0
+	else: savedata["w/l"][0] = 1.0
 	save_to_json_file()
 
 func load_json_file():
@@ -36,4 +38,6 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_timer_timeout() -> void:
-	get_tree().quit()
+	if savedata["w/l"][0] == 2.0:
+		get_tree().change_scene_to_file("res://Effects/Screen effects/You_win....tscn")
+	else:get_tree().quit(0)

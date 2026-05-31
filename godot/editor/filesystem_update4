@@ -1,9 +1,8 @@
-res://Menus/paused.tscn
+res://Effects/Screen effects/You_win....tscn
 res://Assets/Textures/Black colour.tres
 res://Assets/Textures/Red, black gradient.tres
 res://Assets/Textures/red colour.tres
-res://Menus/paused.gd
-res://Menus/paused_settings.gd
-res://notes.txt
-res://Assets/Textures/UI_settings_light.tres
-res://Assets/Textures/UI_light.tres
+res://Effects/Screen effects/you_win....gd
+res://Effects/Screen effects/Win_effects.gd
+res://winning again speech.json
+res://Effects/Screen effects/You_win.tscn

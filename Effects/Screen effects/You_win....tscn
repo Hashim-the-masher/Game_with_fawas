@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dhyjv6kc0s6h1"]
+
+[ext_resource type="Script" uid="uid://dj06gqigfbju2" path="res://Effects/Screen effects/you_win....gd" id="1_eicep"]
+[ext_resource type="FontFile" uid="uid://bffuiwh7227js" path="res://Assets/fonts/UbuntuSans[wdth,wght].ttf" id="2_nrbiv"]
+[ext_resource type="AudioStream" uid="uid://cfb3g2bqrs1t4" path="res://Assets/mus/C.wav" id="3_eicep"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5xn12"]
+font = ExtResource("2_nrbiv")
+font_size = 64
+
+[node name="Control" type="Control" unique_id=868331262]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eicep")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=978400953]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=740209988]
+layout_mode = 1
+offset_right = 1024.0
+offset_bottom = 78.0
+text = "YOU WIN"
+label_settings = SubResource("LabelSettings_5xn12")
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="big timer" type="Timer" parent="." unique_id=1617847344]
+wait_time = 1.5
+one_shot = true
+autostart = true
+
+[node name="small timer" type="Timer" parent="." unique_id=1699022925]
+wait_time = 0.1
+one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=631173200]
+stream = ExtResource("3_eicep")
+volume_db = -50.0
+pitch_scale = 0.7
+autoplay = true
+
+[connection signal="timeout" from="big timer" to="." method="_on_big_timer_timeout"]
+[connection signal="timeout" from="small timer" to="." method="_on_small_timer_timeout"]
