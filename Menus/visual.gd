@@ -111,6 +111,7 @@ func _input(event: InputEvent) -> void:
 					match setting[1].text:
 						"Yes":
 							get_window().content_scale_mode = Window.CONTENT_SCALE_MODE_VIEWPORT
+							get_window().content_scale_factor = 1
 							DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 							print("window fullsckeen")	
 						"No":
